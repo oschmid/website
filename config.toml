@@ -1,3 +1,4 @@
 baseURL = "http://oliverschmid.space/"
 languageCode = "en-us"
 title = "Oliver Schmid"
+theme = "aerial"
