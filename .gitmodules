@@ -1,3 +1,6 @@
 [submodule "themes/aerial"]
 	path = themes/aerial
 	url = https://github.com/sethmacleod/aerial.git
+[submodule "themes/website-theme"]
+	path = themes/website-theme
+	url = https://github.com/oschmid/website-theme.git

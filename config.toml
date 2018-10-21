@@ -4,5 +4,8 @@ title = "Oliver Schmid"
 theme = "aerial"
 
 [params]
-  Name = "Oliver Schmid"
-  About = "Software Developer  •  Thinker  •  Trying to Live Forever"
+  name = "Oliver Schmid"
+  about = "Software Developer  •  Thinker  •  Trying to Live Forever"
+  bg_scroll = "disable"
+  favicon = "favicon-adjust.ico"
+  copyright = "Oliver Schmid"
