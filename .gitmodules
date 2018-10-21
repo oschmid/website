@@ -4,3 +4,6 @@
 [submodule "themes/website-theme"]
 	path = themes/website-theme
 	url = https://github.com/oschmid/website-theme.git
+[submodule "themes/hugo-theme-casper"]
+	path = themes/hugo-theme-casper
+	url = https://github.com/vjeantet/hugo-theme-casper.git
