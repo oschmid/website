@@ -1,9 +1,15 @@
----
-title: "2018 BC Referendum on Electoral Reform"
-date: 2018-10-22T20:12:24-07:00
----
++++
+author = ""
+comments = true	# set false to hide Disqus
+date = "2018-10-22T20:12:24-07:00"
+image = ""
+menu = ""		# set "main" to add this content to the main menu
+share = false	# set false to hide share buttons
+slug = "2018-bc-referendum-on-electoral-reform"
+tags = ["British Columbia","politics","voting"]
+title = "2018 BC Referendum on Electoral Reform"
++++
 This October BC voters have the duty and opportunity to vote on how we vote. This is BC's third referendum on voting reform, and also the one with the most options.
-
 
 *What voting systems is BC choosing between?*
 
