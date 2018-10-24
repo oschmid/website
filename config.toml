@@ -1,11 +1,10 @@
 baseURL = "https://oliverschmid.space/"
 languageCode = "en-us"
 title = "Oliver Schmid"
-theme = "aerial"
+theme = "website-theme"
+paginate = 5
+copyright = "©2018"
 
 [params]
-  name = "Oliver Schmid"
-  about = "Software Developer  •  Thinker  •  Trying to Live Forever"
-  bg_scroll = "disable"
-  favicon = "favicon-adjust.ico"
-  copyright = "Oliver Schmid"
+  author = "Oliver Schmid"
+  cover = "shannon_falls.jpg"
