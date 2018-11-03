@@ -1,10 +1,8 @@
 baseURL = "https://oliverschmid.space/"
-languageCode = "en-us"
 title = "Oliver Schmid"
 theme = "website-theme"
 paginate = 5
-copyright = "©2018"
 
 [params]
-  author = "Oliver Schmid"
-  cover = "shannon_falls.jpg"
+  description = ""
+  image = "shannon_falls.jpg"
