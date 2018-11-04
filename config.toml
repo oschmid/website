@@ -1,8 +1,7 @@
 baseURL = "https://oliverschmid.space/"
-title = "Oliver Schmid"
-theme = "website-theme"
 paginate = 5
+theme = "website-theme"
+title = "Oliver Schmid"
 
 [params]
   description = ""
-  image = "shannon_falls.jpg"
