@@ -5,4 +5,8 @@ theme = "website-theme"
 title = "Oliver Schmid"
 
 [params]
-  description = ""
+  description = "My personal blog"
+
+[sitemap]
+  changeFreq = "weekly"
+  priority = "0.5"
