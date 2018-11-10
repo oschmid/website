@@ -12,5 +12,5 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
-/styles.css
+/styles*.css
   X-Content-Type-Options: nosniff
