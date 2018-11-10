@@ -43,3 +43,7 @@ I’m in favour of Proportional Representation. Based on the scorecard my rankin
 [Range Voting](https://www.rangevoting.org/RangeVoting.html). It doesn’t have Proportional Representation but it has other [benefits](https://www.goodreads.com/book/show/1382574.Gaming_the_Vote) (it’s expressive, resistant to vote splitting, incentivizes honest voting, neither pro-centrist nor pro-extremist).
 
 Actually, there’s a version of range voting that does have Proportional Representation called [Re-Weighted Range Voting](https://www.rangevoting.org/RRV.html) that looks interesting. But that’s for another day.
+
+---
+
+**Update Nov 10** I've submitted my vote. Have you submitted yours? Remember that they must be mailed before Nov 30th!
