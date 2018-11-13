@@ -7,6 +7,10 @@ title = "Oliver Schmid"
 [params]
   description = "My personal blog"
 
+[privacy]
+  [privacy.youtube]
+    privacyEnhanced = true
+
 [sitemap]
   changeFreq = "weekly"
   priority = "0.5"
