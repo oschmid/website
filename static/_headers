@@ -3,12 +3,12 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
 /
-  Content-Security-Policy: base-uri 'self'; default-src 'none'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src https://*; media-src https://*; script-src 'self'; style-src 'self'
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com/*; img-src https://*; media-src https://*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
 /post/*
-  Content-Security-Policy: base-uri 'self'; default-src 'none'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src https://*; media-src https://*; script-src 'self'; style-src 'self'
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com/*; img-src https://*; media-src https://*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
