@@ -47,7 +47,7 @@ The Cellular Telecommunications Industry Association has denied the risk saying 
 
 Mythbusters' Adam Savage even counts this as the [coolest tech myth they ever busted](https://www.businessinsider.com/mythbusters-coolest-tech-myth-2014-10) on the show. For which he and Jamie Hyneman also interviewed Bob Renkes of the Petroleum Equipment Institute who after investigating hundreds of gas station fires has never found one that was caused by a phone.
 
-{{< youtube VjrkwxMhc4s >}}
+{{< youtube id="VjrkwxMhc4s" class="youtube" >}}
 
 So what is the cause of most gas station fires? *Static electricity*. Getting back in and moving around your carpeted car while pumping gas can generate enough static electricity that when you go back to pull out the pump, you can create a spark powerful enough to ignite escaping fumes. Watch the video above to see Bob demonstrate how this can happen.
 
