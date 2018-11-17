@@ -1,0 +1,17 @@
+{{- $ytHost := cond .Page.Site.Config.Privacy.YouTube.PrivacyEnhanced  "www.youtube-nocookie.com" "www.youtube.com" -}}
+/*
+  Referrer-Policy: no-referrer-when-downgrade
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+/
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://{{- $ytHost -}}/*; img-src https://*; media-src https://*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/post/*
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://{{- $ytHost -}}/*; img-src https://*; media-src https://*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/styles*.css
+  X-Content-Type-Options: nosniff
