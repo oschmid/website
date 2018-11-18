@@ -5,7 +5,7 @@ theme = "website-theme"
 title = "Oliver Schmid"
 
 [params]
-  description = "My personal blog"
+  description = "Personal Blog"
 
 [privacy]
   [privacy.youtube]
