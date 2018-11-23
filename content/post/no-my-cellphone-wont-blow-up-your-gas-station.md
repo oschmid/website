@@ -3,7 +3,7 @@ title = "No, My Cellphone Won't Blow Up Your Gas Station"
 subtitle = "Skip to the end though if you want to learn the real fire danger of filing up at the pump."
 date = "2018-11-10T14:25:25-08:00"
 image = ""
-tags = []
+tags = ["mythbuster","safety"]
 +++
 I had the strangest encounter this morning. My fiancée and I were driving into work together at the ungodly hour of 5am when we stopped at a gas station to fill up the tank. As I started filling up, I pulled out my phone to browse the internet.
 
