@@ -1,6 +1,7 @@
 baseURL = "https://oliverschmid.space/"
 enableRobotsTXT = true
 paginate = 5
+rssLimit = 20
 theme = "website-theme"
 title = "Oliver Schmid"
 
