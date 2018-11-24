@@ -1,0 +1,7 @@
+<form name="{{ .Get "name" | default (.Get 0) }}" method="POST" netlify-honeypot="pooh" netlify>
+<label class="hidden">Don't fill this out if you're human<input name="pooh"/></label>
+{{ .Inner }}
+<div netlify-recaptcha></div>
+<p></p>
+<button type="submit">{{ .Get "submit" | default "Send" }}</button>
+</form>
