@@ -5,7 +5,7 @@ menu = "main"
 +++
 ## Contact
 
-{{< netlify-form contact >}}
+{{< netlify-form name="contact" action="/contact-success" >}}
     <label>Name<input name="name" type="text"/></label>
     <p></p>
     <label>Email<input name="email" type="email"/></label>
