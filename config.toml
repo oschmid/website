@@ -8,6 +8,7 @@ title = "Oliver Schmid"
 [params]
   description = "Personal Blog"
   defaultLicense = "cc-by-4.0"
+  appleTouchIcon = "favicon-touch.png"
 
 [privacy]
   [privacy.youtube]
