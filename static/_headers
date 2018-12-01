@@ -15,7 +15,7 @@
   X-Frame-Options:
   X-XSS-Protection:
 
-/styles.css
+/styles.min.css
   Content-Security-Policy:
   Link:
   Referrer-Policy:
