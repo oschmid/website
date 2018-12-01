@@ -1,27 +1,41 @@
 /*
+  Referrer-Policy: no-referrer-when-downgrade
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+/
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
   Link: </styles.min.css>; rel=preload; as=style
   Link: </favicon.ico>; rel=preload; as=image
   Link: </favicon-touch.png; rel=preload; as=image
-  Referrer-Policy: no-referrer-when-downgrade
-  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
 /favicon.ico
-  Content-Security-Policy:
   Content-Type: image/x-icon
-  Link:
-  Referrer-Policy:
-  Strict-Transport-Security:
-  X-Frame-Options:
-  X-XSS-Protection:
 
 /styles.min.css
-  Content-Security-Policy:
-  Link:
-  Referrer-Policy:
-  Strict-Transport-Security:
   X-Content-Type-Options: nosniff
-  X-Frame-Options:
-  X-XSS-Protection:
+
+/about
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
+  Link: </styles.min.css>; rel=preload; as=style
+  Link: </favicon.ico>; rel=preload; as=image
+  Link: </favicon-touch.png; rel=preload; as=image
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/contact
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
+  Link: </styles.min.css>; rel=preload; as=style
+  Link: </favicon.ico>; rel=preload; as=image
+  Link: </favicon-touch.png; rel=preload; as=image
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/post/*
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
+  Link: </styles.min.css>; rel=preload; as=style
+  Link: </favicon.ico>; rel=preload; as=image
+  Link: </favicon-touch.png; rel=preload; as=image
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
