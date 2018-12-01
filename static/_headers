@@ -6,7 +6,7 @@
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
   Link: </styles.min.css>; rel=preload; as=style
   Link: </favicon.ico>; rel=preload; as=image
-  Link: </favicon-touch.png; rel=preload; as=image
+  Link: </favicon-touch.png>; rel=preload; as=image
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
