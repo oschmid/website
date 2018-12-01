@@ -4,6 +4,7 @@
 
 /
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
+  Link: </styles.css>; rel=preload; as=style
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
@@ -12,8 +13,9 @@
 
 /post/*
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
+  Link: </styles.css>; rel=preload; as=style
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
-/styles*.css
+/styles.css
   X-Content-Type-Options: nosniff
