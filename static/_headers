@@ -4,7 +4,6 @@
 
 /
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
-  Link: </favicon-touch.png>; rel=preload; as=image
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
@@ -16,18 +15,15 @@
 
 /about
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
-  Link: </favicon-touch.png>; rel=preload; as=image
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
 /contact
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
-  Link: </favicon-touch.png>; rel=preload; as=image
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
 /post/*
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*
-  Link: </favicon-touch.png>; rel=preload; as=image
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
