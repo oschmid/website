@@ -5,7 +5,6 @@ date = "2018-12-01T12:45:37-08:00"
 image = ""
 license = ""
 tags = ["sleep","health","wearables"]
-draft = true
 +++
 I've been using the new [Oura ring](https://ouraring.com/) sleep tracker for a little over a month now. It's exactly the kind of wearable I'm a fan of: invisible, reliable, and focused. It looks like any normal ring, it's tough and its battery lasts a week, and (unlike other devices) it isn't a distraction because it only tries to do one thing: measure your recovery.
 
