@@ -7,9 +7,9 @@ menu = "main"
 
 <form name="contact" action="/contact-success" method="POST" netlify-honeypot="pooh" netlify>
     <label class="hidden">Don't fill this out if you're human<input name="pooh"/></label>
-    <label>Name<input name="name" type="text"/></label>
+    <label>Name<input name="name" autocomplete="name" type="text"/></label>
     <p></p>
-    <label>Email<input name="email" type="email"/></label>
+    <label>Email<input name="email" autocomplete="email" type="email"/></label>
     <p></p>
     <label>Message<textarea name="message"></textarea></label>
     <p></p>
