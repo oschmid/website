@@ -19,7 +19,7 @@
   X-XSS-Protection: 1; mode=block
 
 /contact
-  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; script-src 'self' https://www.google.com/recaptcha/api.js https://www.gstatic.com/recaptcha/api2/*/recaptcha__en.js; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; script-src 'self' https://www.google.com/recaptcha/api.js https://www.gstatic.com/recaptcha/api2/*; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
