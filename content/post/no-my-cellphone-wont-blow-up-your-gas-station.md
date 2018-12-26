@@ -1,6 +1,5 @@
 +++
 title = "No, My Cellphone Won't Blow Up Your Gas Station"
-subtitle = "Skip to the end though if you want to learn the real fire danger of filing up at the pump."
 date = "2018-11-10T14:25:25-08:00"
 image = ""
 tags = ["mythbuster","safety"]
@@ -39,7 +38,7 @@ He walked away satisfied. The pump dinged. My tank was full. I put the nozzle aw
 
 "Yeah, that was very strange."
 
-### Mythbusting Time
+## Mythbusting Time
 
 Well, I looked it up. Snopes has an article about [Cell Phone Use at Gas Pumps](https://www.snopes.com/fact-check/fuelish-pleasures/). It's false. The urban myth has been circling the web since 1999. First claiming that an Indonesian man was burned and his car badly damaged when his phone caused an explosion at a gas station.
 
