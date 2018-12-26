@@ -1,0 +1,11 @@
+{{ define "site_header" }}
+<!-- the title of the index page should be an h1 element to meet accessibility standards-->
+<h1>{{ .Site.Title }}</h1>
+{{ end }}
+{{ define "main" }}
+  {{ $paginator := .Paginate (where .Pages "Type" "post") }}
+  {{ range $paginator.Pages }}
+    {{ .Render "summary" }}
+  {{ end }}
+  {{ partial "pagination.html" . }}
+{{ end }}

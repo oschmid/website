@@ -1,0 +1,5 @@
+<p class="subtitle has-text-grey">
+    <time datetime="{{ .Date.Format "2006-01-02 15:04" }}">{{ .Date.Format (.Site.Params.dateFormatToUse | default "January 02, 2006")  }}</time>
+    &nbsp;-&nbsp;
+    <span><time datetime="{{ .ReadingTime }}M">{{ .ReadingTime }} min</time> read</span>
+</p>

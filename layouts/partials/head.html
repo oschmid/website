@@ -1,0 +1,21 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{ if not .IsHome }}{{ template "_internal/schema.html" . }}{{ end }}
+    <title>
+      {{ block "title" . }}
+      {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}
+      {{ end }}
+    </title>
+    {{ with .Site.Params.Description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.AppleTouchIcon }}<link rel="apple-touch-icon" href="{{ . }}">{{ end }}
+
+    {{ if .RSSLink -}}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end -}}
+
+    <!-- Styles -->
+    {{ $style := resources.Get "style.css" | minify }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
+</head>

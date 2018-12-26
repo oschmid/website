@@ -1,0 +1,17 @@
+{{ define "body_class" }}tag-template{{ end }}
+{{ define "title" }}{{ .Title }}{{ end }}
+{{ define "main" }}
+  {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
+
+  <!-- Add title for first page of tags -->
+  {{ if not $paginator.HasPrev }}
+    {{ if eq .Data.Plural "tags" }}
+      <h2 class="tag-title">{{ .Title }}</h2>
+    {{ end }}
+  {{ end }}
+
+  {{ range $paginator.Pages  }}
+    {{ .Render "summary"  }}
+  {{ end  }}
+  {{ partial "pagination.html" .  }}
+{{ end }}
