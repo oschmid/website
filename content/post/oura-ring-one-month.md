@@ -1,6 +1,5 @@
 +++
 title = "One Month With The Oura Ring"
-subtitle = ""
 date = "2018-12-01T12:45:37-08:00"
 image = ""
 license = ""

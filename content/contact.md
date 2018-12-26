@@ -3,17 +3,39 @@ title = "Contact"
 date = "2018-11-24T12:17:15-08:00"
 menu = "main"
 +++
-## Contact
+<h1 class="title">Contact</h1>
 
 <form name="contact" action="/contact-success" method="POST" netlify-honeypot="pooh" netlify>
-    <label class="hidden">Don't fill this out if you're human<input name="pooh"/></label>
-    <label>Name<input name="name" autocomplete="name" type="text"/></label>
-    <p></p>
-    <label>Email<input name="email" autocomplete="email" type="email"/></label>
-    <p></p>
-    <label>Message<textarea name="message"></textarea></label>
-    <p></p>
-    <div netlify-recaptcha></div>
-    <p></p>
-    <button type="submit">Send</button>
+    <div class="field hidden">
+        <label class="label" for="pooh">Don't fill this out if you're human</label>
+        <div class="control">
+            <input class="input" id="pooh" name="pooh"/>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label" for="name">Name</label>
+        <div class="control">
+            <input class="input" id="name" name="name" autocomplete="name" type="text"/>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label" for="email">Email</label>
+        <div class="control">
+            <input class="input" id="email" name="email" autocomplete="email" type="email"/>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label" for="message">Message</label>
+        <div class="control">
+            <textarea class="textarea" id="message" name="message"></textarea>
+        </div>
+    </div>
+    <div class="field">
+        <div netlify-recaptcha></div>
+    </div>
+    <div class="field">
+        <div class="control">
+            <button class="button is-info is-pulled-right" type="submit">Send</button>
+        </div>
+    </div>
 </form>
