@@ -1,0 +1,169 @@
+<!-- Inspired by https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/
+
+    This paginator prints the first and last page number along with a configurable number of adjacent pages (see
+    $adjacent_links).
+
+        e.g. [1] ... [4] [5] [*6*] [7] [8] ... [12]
+
+    Rather than including "First" and "Last" links, including the page number of the first and last pages gives the
+    user some context into how far they've gone into the page list. With that info they can make better decisions about
+    whether or not to continue.
+
+    "Previous" and "Next" links are included even though the adjacent page numbers seemingly make them redundant. As
+    these are the most common paging actions (and often clicked repeatedly) we want them at the same location on each
+    page.
+
+    Additionally, if the user is on one of the first few pages (see $lower_limit) more pages are printed after the
+    current page.
+
+        e.g. [1] [*2*] [3] [4] [5] ... [12]
+
+    Similarly, if the user is on one of the last few pages (see $upper_limit) more pages are printed before the
+    current page.
+
+        e.g. [1] ... [8] [9] [10] [*11*] [12]
+-->
+{{ $paginator := .Paginator }}
+
+<!-- Number of links either side of the current page -->
+{{ $adjacent_links := 2 }}
+
+<!-- $max_links = ($adjacent_links * 2) + 1 -->
+{{ $max_links := (add (mul $adjacent_links 2) 1) }}
+
+<!-- $lower_limit = $adjacent_links + 1 -->
+{{ $lower_limit := (add $adjacent_links 1) }}
+
+<!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
+{{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
+
+<!-- $first_middle_page = $paginator.PageNumber - $adjacent_links -->
+{{ $first_middle_page := sub $paginator.PageNumber $adjacent_links }}
+
+<!-- $last_middle_page = $paginator.PageNumber + $adjacent_links -->
+{{ $last_middle_page := add $paginator.PageNumber $adjacent_links }}
+
+
+<!-- If there's more than one page -->
+{{ if gt $paginator.TotalPages 1 }}
+<section class="section">
+    <nav class="pagination is-centered">
+
+        {{ if $paginator.HasPrev }}
+            <a class="pagination-previous" href="{{ $paginator.Prev.URL }}">Previous</a>
+        {{ end }}
+
+        {{ if $paginator.HasNext }}
+            <a class="pagination-next" href="{{ $paginator.Next.URL }}">Next</a>
+        {{ end }}
+
+        <ul class="pagination-list">
+        {{ $show_number := false }}
+        {{ $add_ellipses_before := false }}
+        {{ $add_ellipses_after := false }}
+
+        <!-- Page numbers -->
+        {{ range $paginator.Pagers }}
+
+            {{ $show_number = false }}
+            {{ $add_ellipses_before = false }}
+            {{ $add_ellipses_after = false }}
+
+            <!-- Include first page -->
+            {{ if eq .PageNumber $paginator.First.PageNumber }}
+
+                {{ $show_number = true }}
+
+            <!-- Include last page -->
+            {{ else if eq .PageNumber $paginator.Last.PageNumber }}
+
+                {{ $show_number = true }}
+
+            <!-- Simple page numbers -->
+            {{ else if le $paginator.TotalPages $max_links }}
+
+                {{ $show_number = true }}
+
+            <!-- Advanced page numbers -->
+            {{ else }}
+
+                <!-- Lower limit pages -->
+                <!-- If the user is on a page which is in the lower limit -->
+                {{ if le $paginator.PageNumber $lower_limit }}
+
+                    <!-- If the current loop page is less than max_links. -->
+                    {{ if le .PageNumber $max_links }}
+
+                        {{ $show_number = true }}
+
+                        <!-- Include ellipses if there's a gap between the lower limit and the last page -->
+                        {{ if eq .PageNumber $max_links }}
+                            {{ $add_ellipses_after = true }}
+                        {{ end }}
+
+                    {{ end }}
+
+                <!-- Upper limit pages -->
+                <!-- If the user is on a page which is in the upper limit -->
+                {{ else if ge $paginator.PageNumber $upper_limit }}
+
+                    <!-- If the current loop page is greater than total pages minus $max_links -->
+                    {{ if gt .PageNumber (sub $paginator.TotalPages $max_links) }}
+
+                        {{ $show_number = true }}
+
+                        <!-- Include ellipses if there's a gap between the upper limit and the first page -->
+                        {{ if eq .PageNumber (add (sub $paginator.TotalPages $max_links) 1) }}
+                            {{ $add_ellipses_before = true }}
+                        {{ end }}
+
+                    {{ end }}
+
+
+                <!-- Middle pages -->
+                {{ else if and (ge .PageNumber $first_middle_page) (le .PageNumber $last_middle_page) }}
+
+                    {{ $show_number = true }}
+
+                    <!-- Include ellipses if there's a gap between the first page and the middle pages -->
+                    {{ if (and (eq .PageNumber $first_middle_page) (ne (sub $first_middle_page 1) $paginator.First.PageNumber)) }}
+                        {{ $add_ellipses_before = true }}
+                    {{ end }}
+
+                    <!-- Include ellipses if there's a gap between the last page and the middle pages -->
+                    {{ if (and (eq .PageNumber $last_middle_page) (ne (add $last_middle_page 1) $paginator.Last.PageNumber)) }}
+                        {{ $add_ellipses_after = true }}
+                    {{ end }}
+
+                {{ end }}
+
+            {{ end }}
+
+            <!-- Output page numbers -->
+            {{ if eq $show_number true }}
+
+                {{ if eq $add_ellipses_before true }}
+
+                    <!-- TODO if the ellipses is only replacing a single page, include that page instead -->
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+
+                {{ end }}
+
+                <li><a href="{{ .URL }}" class="pagination-link{{ if eq $paginator.PageNumber .PageNumber }} is-current{{ end }}">{{ .PageNumber }}</a></li>
+
+                {{ if eq $add_ellipses_after true }}
+
+                    <!-- TODO if the ellipses is only replacing a single page, include that page instead -->
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+
+                {{ end }}
+
+            {{ end }}
+
+        {{ end }}
+
+        </ul>
+    </nav>
+</section>
+
+{{ end }}

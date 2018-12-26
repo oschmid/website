@@ -1,0 +1,14 @@
+<article class="section">
+	{{ $url := .URL }}
+	{{ $title := .Title }}
+	{{ with .Params.image }}
+	<a href="{{ $url }}"><img alt="{{ $title }}" src="{{ . }}"/></a>
+	{{ end }}
+	<div>
+		<header>
+			<h2 class="title"><a class="has-text-dark" href="{{ .URL }}">{{ .Title }}</a></h2>
+		</header>
+		<a class="has-text-dark" href="{{ .Permalink }}">{{ .Summary }}</a>
+		{{ partial "post-meta.html" .}}
+	</div>
+</article>

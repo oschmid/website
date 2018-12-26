@@ -1,0 +1,50 @@
+{{ define "body_class" }}post-template{{ end }}
+{{ define "main" }}
+<article class="content">
+  <header class="title">
+    {{ with .Params.image }}
+    <img src="{{ . }}"/>
+    {{ end }}
+    <h1 class="title is-3">{{ .Title }}</h1>
+    {{ partial "post-meta.html" .}}
+  </header>
+  {{ .Content }}
+  <footer class="level">
+    <!-- Tags -->
+    {{ with .Params.tags -}}
+    <div class="tags level-left">
+    {{ range . }}
+    {{- $name := . -}}
+      {{- with $.Site.GetPage "taxonomy" (printf "tags/%s" $name) | default ($.Site.GetPage "taxonomy" (printf "tags/%s" ($name | urlize))) -}}
+      <a class="tag" href="{{ .Permalink }}">{{ $name }}</a>
+      {{ end -}}
+    {{ end }}
+    </div>
+    {{ else }}
+      <div class="level-left"></div>
+    {{- end }}
+
+    <!-- Share Links -->
+    <div class="level-right">
+      <a class="share-link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ .URL | absURL }}" target="_blank" rel="noopener noreferrer">{{ partial "icons/facebook.svg" }}</a>
+      <a class="share-link" title="Share on Reddit" href="https://reddit.com/submit?url={{ .URL | absURL }}&title={{ .Title }}" target="_blank" rel="noopener noreferrer">{{ partial "icons/reddit.svg" }}</a>
+      <a class="share-link" title="Share on Twitter" href="https://twitter.com/share?url={{ .URL | absURL }}&text={{ .Title }}" target="_blank" rel="noopener noreferrer">{{ partial "icons/twitter.svg" }}</a>
+
+      <!-- License -->
+      {{ $license := .Params.license | default .Site.Params.defaultLicense }}
+      {{ with $license }}
+        {{ partial (print "licenses/" $license ".html") }}
+      {{ end }}
+    </div>
+  </footer>
+</article>
+{{ partial "comments.html" . }}
+{{ end }}
+{{ define "credits" }}
+<details>
+  <summary class="credits">Credits</summary>
+  <span>Facebook and Twitter icons by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> is <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a> licensed</span>
+  <br>
+  <span>Diaspora icon by <a href="https://www.iconfinder.com/icons/246636/diaspora_icon" title="Zohanimasi">Zohanimasi</a> is <a href="http://creativecommons.org/licenses/by/2.5/" title="Creative Commons BY 2.5">CC BY 2.5</a> licensed</span>
+</details>
+{{ end }}
