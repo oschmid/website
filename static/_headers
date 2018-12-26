@@ -3,10 +3,7 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
 /
-  Content-Security-Policy: default-src 'self'
-  Content-Security-Policy: frame-ancestors 'none'
-  Content-Security-Policy: img-src https://*
-  Content-Security-Policy: style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; img-src https://*; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
@@ -17,26 +14,16 @@
   X-Content-Type-Options: nosniff
 
 /about
-  Content-Security-Policy: default-src 'self'
-  Content-Security-Policy: frame-ancestors 'none'
-  Content-Security-Policy: style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
 /contact
-  Content-Security-Policy: default-src 'self'
-  Content-Security-Policy: frame-ancestors 'none'
-  Content-Security-Policy: script-src 'self' https://www.google.com/recaptcha/api.js
-  Content-Security-Policy: style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; script-src 'self' https://www.google.com/recaptcha/api.js; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
 /post/*
-  Content-Security-Policy: default-src 'self'
-  Content-Security-Policy: frame-ancestors 'none'
-  Content-Security-Policy: frame-src https://www.youtube-nocookie.com
-  Content-Security-Policy: img-src https://*
-  Content-Security-Policy: media-src https://*
-  Content-Security-Policy: style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
