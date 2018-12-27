@@ -1,28 +1,22 @@
-<!-- Inspired by https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/
++++
+title = "Hugo Pagination"
+date = "2018-12-27T10:45:41-08:00"
+image = ""
+license = ""
+tags = ["Hugo","programming"]
++++
+Inspired by [Glenn McComb's Hugo pagination tutorial](https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/) I decided to write my own custom pager. The specific features I'm interested in for pagination are:
 
-    This paginator prints the first and last page number along with a configurable number of adjacent pages (see
-    $adjacent_links).
+1. Dedicated **Previous** and **Next** links, so the reader can quickly find these 2 common actions at similar locations on each page.
+1. Clearly marked current page number.
+1. Always visible first and last page number. Combined with the current page number, this gives the reader a sense of how many pages they've read and how many there are to go.
+1. A configurable number of adjacent pages.
+1. Ellipses when there are more pages than can be displayed.
+1. [Bulma CSS styles](https://bulma.io/).
 
-        e.g. [1] ... [4] [5] [*6*] [7] [8] ... [12]
+Here's what I came up with (also available on [github](https://github.com/oschmid/website/blob/master/layouts/partials/pagination.html)):
 
-    Rather than including "First" and "Last" links, including the page number of the first and last pages gives the
-    user some context into how far they've gone into the page list. With that info they can make better decisions about
-    whether or not to continue.
-
-    "Previous" and "Next" links are included even though the adjacent page numbers seemingly make them redundant. As
-    these are the most common paging actions (and often clicked repeatedly) we want them at the same location on each
-    page.
-
-    Additionally, if the user is on one of the first few pages (see $lower_limit) more pages are printed after the
-    current page.
-
-        e.g. [1] [*2*] [3] [4] [5] ... [12]
-
-    Similarly, if the user is on one of the last few pages (see $upper_limit) more pages are printed before the
-    current page.
-
-        e.g. [1] ... [8] [9] [10] [*11*] [12]
--->
+{{< highlight "go html template" "linenos=table" >}}
 {{ $paginator := .Paginator }}
 
 <!-- Number of links either side of the current page -->
@@ -115,3 +109,4 @@
     </nav>
 </section>
 {{ end }}
+{{</ highlight >}}
