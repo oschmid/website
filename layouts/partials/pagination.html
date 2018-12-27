@@ -28,7 +28,6 @@
 <!-- Number of links either side of the current page -->
 {{ $adjacent_links := 1 }}
 
-
 <!-- $max_links = ($adjacent_links * 2) + 1 -->
 {{ $max_links := (add (mul $adjacent_links 2) 1) }}
 
@@ -76,7 +75,6 @@
 
 {{ end }}
 
-
 <!-- If there's more than one page -->
 {{ if gt $paginator.TotalPages 1 }}
 <section class="section">
@@ -105,7 +103,7 @@
                 <li><a href="{{ .URL }}" class="pagination-link{{ if eq $paginator.PageNumber .PageNumber }} is-current{{ end }}">{{ .PageNumber }}</a></li>
 
                 <!-- If we're on the first page and we're including an ellipsis -->
-                {{ if and (eq .PageNumber $paginator.First.PageNumber) (eq $include_lower_ellipsis true) }}
+                {{ if and (eq .PageNumber 1) (eq $include_lower_ellipsis true) }}
                     <li><span class="pagination-ellipsis">&hellip;</span></li>
                 {{ end }}
 
