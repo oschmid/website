@@ -125,4 +125,10 @@ Here's what I came up with:
 
 Note [this code is available on github](https://github.com/oschmid/website/blob/master/layouts/partials/pagination.html) (along with the code for the rest of this site).
 
-The biggest stylistic difference from Glenn McComb's version is that the adjacent pages are pre-computed outside the loop. I doubt there's any performance difference as both versions are still O(n) but it is shorter.
+The biggest stylistic difference from Glenn McComb's version is that the adjacent pages are pre-computed outside the loop. I doubt there's any performance difference as both versions are still O(n) but it did shorten the code somewhat.
+
+I noticed a couple things about the go template language while developing. For one, [go template expressions can't stretch across multiple lines](https://stackoverflow.com/questions/49816911/how-to-split-a-long-golang-template-function-across-multiple-lines). This forced the complicated boolean logic to stretch quite wide.
+
+The go template language is also missing slice expressions (i.e. `a[2:5]`). Had these existed I would have attempted to range only over the adjacent links and reduce the algorithm to O(m) (where m is the number of adjacent links). It's possible to get around this in regular usage of go templates by adding a [custom mkSlice function](https://stackoverflow.com/questions/25012467/golang-templates-how-to-define-array-in-a-variable) but [Hugo does not allow custom go template functions](https://discourse.gohugo.io/t/adding-custom-functions/14164/5).
+
+Oh well, the performance implications are minimal. It was still a fun little coding exercise :)
