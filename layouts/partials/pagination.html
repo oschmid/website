@@ -37,7 +37,7 @@
 {{ $include_lower_ellipsis := false }}
 {{ $include_upper_ellipsis := false }}
 
-{{ if gt $paginator.TotalPages $max_links }}
+{{ if gt $paginator.TotalPages (add $max_links 2) }}
 
     <!-- If we have more pages before the current page than we can print -->
     {{ if ge $paginator.PageNumber $adjacent_links }}
@@ -49,7 +49,7 @@
             {{ $lower_limit = add 1 (sub $paginator.TotalPages $max_links) }}
         {{ end }}
 
-        <!--Show ellipsis if at least 2 pages are hidden-->
+        <!-- Show ellipsis -->
         {{ if gt (sub $lower_limit 1) 1 }}
             {{ $include_lower_ellipsis = true }}
         {{ end }}
@@ -66,7 +66,7 @@
             {{ $upper_limit = $max_links }}
         {{ end }}
 
-        <!--Show ellipsis if at least 2 pages are hidden-->
+        <!-- Show ellipsis -->
         {{ if gt (sub $paginator.TotalPages $upper_limit) 1 }}
             {{ $include_upper_ellipsis = true }}
         {{ end }}
@@ -85,7 +85,7 @@
         {{ end }}
 
         {{ if $paginator.HasNext }}
-            <a class="pagination-next" href="{{ $paginator.Next.URL }}">Next</a>
+            <a class="pagination-next" href="{{ $paginator.Next.URL }}">Next page</a>
         {{ end }}
 
         <ul class="pagination-list">
@@ -95,15 +95,10 @@
             <!-- Include first, last, and middle pages -->
             {{ if or (or (eq .PageNumber 1) (eq .PageNumber $paginator.TotalPages)) (and (ge .PageNumber $lower_limit) (le .PageNumber $upper_limit)) }}
 
-                <!-- If we're on the last page and we're including an ellipsis -->
-                {{ if and (eq .PageNumber $paginator.TotalPages) (eq $include_upper_ellipsis true) }}
-                    <li><span class="pagination-ellipsis">&hellip;</span></li>
-                {{ end }}
-
                 <li><a href="{{ .URL }}" class="pagination-link{{ if eq $paginator.PageNumber .PageNumber }} is-current{{ end }}">{{ .PageNumber }}</a></li>
 
-                <!-- If we're on the first page and we're including an ellipsis -->
-                {{ if and (eq .PageNumber 1) (eq $include_lower_ellipsis true) }}
+                <!-- If we're on the first page and inserting an ellipsis, or just before the last page and inserting an ellipsis -->
+                {{ if or (and (eq .PageNumber 1) (eq $include_lower_ellipsis true)) (and (eq .PageNumber $upper_limit) (eq $include_upper_ellipsis true)) }}
                     <li><span class="pagination-ellipsis">&hellip;</span></li>
                 {{ end }}
 

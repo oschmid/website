@@ -4,6 +4,15 @@
     line-height: 1.7;
 }
 
+ul.paging-example {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.paging-example li {
+    list-style-type: none;
+}
+
 .credits {
     cursor: pointer;
 }
