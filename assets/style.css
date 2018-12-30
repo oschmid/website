@@ -1,5 +1,5 @@
-#main {
-    min-height: 600px;
+.is-readable-column {
+    min-height: 625px;
     max-width: 700px;
     line-height: 1.7;
 }
@@ -13,8 +13,16 @@ ul.paging-example {
     list-style-type: none;
 }
 
+.is-spaced-footer-link {
+    margin-left: 3rem;
+}
+
 .credits {
-    cursor: pointer;
+    margin-top: 2em;
+}
+
+.has-text-underlined {
+    text-decoration: underline;
 }
 
 .share-link {
@@ -25,8 +33,9 @@ ul.paging-example {
     display: none;
 }
 
-#rss-icon {
+.rss-icon {
     vertical-align: sub;
+    fill: white;
 }
 
 /* YouTube Shortcode */
