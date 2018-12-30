@@ -10,4 +10,4 @@ Oliver Schmid is a software developer, a voracious reader, a creative, and now a
 <br>
 <h2 class="title is-4">About Site</h2>
 
-This website was built using the static site generator [Hugo](https://gohugo.io/) and is hosted by [Netlify](https://www.netlify.com/). The source code for [oliverschmid.space is available on GitHub](https://github.com/oschmid/website) (MIT License); as is the source code for the [oliverschmid.space Hugo theme](https://github.com/oschmid/website-theme) (MIT License).
+This website was built using the static site generator [Hugo](https://gohugo.io/) and is hosted by [Netlify](https://www.netlify.com/). The [source code for oliverschmid.space](https://github.com/oschmid/website) is available on GitHub (MIT License).

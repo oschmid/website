@@ -2,15 +2,24 @@
 <html lang="{{ .Site.Language.Lang }}">
     {{ partial "head.html" . }}
     <body>
-        {{ partial "header.html" . }}
         <section class="section">
-            <main id="main" class="container">
+            <div class="container">
+                {{ block "header" . }}
+                <header class="title">
+                    <h2><a class="has-text-black-ter" href="/">{{ .Site.Title }}</a></h2>
+                </header>
+                {{ end }}
+            </div>
+            <main class="container is-readable-column">
             {{ block "main" . }}{{ end }}
             </main>
         </section>
-        <footer class="footer">
-            <div class="content has-text-centered">
-                <a class="has-text-dark" title="Subscribe to RSS" href="/index.xml">{{ partial "icons/rss.svg" }}Subscribe</a>
+        <footer class="footer has-background-dark">
+            <div class="content has-text-centered has-text-light">
+                <a class="has-text-light" title="Subscribe to RSS" href="/index.xml">{{ partial "icons/rss.svg" }}Subscribe</a>
+                {{ range .Site.Menus.main }}
+                    <a class="is-spaced-footer-link has-text-light" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
+                {{ end }}
                 {{ block "credits" . }}{{ end }}
             </div>
         </footer>
