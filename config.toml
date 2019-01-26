@@ -17,3 +17,8 @@ title = "Oliver Schmid"
 [sitemap]
   changeFreq = "weekly"
   priority = "0.5"
+
+[taxonomies]
+  app = "apps"
+  category = ""
+  tag = "tags"
