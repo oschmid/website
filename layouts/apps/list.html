@@ -1,0 +1,18 @@
+{{ define "header" }}
+<!---->
+{{ end }}
+{{ define "main" }}
+<div class="tile is-ancestor">
+  {{ $paginator := .Paginate .Pages }}
+  {{ range $paginator.Pages }}
+    <a href="{{ .URL }}" class="tile is-4 is-child box">
+      {{ with .Params.Image }}
+        <figure class="image">
+            <img src="{{ . }}">
+        </figure>
+      {{ end }}
+      <h2 class="title is-4">{{ .Title }}</h2>
+    </a>
+  {{ end }}
+</div>
+{{ end }}
