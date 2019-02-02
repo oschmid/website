@@ -10,9 +10,6 @@
 /favicon.ico
   Content-Type: image/x-icon
 
-/style.min.css
-  X-Content-Type-Options: nosniff
-
 /about
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
@@ -27,3 +24,10 @@
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
+
+/*.html
+  Cache-Control: no-cache, no-store
+
+/*.css
+  Cache-Control: public, max-age=31536000
+  X-Content-Type-Options: nosniff
