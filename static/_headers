@@ -10,7 +10,7 @@
 /favicon.ico
   Content-Type: image/x-icon
 
-/*.css
+/styles.*.css
   X-Content-Type-Options: nosniff
 
 /about
