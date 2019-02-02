@@ -27,3 +27,6 @@
   Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.youtube-nocookie.com; img-src https://*; media-src https://*; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
+
+/*.html
+  Warning: test
