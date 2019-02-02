@@ -1,7 +1,6 @@
 ---
 title: "Best I've Read Lately"
 date: 2019-01-27T11:14:44-08:00
-draft: true
 ---
 1. Wild and out there but the [Connectome-Specfic Harmonic Wave framework](https://opentheory.net/2018/08/a-future-for-neuroscience/) offers an interesting avenue of exploration for the future of neuroscience.
 1. As a fan of comic books, it's nice to see their positive effect on the world. Especially if that effect is [saving lives](https://medium.com/@squidmag/how-didier-kassai-is-saving-lives-with-comic-books-in-the-central-african-republic-16d2b2aa8337)
