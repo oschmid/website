@@ -12,4 +12,5 @@ Oliver Schmid is a software developer, a voracious reader, a creative, and now a
 
 This website was built using the static site generator [Hugo](https://gohugo.io/) and is hosted by [Netlify](https://www.netlify.com/). The [source code for oliverschmid.space](https://github.com/oschmid/website) is available on GitHub (MIT License).
 
-<a href='http://ipv6-test.com/validate.php?url=referer'><img src='http://ipv6-test.com/button-ipv6-small.png' alt='ipv6 ready' title='ipv6 ready' border='0' /></a>
+<br>
+<a href='http://ipv6-test.com/validate.php?url=referer'><img src='button-ipv6-small.png' alt='ipv6 ready' title='ipv6 ready' border='0' /></a>
