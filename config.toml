@@ -1,4 +1,5 @@
 baseURL = "https://oliverschmid.space/"
+copyright = "Oliver Schmid"
 enableRobotsTXT = true
 paginate = 5
 pygmentsUseClasses = true
@@ -7,7 +8,6 @@ title = "Oliver Schmid"
 
 [params]
   description = "Personal Blog"
-  defaultLicense = "cc-by-4.0"
   appleTouchIcon = "/favicon-touch.png"
 
 [privacy]
