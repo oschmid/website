@@ -21,6 +21,8 @@
                     <a class="is-spaced-footer-link has-text-light" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
                 {{ end }}
                 {{ block "credits" . }}{{ end }}
+                <p>
+                <div>©{{ now.Format "2006" }} {{ .Site.Copyright }}</div>
             </div>
         </footer>
     </body>

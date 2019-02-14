@@ -29,12 +29,6 @@
       <a class="share-link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ .URL | absURL }}" target="_blank" rel="noopener noreferrer">{{ partial "icons/facebook.svg" }}</a>
       <a class="share-link" title="Share on Reddit" href="https://reddit.com/submit?url={{ .URL | absURL }}&title={{ .Title }}" target="_blank" rel="noopener noreferrer">{{ partial "icons/reddit.svg" }}</a>
       <a class="share-link" title="Share on Twitter" href="https://twitter.com/share?url={{ .URL | absURL }}&text={{ .Title }}" target="_blank" rel="noopener noreferrer">{{ partial "icons/twitter.svg" }}</a>
-
-      <!-- License -->
-      {{ $license := .Params.license | default .Site.Params.defaultLicense }}
-      {{ with $license }}
-        {{ partial (print "licenses/" $license ".html") }}
-      {{ end }}
     </div>
   </footer>
 </article>

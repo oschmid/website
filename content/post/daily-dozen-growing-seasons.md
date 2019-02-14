@@ -2,7 +2,6 @@
 title = "Daily Dozen Growing Seasons"
 date = "2018-12-15T12:13:10-08:00"
 image = ""
-license = ""
 tags = []
 draft = true
 +++
