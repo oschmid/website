@@ -1,7 +1,9 @@
----
-title: "Best I've Read Lately"
-date: 2019-01-27T11:14:44-08:00
----
++++
+title = "Best I've Read Lately"
+date = "2019-01-27T11:14:44-08:00"
+image = ""
+tags = ["neuroscience","comics","internet","biotech","astrophysics","investing","futurology","nutrition","climate change","politics","social media","geography"]
++++
 1. Wild and out there but the [Connectome-Specfic Harmonic Wave framework](https://opentheory.net/2018/08/a-future-for-neuroscience/) offers an interesting avenue of exploration for the future of neuroscience.
 1. As a fan of comic books, it's nice to see their positive effect on the world. Especially if that effect is [saving lives](https://medium.com/@squidmag/how-didier-kassai-is-saving-lives-with-comic-books-in-the-central-african-republic-16d2b2aa8337)
 1. Deep fakes are getting more and more realistic. Here's how [journalists are preparing to identify them](http://www.niemanlab.org/2018/11/how-the-wall-street-journal-is-preparing-its-journalists-to-detect-deepfakes/).
