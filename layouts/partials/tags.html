@@ -1,0 +1,7 @@
+<h2 class="title is-2">Tags</h2>
+<div class="tags">
+    {{ $tags := $.Site.Taxonomies.tags.Alphabetical }}
+    {{ range $tags }}
+    <a class="tag" href="{{ $.Site.BaseURL }}tags/{{ .Term | urlize }}/">{{ .Term }} ({{ .Count }})</a>
+    {{ end }}
+</div>
