@@ -31,9 +31,6 @@ menu = "main"
         </div>
     </div>
     <div class="field">
-        <div netlify-recaptcha></div>
-    </div>
-    <div class="field">
         <div class="control">
             <button class="button is-info is-pulled-right" type="submit">Send</button>
         </div>

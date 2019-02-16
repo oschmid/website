@@ -8,7 +8,7 @@
   X-XSS-Protection: 1; mode=block
 
 /*/
-  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.google.com https://www.youtube-nocookie.com; img-src https://*; media-src https://*; script-src 'self' https://www.google.com/recaptcha/api.js https://www.gstatic.com/recaptcha/api2/; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.google.com https://www.youtube-nocookie.com; img-src https://*; media-src https://*; script-src 'self'; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
