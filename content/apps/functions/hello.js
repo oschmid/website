@@ -1,7 +1,7 @@
 exports.handler = function(event, context, callback) {
     callback(null, {
         statusCode: 200,
-        body: "Hello, World\n\nevent:" + event +
-            "\n\ncontext:" + context
+        body: "Hello, World\n\nevent:" + stringify(event) +
+            "\n\ncontext:" + stringify(context)
     });
 }
