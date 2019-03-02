@@ -1,6 +1,7 @@
 [build]
   publish = "public"
-  command = "hugo --minify"
+  command = "npm run-script build:functions; npm run-script build:site"
+  functions = "content/apps/functions"
 
 [build.environment]
   HUGO_VERSION = "0.53"
