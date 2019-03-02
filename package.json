@@ -1,0 +1,26 @@
+{
+  "name": "oliverschmid.space",
+  "version": "1.0.0",
+  "description": "The personal website of Oliver Schmid",
+  "keywords": [
+    "personal",
+    "blog"
+  ],
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oschmid/website.git"
+  },
+  "author": "Oliver Schmid",
+  "bugs": {
+    "url": "https://github.com/oschmid/website/issues"
+  },
+  "homepage": "https://oliverschmid.space",
+  "dependencies": {
+    "googleapis": "^37.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  }
+}
