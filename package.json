@@ -22,6 +22,6 @@
   },
   "scripts": {
     "build:functions": "netlify-lambda build content/apps/functions",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "build:site": "hugo --minify"
   }
 }
