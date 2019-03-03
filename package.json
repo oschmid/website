@@ -17,11 +17,13 @@
     "url": "https://github.com/oschmid/website/issues"
   },
   "homepage": "https://oliverschmid.space",
+  "scripts": {
+    "build": "netlify-lambda build content/apps/functions; hugo --minify"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.4.2"
+  },
   "dependencies": {
     "googleapis": "^37.2.0"
-  },
-  "scripts": {
-    "build:functions": "netlify-lambda build content/apps/functions",
-    "build:site": "hugo --minify"
   }
 }
