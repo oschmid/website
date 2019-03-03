@@ -1,5 +1,6 @@
 .idea/*
 *.iml
+npm-debug.log
 /functions
 /node_modules
 /public/
