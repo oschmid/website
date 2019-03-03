@@ -1,7 +1,7 @@
 [build]
   publish = "public"
-  command = "npm run-script build:functions; npm run-script build:site"
-  functions = "content/apps/functions"
+  command = "npm run-script build"
+  functions = "functions"
 
 [build.environment]
-  HUGO_VERSION = "0.53"
+  HUGO_VERSION = "0.54"

@@ -1,5 +1,6 @@
 .idea/*
 *.iml
+/functions
 /node_modules
 /public/
 /resources
