@@ -2,6 +2,3 @@
   publish = "public"
   command = "npm run-script build"
   functions = "functions"
-
-[build.environment]
-  HUGO_VERSION = "0.54"
