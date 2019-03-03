@@ -1,4 +1,4 @@
-import {calendar} from 'googleapis';
+import {calendar_v3} from 'googleapis';
 
 export function handler(event, context, callback) {
     callback(null, {
