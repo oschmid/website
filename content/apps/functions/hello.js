@@ -1,6 +1,6 @@
-const {google} = require('googleapis');
+import google from 'googleapis';
 
-exports.handler = function(event, context, callback) {
+export function handler(event, context, callback) {
     callback(null, {
         statusCode: 200,
         body: "Hello, World\n\nprocess.env.TEST_VAR:" + process.env.TEST_VAR +
