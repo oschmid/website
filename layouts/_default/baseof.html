@@ -25,5 +25,6 @@
                 <div>©{{ now.Format "2006" }} {{ .Site.Copyright }}</div>
             </div>
         </footer>
+        {{ block "end-scripts" . }}{{ end }}
     </body>
 </html>

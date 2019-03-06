@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow
+
+media_folder: "static/images/"
+
+public_folder: "/images/"
+
+collections:
+- name: "posts"
+  label: "Posts"
+  folder: "content/post"
+  create: true
+  slug: "{{slug}}"
+  fields:
+  - { label: "Title", name: "title", widget: "string" }
+  - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZZ" }
+  - { label: "Image", name: "image", widget: "image" }
+  - { label: "Tags", name: "tags", widget: "list" }
+  - { label: "Draft", name: "draft", widget: "boolean", default: true }
