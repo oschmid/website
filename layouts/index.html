@@ -20,5 +20,6 @@
   {{ partial "tags.html" . }}
 {{ end }}
 {{ define "end-scripts" }}
-<script src="/static/js/redirect-admin.js"></script>
+  {{ $admin_redirect := resources.Get "admin-redirect.js" | minify }}
+  <script src="{{ $admin_redirect.RelPermalink }}" integrity="{{ $admin_redirect.Data.Integrity }}" ></script>
 {{ end }}
