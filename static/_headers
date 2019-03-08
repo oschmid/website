@@ -8,7 +8,7 @@
   X-XSS-Protection: 1; mode=block
 
 /
-  Content-Security-Policy: default-src 'none'; img-src 'self' https://* data:; script-src 'self' https://identity.netlify.com/v1/netlify-identity-widget.js; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css 'sha256-jILZY2UBo/ux6K6qGHntQonoJYNQZfxdLrszRmDpc/o=' 'sha256-v40OvYf1mF3VQM75141gVEb6xZk97Wd9tDERTFg3N38='
+  Content-Security-Policy: default-src 'none'; img-src 'self' https://* data:; script-src 'self' https://identity.netlify.com/v1/netlify-identity-widget.js; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css 'unsafe-inline'
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
@@ -21,5 +21,5 @@
 /favicon.ico
   Content-Type: image/x-icon
 
-/styles.*.css
+/styles.min.css
   X-Content-Type-Options: nosniff
