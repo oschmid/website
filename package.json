@@ -17,10 +17,10 @@
     "url": "https://github.com/oschmid/website/issues"
   },
   "homepage": "https://oliverschmid.space",
-  "scripts": {
-    "build": "netlify-lambda build content/apps/functions; hugo --minify"
-  },
   "devDependencies": {
+    "child_process": "^1.0.2",
+    "del": "^4.0.0",
+    "gulp": "^4.0.0",
     "netlify-lambda": "^1.4.2"
   },
   "dependencies": {
