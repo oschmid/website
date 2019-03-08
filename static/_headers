@@ -2,8 +2,9 @@
   Referrer-Policy: no-referrer-when-downgrade
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
+# All HTML pages
 /*/
-  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.google.com https://www.youtube-nocookie.com; img-src https://*; media-src https://*; script-src 'self' https://identity.netlify.com/v1/netlify-identity-widget.js; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css 'sha256-jILZY2UBo/ux6K6qGHntQonoJYNQZfxdLrszRmDpc/o='
+  Content-Security-Policy: default-src 'none'; frame-src https://www.google.com https://www.youtube-nocookie.com; img-src https://*; media-src https://*; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
@@ -13,9 +14,7 @@
   X-XSS-Protection: 1; mode=block
 
 /admin/
-  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; frame-src https://www.google.com https://www.youtube-nocookie.com; img-src https://* data:; media-src https://*; script-src 'self' 'unsafe-eval' https://identity.netlify.com/v1/netlify-identity-widget.js https://unpkg.com/netlify-cms@%5E2.0.0/dist/netlify-cms.js; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
+  Content-Security-Policy: default-src 'none'; img-src https://* data:; script-src 'self' 'unsafe-eval' https://identity.netlify.com/v1/netlify-identity-widget.js https://unpkg.com/netlify-cms@%5E2.0.0/dist/netlify-cms.js; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
 
 
 /favicon.ico
