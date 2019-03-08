@@ -14,7 +14,7 @@
   X-XSS-Protection: 1; mode=block
 
 /admin/
-  Content-Security-Policy: default-src 'none'; connect-src 'self'; img-src https://* data:; script-src 'self' 'unsafe-eval' https://identity.netlify.com/v1/netlify-identity-widget.js https://unpkg.com/netlify-cms@%5E2.0.0/dist/netlify-cms.js; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
+  Content-Security-Policy: default-src 'none'; connect-src 'self'; img-src https://* data:; script-src 'self' 'unsafe-inline' https://identity.netlify.com/v1/netlify-identity-widget.js https://unpkg.com/netlify-cms@%5E2.0.0/dist/netlify-cms.js; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
 
 
 /favicon.ico
