@@ -6,11 +6,7 @@ const del = require('del');
 
 // tasks
 function clean() {
-    return del(["./functions", "./public"]);
-}
-
-function build_lambda() {
-    return spawn("netlify-lambda", ["build", "content/apps/functions"], {stdio: 'inherit'});
+    return del(["./public"]);
 }
 
 function build_hugo() {
@@ -18,7 +14,7 @@ function build_hugo() {
 }
 
 // complex tasks
-const build = series(clean, build_lambda, build_hugo);
+const build = series(clean, build_hugo);
 
 // export tasks
 exports.build = build;
