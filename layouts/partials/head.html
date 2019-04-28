@@ -10,8 +10,9 @@
     {{ with .Site.Params.Description }}<meta name="description" content="{{ . }}">{{ end }}
     {{ with .Site.Params.AppleTouchIcon }}<link rel="apple-touch-icon" href="{{ . }}">{{ end }}
 
-    {{ if .RSSLink -}}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ $siteTitle := .Site.Title }}
+    {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $siteTitle }}" />
     {{ end -}}
 
     <!-- Styles -->
