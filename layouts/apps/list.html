@@ -5,7 +5,7 @@
 <div class="tile is-ancestor">
   {{ $paginator := .Paginate .Pages }}
   {{ range $paginator.Pages }}
-    <a href="{{ .URL }}" class="tile is-4 is-child box">
+    <a href="{{ .RelPermalink }}" class="tile is-4 is-child box">
       {{ with .Params.Image }}
         <figure class="image">
             <img src="{{ . }}">

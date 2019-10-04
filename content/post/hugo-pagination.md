@@ -91,11 +91,11 @@ Here's what I came up with:
     <nav class="pagination is-centered">
 
         {{ if $paginator.HasPrev }}
-            <a class="pagination-previous" href="{{ $paginator.Prev.URL }}">Previous</a>
+            <a class="pagination-previous" href="{{ $paginator.Prev.RelPermalink }}">Previous</a>
         {{ end }}
 
         {{ if $paginator.HasNext }}
-            <a class="pagination-next" href="{{ $paginator.Next.URL }}">Next page</a>
+            <a class="pagination-next" href="{{ $paginator.Next.RelPermalink }}">Next page</a>
         {{ end }}
 
         <ul class="pagination-list">
@@ -105,7 +105,7 @@ Here's what I came up with:
             <!-- Include first, last, and middle pages -->
             {{ if or (or (eq .PageNumber 1) (eq .PageNumber $paginator.TotalPages)) (and (ge .PageNumber $lower_limit) (le .PageNumber $upper_limit)) }}
 
-                <li><a href="{{ .URL }}" class="pagination-link{{ if eq $paginator.PageNumber .PageNumber }} is-current{{ end }}">{{ .PageNumber }}</a></li>
+                <li><a href="{{ .RelPermalink }}" class="pagination-link{{ if eq $paginator.PageNumber .PageNumber }} is-current{{ end }}">{{ .PageNumber }}</a></li>
 
                 <!-- If we're on the first page and inserting an ellipsis, or just before the last page and inserting an ellipsis -->
                 {{ if or (and (eq .PageNumber 1) (eq $include_lower_ellipsis true)) (and (eq .PageNumber $upper_limit) (eq $include_upper_ellipsis true)) }}

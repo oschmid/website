@@ -1,6 +1,6 @@
 {{ define "title" }}{{ .Title }}{{ end }}
 {{ define "main" }}
-  {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
+  {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "paginate" | default 10) }}
 
   <!-- Add title for first page of tags -->
   {{ if not $paginator.HasPrev }}
