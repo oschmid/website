@@ -15,10 +15,8 @@ title = "Oliver Schmid"
     privacyEnhanced = true
 
 [sitemap]
-  changeFreq = "weekly"
+  changeFreq = "monthly"
   priority = "0.5"
 
 [taxonomies]
-  app = "apps"
-  category = ""
   tag = "tags"

@@ -2,6 +2,6 @@
 <div class="tags">
     {{ $tags := $.Site.Taxonomies.tags.Alphabetical }}
     {{ range $tags }}
-    <a class="tag" href="{{ $.Site.BaseURL }}tags/{{ .Term | urlize }}/">{{ .Term }} ({{ .Count }})</a>
+    <a class="tag" href="{{ $.Site.BaseURL }}tags/{{ .Term | urlize }}/">{{ .Term }}{{ if ne 1 .Count }} ({{ .Count }}){{ end }}</a>
     {{ end }}
 </div>
