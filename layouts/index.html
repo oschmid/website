@@ -5,7 +5,7 @@
 </header>
 {{ end }}
 {{ define "main" }}
-  {{ $paginator := .Paginate (where .Pages "Type" "post") }}
+  {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
   {{ range $paginator.Pages }}
     {{ .Render "summary" }}
   {{ end }}
