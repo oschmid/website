@@ -1,6 +1,6 @@
 {{ define "title" }}{{ .Title }}{{ end }}
 {{ define "main" }}
-  {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "paginate" | default 10) }}
+  {{ $paginator := .Paginator }}
 
   <!-- Add title for first page of tags -->
   {{ if not $paginator.HasPrev }}
@@ -9,8 +9,8 @@
     {{ end }}
   {{ end }}
 
-  {{ range $paginator.Pages  }}
-    {{ .Render "summary"  }}
+  {{ range $paginator.Pages }}
+    {{ .Render "summary" }}
   {{ end  }}
 
   <!-- Add return to home on last page -->
@@ -18,5 +18,5 @@
     {{ partial "list-end.html" . }}
   {{ end }}
 
-  {{ partial "pagination.html" .  }}
+  {{ partial "pagination.html" . }}
 {{ end }}

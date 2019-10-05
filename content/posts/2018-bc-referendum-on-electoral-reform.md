@@ -9,7 +9,7 @@ This November BC voters have the duty and opportunity to vote on how we vote. Th
 
 **What voting systems is BC choosing between?**
 
-The first question of the referendum is between keeping the current system: known as first-past-the-post (FPTP) and switching to a Proportional Representation voting system. The second question BC voters will be asked is to rank 3 PR systems. Mail in ballots will be mailed out between Oct 22 and Nov 2.
+The first question of the referendum is between keeping the current system: known as First-Past-The-Post (FPTP) and switching to a Proportional Representation voting system. The second question BC voters will be asked is to rank 3 PR systems. Mail in ballots will be mailed out between Oct 22 and Nov 2.
 
 **What is Proportional Representation?**
 
