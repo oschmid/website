@@ -23,5 +23,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n" crossorigin="anonymous" />
 
     <!-- Scripts -->
-    {{ if .IsHome }}<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" crossorigin="anonymous"></script>{{ end }}
+    {{ if .IsHome }}
+      <script src="https://cdn.jsdelivr.net/gh/netlify/netlify-identity-widget@1.5.5/releases/v1/netlify-identity-widget.js"
+              integrity="sha384-oRmnT3dRg2P8z/pjFHzRKkp1NaJjH+f6DE1fbenhLoQszSoZ2bW3fWybusmXaHda"
+              crossorigin="anonymous">
+      </script>
+    {{ end }}
 </head>
