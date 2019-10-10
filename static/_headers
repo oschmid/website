@@ -10,15 +10,20 @@
 
 /
   Content-Security-Policy: default-src 'none'; img-src 'self' https://* data:; script-src 'self' https://identity.netlify.com/v1/netlify-identity-widget.js; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css 'unsafe-inline'
+  X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
 /admin/
   Content-Security-Policy: default-src 'none'; connect-src 'self'; img-src https://* data:; script-src 'self' 'unsafe-eval' https://identity.netlify.com/v1/netlify-identity-widget.js https://unpkg.com/netlify-cms@%5E2.0.0/dist/netlify-cms.js; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
 
+/admin-redirect.min.js
+  Content-Type: application/javascript; charset=utf-8
+  X-Content-Type-Options: nosniff
 
 /favicon.ico
   Content-Type: image/x-icon
+  X-Content-Type-Options: nosniff
 
 /styles.min.css
   X-Content-Type-Options: nosniff

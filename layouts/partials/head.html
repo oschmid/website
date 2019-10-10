@@ -19,9 +19,9 @@
     {{ $friendly := resources.Get "friendly.css" }}
     {{ $style := resources.Get "style.css" }}
     {{ $styles := slice $friendly $style | resources.Concat "styles.css" | minify }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n" crossorigin="anonymous" />
 
     <!-- Scripts -->
-    {{ if .IsHome }}<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>{{ end }}
+    {{ if .IsHome }}<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" crossorigin="anonymous"></script>{{ end }}
 </head>
