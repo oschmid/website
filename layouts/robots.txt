@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /contact-success/
-Disallow: /posts/
+Disallow: /posts/$
 Disallow: /tags/
-Disallow: /tags/*
 Sitemap: {{ .Site.BaseURL }}sitemap.xml
