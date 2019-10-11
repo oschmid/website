@@ -1,3 +1,6 @@
-user-agent: *
-allow: /
-sitemap: {{ .Site.BaseURL }}sitemap.xml
+User-agent: *
+Disallow: /contact-success/
+Disallow: /posts/
+Disallow: /tags/
+Disallow: /tags/*
+Sitemap: {{ .Site.BaseURL }}sitemap.xml
