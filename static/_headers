@@ -4,12 +4,12 @@
 
 # All HTML pages
 /*/
-  Content-Security-Policy: default-src 'none'; frame-src https://www.google.com https://www.youtube-nocookie.com; img-src https://*; media-src https://*; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
+  Content-Security-Policy: default-src 'none'; frame-src https://duckduckgo.com/search.html https://www.google.com https://www.youtube-nocookie.com; img-src https://*; media-src https://*; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
 /
-  Content-Security-Policy: default-src 'none'; frame-src https://duckduckgo.com/search.html; img-src 'self' https://* data:; script-src 'self' https://cdn.jsdelivr.net/gh/netlify/netlify-identity-widget@1.5.5/releases/v1/netlify-identity-widget.js; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css 'unsafe-inline'
+  Content-Security-Policy: default-src 'none'; img-src 'self' https://* data:; script-src 'self' https://cdn.jsdelivr.net/gh/netlify/netlify-identity-widget@1.5.5/releases/v1/netlify-identity-widget.js; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css 'unsafe-inline'
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
