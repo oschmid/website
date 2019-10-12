@@ -13,6 +13,16 @@ ul.paging-example {
     list-style-type: none;
 }
 
+.pagination-link.is-current {
+    background-color: #767676;
+    border-color: #767676;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
 .is-spaced-footer-link {
     margin-left: 3rem;
 }
@@ -29,12 +39,9 @@ ul.paging-example {
     text-decoration: underline;
 }
 
+/* Social media */
 .share-link {
     margin-right: .25rem;
-}
-
-.hidden {
-    display: none;
 }
 
 .rss-icon {
