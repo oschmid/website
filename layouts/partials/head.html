@@ -16,11 +16,11 @@
     {{ end -}}
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n" crossorigin="anonymous" />
     {{ $friendly := resources.Get "friendly.css" }}
     {{ $style := resources.Get "style.css" }}
     {{ $styles := slice $friendly $style | resources.Concat "styles.css" | minify }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n" crossorigin="anonymous" />
 
     <!-- Scripts -->
     {{ if .IsHome }}

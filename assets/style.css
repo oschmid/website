@@ -21,6 +21,10 @@ ul.paging-example {
     margin-top: 2em;
 }
 
+.has-text-grey {
+    color: #767676 !important;
+}
+
 .has-text-underlined {
     text-decoration: underline;
 }
