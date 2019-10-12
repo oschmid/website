@@ -42,6 +42,10 @@ ul.paging-example {
     fill: white;
 }
 
+.greyscale {
+    filter: grayscale(100%);
+}
+
 /* Loading spinner - https://loading.io/css/ */
 .lds-dual-ring {
   display: inline-block;
