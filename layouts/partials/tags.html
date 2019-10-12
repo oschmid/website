@@ -5,3 +5,6 @@
     <a class="tag" href="{{ $.Site.BaseURL }}tags/{{ .Term | urlize }}/">{{ .Term }}{{ if ne 1 .Count }} ({{ .Count }}){{ end }}</a>
     {{ end }}
 </div>
+<div>
+    <iframe class="search greyscale" src="https://duckduckgo.com/search.html?site={{ $.Site.BaseURL }}&prefill=Search site with DuckDuckGo" frameborder="0"></iframe>
+</div>
