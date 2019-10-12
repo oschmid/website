@@ -19,7 +19,3 @@
 
   {{ partial "tags.html" . }}
 {{ end }}
-{{ define "end-scripts" }}
-  {{ $admin_redirect := resources.Get "admin-redirect.js" | minify }}
-  <script src="{{ $admin_redirect.RelPermalink }}"></script>
-{{ end }}
