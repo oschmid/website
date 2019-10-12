@@ -5,6 +5,7 @@
 # All HTML pages
 /*/
   Content-Security-Policy: default-src 'none'; frame-src https://duckduckgo.com/search.html https://www.google.com https://www.youtube-nocookie.com; img-src 'self' https://* data:; media-src https://*; script-src 'self'; style-src 'self' https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css
+  X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
