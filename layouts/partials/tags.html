@@ -6,5 +6,5 @@
     {{ end }}
 </div>
 <div>
-    <iframe title="DuckDuckGo search box" class="search greyscale" src="https://duckduckgo.com/search.html?site={{ $.Site.BaseURL }}&prefill=Search site with DuckDuckGo" frameborder="0" sandbox="allow-forms allow-scripts allow-top-navigation"></iframe>
+    {{ partial "search.html" . }}
 </div>
