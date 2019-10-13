@@ -16,7 +16,9 @@
 
 /favicon.ico
   Content-Type: image/x-icon
+  Content-Security-Policy:
   X-Content-Type-Options: nosniff
+  X-XSS-Protection:
 
 /styles.min.css
   Content-Security-Policy:
