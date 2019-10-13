@@ -32,7 +32,7 @@ menu = "main"
     </div>
     <div class="field">
         <div class="control">
-            <button class="button is-info is-pulled-right" type="submit">Send</button>
+            <button class="button is-link is-pulled-right" type="submit">Send</button>
         </div>
     </div>
 </form>
