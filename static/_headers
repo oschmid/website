@@ -19,4 +19,6 @@
   X-Content-Type-Options: nosniff
 
 /styles.min.css
+  Content-Security-Policy:
   X-Content-Type-Options: nosniff
+  X-XSS-Protection:
