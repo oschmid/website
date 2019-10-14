@@ -2,6 +2,7 @@
 title = "Hugo Pagination"
 date = "2018-12-27T10:45:41-08:00"
 image = ""
+summary = "Inspired by Glenn McComb's Hugo pagination tutorial I decided to write my own custom pager."
 tags = ["Hugo","programming"]
 +++
 Inspired by [Glenn McComb's Hugo pagination tutorial](https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/) I decided to write my own custom pager. The specific features I'm interested in for pagination are:

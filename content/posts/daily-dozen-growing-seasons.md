@@ -2,10 +2,11 @@
 title = "Daily Dozen Growing Seasons"
 date = "2018-12-15T12:13:10-08:00"
 image = ""
+summary = "I rcently came across the clearest set of nutritional guidelines I've ever seen: Dr Gerber's Daily Dozen."
 tags = []
 draft = true
 +++
-I've recently come across a set of nutritional guidelines that have more clarity in them than any other I've read: [Dr Gerber's Daily Dozen](https://youtu.be/MqmSMunAtss). While I'm not ready to follow Dr Gerber and go full vegan - or even fully vegetarian - it is nice to have a list of healthy foods and minimum servings to strive for each day.
+I rcently came across the clearest set of nutritional guidelines I've ever seen: [Dr Gerber's Daily Dozen](https://youtu.be/MqmSMunAtss). While I'm not ready to follow Dr Gerber and go full vegan - or even fully vegetarian - it is nice to have a list of healthy foods and minimum servings to strive for each day.
 
 Dr Gerber also has a handy app for tracking your consumption of each item of the Daily Dozen. It has a handy checklist, a list of suggested foods, portion sizes, and even some basic statistics of how many you regularly knock off the list.
 
