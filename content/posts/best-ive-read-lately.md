@@ -2,7 +2,7 @@
 title = "Best I've Read Lately"
 date = "2019-01-27T11:14:44-08:00"
 image = ""
-summary = "A list of articles I read recently and found interesting."
+summary = " "
 tags = ["neuroscience","comics","internet","biotech","astrophysics","investing","futurology","nutrition","climate change","politics","social media","geography"]
 +++
 1. Wild and out there but the [Connectome-Specfic Harmonic Wave framework](https://opentheory.net/2018/08/a-future-for-neuroscience/) offers an interesting avenue of exploration for the future of neuroscience.

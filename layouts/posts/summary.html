@@ -6,9 +6,9 @@
 	{{ end }}
 	<div>
 		<header>
-			<h2 class="title"><a class="has-text-dark" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+			<h2 class="title"><a class="is-plain" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 		</header>
 		{{ partial "post-meta.html" .}}
-		<a class="has-text-dark" href="{{ .Permalink }}">{{ .Summary }}</a>
+		<a class="is-plain" href="{{ .Permalink }}">{{ .Summary }}</a>
 	</div>
 </article>
