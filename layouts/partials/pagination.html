@@ -82,10 +82,14 @@
 
         {{ if $paginator.HasPrev }}
             <a class="pagination-previous" href="{{ $paginator.Prev.URL }}">Previous</a>
+        {{ else }}
+            <a class="pagination-previous" title="On first page" disabled>Previous</a>
         {{ end }}
 
         {{ if $paginator.HasNext }}
             <a class="pagination-next button is-link" href="{{ $paginator.Next.URL }}">Next page</a>
+        {{ else }}
+            <a class="pagination-next" title="On last page" disabled>Next page</a>
         {{ end }}
 
         <ul class="pagination-list">
