@@ -1,3 +1,13 @@
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-background-color: #fff;
+        --main-text-color: #4a4a4a;
+        --disabled-color: #dbdbdb;
+        --link-hover-color: #4a4a4a;
+    }
+}
+
 .is-readable-column {
     min-height: 625px;
     max-width: 700px;
@@ -14,13 +24,27 @@ ul.paging-example {
 }
 
 .pagination-link.is-current {
-    background-color: #767676;
-    border-color: #767676;
+    background-color: var(--disabled-color);
+    border-color: var(--disabled-color);
 }
 
 .hidden {
     display: none;
 }
+
+body {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+}
+
+.greyscale {
+    filter: grayscale(100%);
+}
+
+.is-plain {
+    color: var(--main-text-color);
+}
+
 
 /* Search */
 .search {
@@ -55,11 +79,18 @@ ul.paging-example {
 
 .rss-icon {
     vertical-align: sub;
-    fill: white;
 }
 
-.greyscale {
-    filter: grayscale(100%);
+.rss-button {
+    fill: var(--main-text-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+.rss-button:hover {
+    fill: var(--link-hover-color);
 }
 
 /* Loading spinner - https://loading.io/css/ */
