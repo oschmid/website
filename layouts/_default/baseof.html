@@ -21,9 +21,10 @@
                 {{ range .Site.Menus.main }}
                     <a class="is-plain is-spaced-footer-link" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
                 {{ end }}
-                {{ block "credits" . }}{{ end }}
                 <p>
                 <div>©{{ now.Format "2006" }} {{ .Site.Copyright }}</div>
+                <p>
+                {{ block "credits" . }}{{ end }}
             </div>
         </footer>
         {{ block "end-scripts" . }}{{ end }}
