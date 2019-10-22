@@ -41,6 +41,10 @@ body {
     filter: grayscale(100%);
 }
 
+.share-link.greyscale:hover {
+    filter: none;
+}
+
 .is-plain {
     color: var(--main-text-color);
 }
