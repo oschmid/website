@@ -2,9 +2,10 @@
 title = "Website Updates"
 date = "2019-10-13T07:34:48-07:00"
 image = ""
+summary = "The site broke recently. Somehow Hugo had stopped rendering posts or tags and the homepage looked like it had no content."
+tags = ["Hugo","programming"]
 +++
 The site broke recently. Somehow Hugo had stopped rendering posts or tags and the homepage looked like it had no content.
-<!--more-->
 
 ![Homepage missing Posts and Tags](./missing-posts-and-tags.png)
 
