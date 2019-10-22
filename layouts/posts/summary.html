@@ -5,10 +5,12 @@
 	<a href="{{ $url }}"><img alt="{{ $title }}" src="{{ . }}"/></a>
 	{{ end }}
 	<div>
-		<header>
-			<h2 class="title"><a class="is-plain" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-		</header>
-		{{ partial "post-meta.html" .}}
-		<a class="is-plain" href="{{ .Permalink }}">{{ .Summary }}</a>
+		<a href="{{ .RelPermalink }}">
+			<header>
+				<h2 class="title">{{ .Title }}</h2>
+			</header>
+			{{ partial "post-meta.html" .}}
+			<p class="is-plain">{{ .Summary }}</p>
+		</a>
 	</div>
 </article>

@@ -2,10 +2,10 @@
 title = "2018 BC Referendum on Electoral Reform"
 date = "2018-10-22T20:12:24-07:00"
 image = ""
+summary = "This November BC voters have the duty and opportunity to vote on how we vote. This is BC's third referendum on voting reform, and also the one with the most options."
 tags = ["British Columbia","politics","voting"]
 +++
 This November BC voters have the duty and opportunity to vote on how we vote. This is BC's third referendum on voting reform, and also the one with the most options.
-<!--more-->
 
 ### What voting systems is BC choosing between?
 
