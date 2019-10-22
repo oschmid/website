@@ -5,6 +5,3 @@
     <a class="tag" href="{{ $.Site.BaseURL }}tags/{{ .Term | urlize }}/">{{ .Term }}{{ if ne 1 .Count }} ({{ .Count }}){{ end }}</a>
     {{ end }}
 </div>
-<div>
-    {{ partial "search.html" . }}
-</div>
