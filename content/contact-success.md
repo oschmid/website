@@ -1,6 +1,7 @@
 +++
 title = "Contact Success"
 date = "2018-11-24T12:33:21-08:00"
+hiddenFromSitemap = true
 +++
 <div class="has-text-centered">
     <h1 class="title">Success</h1>
