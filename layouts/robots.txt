@@ -1,4 +1,3 @@
 User-agent: *
 Disallow: /contact-success/
-Disallow: /posts/$
 Sitemap: {{ .Site.BaseURL }}sitemap.xml
