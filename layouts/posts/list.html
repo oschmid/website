@@ -1,14 +1,9 @@
 {{ define "title" }}{{ .Title }}{{ end }}
+{{ define "meta" }}
+  <link rel="canonical" href="{{ .Site.BaseURL }}"/>
+{{ end }}
 {{ define "main" }}
   {{ $paginator := .Paginator }}
-
-  <!-- Add title for first page of tags -->
-  {{ if not $paginator.HasPrev }}
-    {{ if eq .Data.Plural "tags" }}
-      <h1 class="title is-2">{{ .Title }}</h1>
-    {{ end }}
-  {{ end }}
-
   {{ range $paginator.Pages }}
     {{ .Render "summary" }}
   {{ end  }}
