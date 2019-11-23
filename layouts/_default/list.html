@@ -1,0 +1,14 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+{{ define "main" }}
+  {{ $paginator := .Paginator }}
+  {{ range $paginator.Pages }}
+    {{ .Render "summary" }}
+  {{ end  }}
+
+  <!-- Add return to home on last page -->
+  {{ if not $paginator.HasNext }}
+    {{ partial "list-end.html" . }}
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+{{ end }}
