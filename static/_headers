@@ -14,7 +14,7 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 
-/contact-success
+/contact-success/
   X-Robots-Tag: noindex
 
 /favicon.ico
@@ -28,5 +28,5 @@
   X-Content-Type-Options: nosniff
   X-XSS-Protection:
 
-/tags
+/tags/*
   X-Robots-Tag: noindex
