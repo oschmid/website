@@ -1,0 +1,16 @@
+{
+  "short_name": "Hello",
+  "name": "Hello World",
+  "icons": [
+    {
+      "src": "tree.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/app/hello/",
+  "display": "standalone",
+  "background_color": "#FF9800",
+  "theme_color": "#FF9800",
+  "prefer_related_applications": false
+}
