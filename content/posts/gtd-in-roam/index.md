@@ -1,7 +1,7 @@
 +++
 title = "GTD in Roam"
 date = "2020-02-09T08:19:51-08:00"
-image = ""
+image = "gtd-plus-roam.png"
 +++
 
 [Roam](https://roamresearch.com/) is a great note taking app where each note page tracks its [linked and unlinked references](https://roamresearch.com/#/v8/help/page/Vu1MmjinS). Even without explicitly linking pages Roam will create connections and help you manage your disparate thoughts.
