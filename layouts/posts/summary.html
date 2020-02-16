@@ -2,7 +2,7 @@
 	{{ $url := .RelPermalink }}
 	{{ $title := .Title }}
 	{{ with .Params.image }}
-	<a href="{{ $url }}"><img alt="{{ $title }}" src="{{ . }}"/></a>
+	<a href="{{ $url }}"><img alt="{{ $title }}" src="{{ $url }}{{ . }}"/></a>
 	{{ end }}
 	<div>
 		<a href="{{ .RelPermalink }}">
