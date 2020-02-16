@@ -59,6 +59,10 @@ Roam linked references can be filtered (and Roam will even remember filters acro
 
 ![Context TODO filter](./context-todo-filter.png)
 
+I like to complete actions by tagging the current day (using the */Today* command) and then checking it off. This adds it to the Daily Note where I journal about what I did during the day. 
+
+![Completed action](./completed-action.png)
+
 ## Roam Shortcuts
 
 Roam's left sidebar has space for a list of shortcuts. I added the following to make all parts of the GTD workflow easily accessible:
