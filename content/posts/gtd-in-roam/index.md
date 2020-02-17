@@ -6,7 +6,7 @@ image = "gtd-plus-roam.png"
 
 [Roam](https://roamresearch.com/) is a great note taking app where each note page tracks its [linked and unlinked references](https://roamresearch.com/#/v8/help/page/Vu1MmjinS). Even without explicitly linking pages Roam will create connections and help you manage your disparate thoughts.
 
-When I was reading through the [Welcome to Roam](https://roamresearch.com/#/v8/help/page/1308) documentation I came across notes on how to setup [Getting Things Done in Roam](https://roamresearch.com/#/v8/help/page/AImpYBcPs). It was a good starting point but it doesn't use GTD Contexts to narrow down Next Actions and relies a lot on drag-and-drop to move actions around. Both of these factors limit the total number of tasks that can be managed without getting overloaded.
+When I was reading through the [Welcome to Roam](https://roamresearch.com/#/v8/help/page/1308) documentation I came across notes on how to setup [Getting Things Done in Roam](https://roamresearch.com/#/v8/help/page/AImpYBcPs). It was a good starting point but it doesn't use GTD Contexts to narrow down Next Actions and relies a lot on drag-and-drop to move actions around. Both of these factors limit the total number of tasks that can be managed without getting overloaded and make it harder to do GTD on a phone.
 
 So I've come up with a system that uses Roam's linked references to gather tasks by their context tag, and let me move tasks around without leaving the keyboard.
 
@@ -125,7 +125,7 @@ This is the easiest part of GTD to handle in Roam. Roam's reference linking will
 
 ## Reviews
 
-I start my Daily Reviews on the **Inbox** page. Clarifying and organizing what Roam has linked, and then looking through my list of satellite inboxes. Then I'll go to the **Daily Notes** page (using **Alt + D**) and scroll down to see if I missed any *#Tickler* or *#Waiting On* tasks. Finally I'll plan my day by reading through my Next Actions, and adding block references in the Daily Note I open in the right sidebar.
+I start my Daily Reviews on the **Inbox** page. Clarifying and organizing what Roam has linked, and then looking through my list of satellite inboxes. Then I'll go to the **Daily Notes** page (using **Alt + D**) and scroll down to see if I missed any *#Tickler* or *#Waiting On* tasks. I could also go to the **Tickler** or **Waiting On** pages directly but these lists can get long (for me at least) and Roam has no way of sorting by date. Plus I use Roam frequently enough that I have yet to need to scroll far. Finally I'll plan my day by reading through my Next Actions, and adding block references in the Daily Note I open in the right sidebar.
 
 ![Daily Review planning](./daily-review-planning.png)
 
