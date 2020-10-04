@@ -4495,7 +4495,7 @@ var $elm$core$Basics$composeR = F3(
 var $author$project$Main$Model = function (value) {
 	return {value: value};
 };
-var $author$project$Main$init = $author$project$Main$Model('');
+var $author$project$Main$init = $author$project$Main$Model(0.0);
 var $elm$core$Basics$append = _Utils_append;
 var $mdgriffith$elm_ui$Internal$Style$classes = {above: 'a', active: 'atv', alignBottom: 'ab', alignCenterX: 'cx', alignCenterY: 'cy', alignContainerBottom: 'acb', alignContainerCenterX: 'accx', alignContainerCenterY: 'accy', alignContainerRight: 'acr', alignLeft: 'al', alignRight: 'ar', alignTop: 'at', alignedHorizontally: 'ah', alignedVertically: 'av', any: 's', behind: 'bh', below: 'b', bold: 'w7', borderDashed: 'bd', borderDotted: 'bdt', borderNone: 'bn', borderSolid: 'bs', capturePointerEvents: 'cpe', clip: 'cp', clipX: 'cpx', clipY: 'cpy', column: 'c', container: 'ctr', contentBottom: 'cb', contentCenterX: 'ccx', contentCenterY: 'ccy', contentLeft: 'cl', contentRight: 'cr', contentTop: 'ct', cursorPointer: 'cptr', cursorText: 'ctxt', focus: 'fcs', focusedWithin: 'focus-within', fullSize: 'fs', grid: 'g', hasBehind: 'hbh', heightContent: 'hc', heightExact: 'he', heightFill: 'hf', heightFillPortion: 'hfp', hover: 'hv', imageContainer: 'ic', inFront: 'fr', inputLabel: 'lbl', inputMultiline: 'iml', inputMultilineFiller: 'imlf', inputMultilineParent: 'imlp', inputMultilineWrapper: 'implw', inputText: 'it', italic: 'i', link: 'lnk', nearby: 'nb', noTextSelection: 'notxt', onLeft: 'ol', onRight: 'or', opaque: 'oq', overflowHidden: 'oh', page: 'pg', paragraph: 'p', passPointerEvents: 'ppe', root: 'ui', row: 'r', scrollbars: 'sb', scrollbarsX: 'sbx', scrollbarsY: 'sby', seButton: 'sbt', single: 'e', sizeByCapital: 'cap', spaceEvenly: 'sev', strike: 'sk', text: 't', textCenter: 'tc', textExtraBold: 'w8', textExtraLight: 'w2', textHeavy: 'w9', textJustify: 'tj', textJustifyAll: 'tja', textLeft: 'tl', textLight: 'w3', textMedium: 'w5', textNormalWeight: 'w4', textRight: 'tr', textSemiBold: 'w6', textThin: 'w1', textUnitalicized: 'tun', transition: 'ts', transparent: 'clr', underline: 'u', widthContent: 'wc', widthExact: 'we', widthFill: 'wf', widthFillPortion: 'wfp', wrapped: 'wrp'};
 var $mdgriffith$elm_ui$Internal$Model$Attr = function (a) {
@@ -11120,12 +11120,18 @@ var $elm$browser$Browser$sandbox = function (impl) {
 			view: impl.view
 		});
 };
+var $elm$core$String$toFloat = _String_toFloat;
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		var v = msg.a;
 		return _Utils_update(
 			model,
-			{value: v});
+			{
+				value: A2(
+					$elm$core$Maybe$withDefault,
+					0.0,
+					$elm$core$String$toFloat(v))
+			});
 	});
 var $author$project$Main$Value = function (a) {
 	return {$: 'Value', a: a};
@@ -12508,7 +12514,6 @@ var $mdgriffith$elm_ui$Element$Input$text = $mdgriffith$elm_ui$Element$Input$tex
 		spellchecked: false,
 		type_: $mdgriffith$elm_ui$Element$Input$TextInputNode('text')
 	});
-var $elm$core$String$toFloat = _String_toFloat;
 var $author$project$Main$typeUI = A2($elm$core$Basics$composeL, $mdgriffith$elm_ui$Element$htmlAttribute, $elm$html$Html$Attributes$type_);
 var $author$project$Main$view = function (model) {
 	return A2(
@@ -12537,7 +12542,7 @@ var $author$project$Main$view = function (model) {
 							label: A2($mdgriffith$elm_ui$Element$Input$labelAbove, _List_Nil, $mdgriffith$elm_ui$Element$none),
 							onChange: $author$project$Main$Value,
 							placeholder: $elm$core$Maybe$Nothing,
-							text: model.value
+							text: $elm$core$String$fromFloat(model.value)
 						})
 					])),
 				A2(
@@ -12563,18 +12568,7 @@ var $author$project$Main$view = function (model) {
 											$author$project$Main$alternatingBackground(i)
 										]),
 									$mdgriffith$elm_ui$Element$text(
-										A2(
-											$elm$core$Maybe$withDefault,
-											'',
-											A2(
-												$elm$core$Maybe$map,
-												A2(
-													$elm$core$Basics$composeR,
-													function (f) {
-														return (f * percent) / 100;
-													},
-													$elm$core$String$fromFloat),
-												$elm$core$String$toFloat(model.value)))));
+										$elm$core$String$fromFloat((model.value * percent) / 100)));
 							},
 							width: $mdgriffith$elm_ui$Element$fill
 						},
