@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Main</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Main</title>
   <style>body { padding: 0; margin: 0; }</style>
 </head>
 
@@ -11255,7 +11255,7 @@ var $elm$core$Tuple$pair = F2(
 		return _Utils_Tuple2(a, b);
 	});
 var $author$project$Main$percentages = _List_fromArray(
-	[95, 90, 85, 80, 75, 70, 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5]);
+	[95, 90, 85, 80, 75, 70, 68.5, 65, 63.5, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5]);
 var $mdgriffith$elm_ui$Internal$Model$AsRow = {$: 'AsRow'};
 var $mdgriffith$elm_ui$Internal$Model$asRow = $mdgriffith$elm_ui$Internal$Model$AsRow;
 var $mdgriffith$elm_ui$Element$row = F2(
@@ -12584,7 +12584,7 @@ var $author$project$Main$view = function (model) {
 											$author$project$Main$alternatingBackground(i)
 										]),
 									$mdgriffith$elm_ui$Element$text(
-										$elm$core$String$fromInt(percent) + '%'));
+										$elm$core$String$fromFloat(percent) + '%'));
 							},
 							width: $mdgriffith$elm_ui$Element$fill
 						}
