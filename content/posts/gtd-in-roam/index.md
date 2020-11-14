@@ -4,7 +4,11 @@ date = "2020-02-09T08:19:51-08:00"
 image = "gtd-plus-roam.png"
 +++
 
-[Roam](https://roamresearch.com/) is a great note taking app where each note page tracks its [linked and unlinked references](https://roamresearch.com/#/v8/help/page/Vu1MmjinS). Even without explicitly linking pages Roam will create connections and help you manage your disparate thoughts.
+**Update Nov 14, 2020:** After some experimentation I returned to using Trello for GTD. Roam is well suited for learning and deep work, but not for juggling a lot of small actions. In particular, clarifying/organizing tasks on Roam mobile was painful due to its slow startup and text based input. (Trello on the other hand is fast to start and has dropdowns for moving actions to different lists.) Roam may be better paired with another task management system. Feel free to still read the below as inspiration for your own Roam workflows.
+
+---
+
+[Roam Research](https://roamresearch.com/) is a great note taking app where each note page tracks its [linked and unlinked references](https://roamresearch.com/#/v8/help/page/Vu1MmjinS). Even without explicitly linking pages Roam will create connections and help you manage your disparate thoughts.
 
 When I was reading through the [Welcome to Roam](https://roamresearch.com/#/v8/help/page/1308) documentation I came across notes on how to setup [Getting Things Done in Roam](https://roamresearch.com/#/v8/help/page/AImpYBcPs). It was a good starting point but it doesn't use GTD Contexts to narrow down Next Actions and relies a lot on drag-and-drop to move actions around. Both of these factors limit the total number of tasks that can be managed without getting overloaded and make it harder to do GTD on a phone.
 
