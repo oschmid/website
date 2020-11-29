@@ -76,7 +76,7 @@ if ('serviceWorker' in navigator) {
          * You can call register() every time a page loads without concern;
          * the browser will figure out if the service worker is already registered or not and handle it accordingly.
          */
-        navigator.serviceWorker.register('./serviceWorker.js', {scope : "./"} ).then(function(registration) {
+        navigator.serviceWorker.register('dry-eye/serviceWorker.js', {scope : "./"} ).then(function(registration) {
             console.log('ServiceWorker registration succeeded, scope: ', registration.scope);
         }, function(err) {
             console.log('ServiceWorker registration failed: ', err);
