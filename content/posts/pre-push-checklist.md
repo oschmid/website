@@ -6,7 +6,7 @@ image = ""
 
 Last week I made two commits that broke really obvious things. I was rushing and thought to myself "This is a simple change. Let's just check it in." I should have realized that these are every developer's famous last words...
 
-After these two incidents happened so close to each other, I knew I needed a way of reminding myself to do some basic sanity checks before committing code. Mostly I want to check things that the Continuous Integration build would miss.
+After these two incidents happened so close to each other, I knew I  needed a way to remind myself to be more careful. To sanity check my changes for things the Continuous Integration build might miss.
 
 ### Checklist for Pushing Code
 
@@ -14,15 +14,15 @@ After these two incidents happened so close to each other, I knew I needed a way
 1. Sanity test changes
     1. Check that the app still starts
     1. Do a basic manual end-to-end sanity test to show your changes work
-    1. Check the code around your change still works (e.g. ["If you added a new setting to the options dialog, make sure the entire dialog still works, options are properly saved, loaded, or restored as appropriate on apply or cancel etc."](https://www.gamasutra.com/view/news/127467/Opinion_A_Precommit_Checklist.php))
-1. Review the list of files being checked in
+    1. Check the functionality [around your change](https://www.gamasutra.com/view/news/127467/Opinion_A_Precommit_Checklist.php) still works.
+1. Review the list of files in each commit (`git log --stat`)
     1. Are all necessary files included?
     1. Are any files included that shouldn't be?
-1. Quickly read through the diff
+1. Read through the diff(s)
     1. Are there any unfinished sections?
     1. Are there any sections that you meant to refactor?
+    1. Is each change in a commit related? (e.g. [separate](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) incidental code cleanups from feature/bug changes for clarity.)
     1. Do you want to reword the change description? (Remember it should have an [imperative header, and a body describing what and why](https://chris.beams.io/posts/git-commit/))
-    1. Should it be [separated into multiple commits](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging)? (Random code cleanups and formatting should be separate from actual required code changes)
 1. Update relevant documentation
 
 ---
