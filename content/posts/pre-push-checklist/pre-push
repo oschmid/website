@@ -9,19 +9,24 @@ D="\e[37m" # default
 H="\e[39m" # highlight
 S="\e[33m" #section
 
-echo "${S}Checklist${D}"
-echo ""
-echo " 1 Rebase, build, and unit test"
-echo " 2 App still ${H}starts${D}?"
-echo " 3 ${H}Sanity$D test change"
-echo " 4 Functionality ${H}around$D your change still works?"
-echo " 5 Commit includes all/only necessary ${H}files${D}?"
-echo " 6 Review ${H}diffs$D for TODOs and refactors?"
-echo " 7 Is each change in a commit related?"
-echo " 8 Clearest possible commit messages?"
-echo " 9 Update ${H}docs${D}?"
-echo ""
-echo "${S}Continue with push? (Y/n):$D "
+CL=$(cat <<-EOM
+
+${S}Checklist${D}
+
+1 Rebase, build, and unit test
+2 App still ${H}starts${D}?
+3 ${H}Sanity$D test change
+4 Functionality ${H}around$D your change still works?
+5 Commit includes ${H}all/only$D necessary files?
+6 Review ${H}diffs$D for TODOs and refactors?
+7 Is each change in a commit ${H}related${D}?
+8 ${H}Clearest$D possible commit messages?
+9 Update ${H}docs${D}?
+
+${S}Continue with push? (Y/n):$D 
+EOM
+)
+echo "$CL"
 
 while read yn; do
   case $yn in
