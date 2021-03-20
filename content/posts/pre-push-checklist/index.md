@@ -29,38 +29,7 @@ After these two incidents happened so close to each other, I knew I  needed a wa
 
 Inspired by [Victoria Drake](https://dev.to/victoria/an-automatic-interactive-pre-commit-checklist-in-the-style-of-infomercials-14i7) I turned this list into a git hook. She likes to do her checklist before each commit but for my workflow I prefer running it before a push. To do this in git, put the script below into the `.git/hooks` directory and name it `pre-push`.
 
-{{< highlight "sh" "linenos=table" >}}
-#!/bin/sh
-
-check()
-{
-    while read -p "$1 (Y/n) " yn; do
-        case $yn in
-            Y|y|"") break;;
-            N|n) echo $2; exit 1;;
-            *) echo "Please answer y (yes) or n (no):" && continue;
-        esac
-    done
-}
-
-git log origin..HEAD
-
-# Read user input, assign stdin to keyboard
-exec < /dev/tty
-
-check "Rebased onto latest code?" "Please rebase."
-check "Ran build and tests?" "Please run the build and unit tests."
-check "App still starts?" "Please fix app startup."
-check "Sanity tested change?" "Please do a basic end-to-end test of your change."
-check "Checked the functionality around your change still works?" "Please test around your code."
-check "Reviewed the list of files included in your commit(s)?" "Please check all/only necessary files are included."
-check "Reviewed the diff(s) for TODOs and refactors?" "Please review the diff(s)."
-check "Is there a commit you want to split into smaller commits?" "Please run interactive staging."
-check "Are commit message(s) as clear as they can be?" "Please update the commit message(s)."
-check "Updated the documentation?" "Please update the documentation."
-
-exec <&-
-{{</ highlight >}}
+{{< highlightFile "pre-push" "sh" "linenos=table" >}}
 
 That's it! Let me know if you have a similar checklist process. Especially if it has something you think it has something I should add to mine!
 

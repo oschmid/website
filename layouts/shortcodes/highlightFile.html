@@ -1,0 +1,6 @@
+{{ $contents := readFile (print .Page.Dir (.Get 0)) }}
+{{ if len .Params | eq 3 }}
+  {{ highlight $contents (.Get 1) (.Get 2) }}
+{{ else }}
+  {{ highlight $contents (.Get 1) }}
+{{ end }}
