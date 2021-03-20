@@ -1,4 +1,5 @@
-{{ $contents := readFile (print .Page.Dir (.Get 0)) }}
+{{ $path := cond (hasPrefix (.Get 0) "/") (substr (.Get 0) 1) (print .Page.File.Dir (.Get 0)) }}
+{{ $contents := readFile $path }}
 {{ if len .Params | eq 3 }}
   {{ highlight $contents (.Get 1) (.Get 2) }}
 {{ else }}
