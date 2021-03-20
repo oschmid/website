@@ -27,9 +27,16 @@ After these two incidents happened so close to each other, I knew I  needed a wa
 
 ---
 
-Inspired by [Victoria Drake](https://dev.to/victoria/an-automatic-interactive-pre-commit-checklist-in-the-style-of-infomercials-14i7) I turned this list into a git hook. She likes to do her checklist before each commit but for my workflow I prefer running it before a push. To do this in git, put the script below into the `.git/hooks` directory and name it `pre-push`.
+Inspired by [Victoria Drake](https://dev.to/victoria/an-automatic-interactive-pre-commit-checklist-in-the-style-of-infomercials-14i7) I turned this list into a [git hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks). Copy the following shell script into `.git/hooks` and name it `pre-push`.
 
 {{< highlightFile "pre-push" "sh" "linenos=table" >}}
+
+Some notable features:
+
+- First it prints the `git log` of the commits to be pushed.
+- The most meaningful word in each check is highlighted to make the list quicker to read.
+- It only asks once whether to continue with the push, rather than after each check.
+- `Enter` will default to yes.
 
 That's it! Let me know if you have a similar checklist process. Especially if it has something you think it has something I should add to mine!
 
