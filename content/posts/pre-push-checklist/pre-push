@@ -1,0 +1,34 @@
+#!/bin/sh
+
+git log origin..HEAD
+
+# Read user input, assign stdin to keyboard
+exec < /dev/tty
+
+D="\e[37m" # default
+H="\e[39m" # highlight
+S="\e[33m" #section
+
+echo "${S}Checklist${D}"
+echo ""
+echo " 1 Rebase, build, and unit test"
+echo " 2 App still ${H}starts${D}?"
+echo " 3 ${H}Sanity$D test change"
+echo " 4 Functionality ${H}around$D your change still works?"
+echo " 5 Commit includes all/only necessary ${H}files${D}?"
+echo " 6 Review ${H}diffs$D for TODOs and refactors?"
+echo " 7 Is each change in a commit related?"
+echo " 8 Clearest possible commit messages?"
+echo " 9 Update ${H}docs${D}?"
+echo ""
+echo "${S}Continue with push? (Y/n):$D "
+
+while read yn; do
+  case $yn in
+    Y|y|"") break;;
+    N|n) exit 1;;
+    *) echo "Please answer y (yes) or n (no):" && continue;
+  esac
+done
+
+exec <&-
