@@ -2,7 +2,7 @@
 title = "Best I've Read Lately 3"
 date = "2020-07-25T10:08:04-07:00"
 image = ""
-tags = ["social media", "psychology", "engineering", "futurology", "sociology", "entrepreneurism", "geography", "rationalism", "economics", "health", "software", "art", "evolution", "quantum computers", "geoengineering", "space"]
+tags = ["social media", "psychology", "engineering", "futurology", "sociology", "entrepreneurism", "geography", "rationalism", "economics", "health", "software development", "art", "evolution", "quantum computers", "geoengineering", "space"]
 +++
 1. Social media analyzed as [Status as a Service](https://www.eugenewei.com/blog/2019/2/19/status-as-a-service) software. It gave me some insights as to why my usage of these platforms has decreased as I've grown older and how my own decisions and interests have been influenced by unconscious status seeking.
 1. Birth of a new field of [twistronics](https://www.quantamagazine.org/how-twisted-graphene-became-the-big-thing-in-physics-20190430/). Particularly interesting is the hint at dynamic material engineering. Sounds like programmable matter.
