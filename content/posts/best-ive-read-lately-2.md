@@ -1,5 +1,5 @@
 +++
-title = "Best Ive Read Lately 2"
+title = "Best I've Read Lately 2"
 date = "2019-04-28T08:57:58-07:00"
 image = ""
 summary = "A collection of interesting links."
