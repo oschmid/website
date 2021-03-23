@@ -2,7 +2,7 @@
 title = "Best Ive Read Lately 2"
 date = "2019-04-28T08:57:58-07:00"
 image = ""
-summary = " "
+summary = "A collection of interesting links."
 tags = ["MMT", "cosmology", "art", "sociology", "climate change", "music", "genetics", "software development", "media", "cooking"]
 +++
 1. Modern Monetary Theory argues for a [Job Guarantee](http://bilbo.economicoutlook.net/blog/?p=41399): a government program that will hire anyone who wants a job and find one for them. The specific job is low skilled, minimum wage, and depends on community needs. This usually means work that isn't profitable for the private sector and doesn't fall easily under current definitions of public sector and can include such areas as community, environmental, or infrastructure improvement.
