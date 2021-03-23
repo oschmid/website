@@ -2,6 +2,8 @@
 title = "Pre-Push Checklist"
 date = "2021-03-16T20:57:12-07:00"
 image = ""
+summary = ""
+tags = ["Hugo", "programming"]
 +++
 
 Last week I made two commits that broke really obvious things. I was rushing and thought to myself "This is a simple change. Let's just check it in." I should have realized that these are every developer's famous last words...
