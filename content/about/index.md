@@ -5,7 +5,7 @@ menu = "main"
 +++
 <h1 class="title">About</h1>
 
-Oliver Schmid is a software developer, a voracious reader, a creative, and now a blogger. The last role is a more recent endeavour taken so as to share the interesting content he finds in his reading and to deepen his understanding of the material through the process of writing about it.
+Oliver Schmid is a software developer, a voracious reader, a creative, and occasional blogger.
 
 You can also find some of his projects on [github](https://github.com/oschmid) and [glitch](https://glitch.com/@oschmid).
 
