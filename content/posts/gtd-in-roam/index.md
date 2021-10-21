@@ -4,6 +4,8 @@ date = "2020-02-09T08:19:51-08:00"
 image = "gtd-plus-roam.png"
 +++
 
+**Update Oct 21, 2021:** I have switched to [Nirvana HQ](https://nirvanahq.com/) for GTD.
+
 **Update Nov 14, 2020:** After some experimentation I returned to using Trello for GTD. Roam is well suited for learning and deep work, but not for juggling a lot of small actions. In particular, clarifying/organizing tasks on Roam mobile was painful due to its slow startup and text based input. (Trello on the other hand is fast to start and has dropdowns for moving actions to different lists.) Roam may be better paired with another task management system. Feel free to still read the below as inspiration for your own Roam workflows.
 
 ---
