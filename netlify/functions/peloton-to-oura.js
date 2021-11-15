@@ -1,3 +1,5 @@
+const { PELOTON_USER_ID, PELOTON_PASSWORD } from process.env;
+
 exports.handler = async (event, context) => {
   const { user } = context.clientContext;
   if (!user) {
@@ -5,6 +7,6 @@ exports.handler = async (event, context) => {
   }
   return {
     statusCode: 200,
-    body: "Hello, World"
+    body: PELOTON_USER_ID
   };
 };

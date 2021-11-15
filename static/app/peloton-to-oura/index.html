@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+function getCookie(cName) {
+  const name = cName + "=";
+  const cDecoded = decodeURIComponent(document.cookie); //to be careful
+  const cArr = cDecoded.split('; ');
+  let res;
+  cArr.forEach(val => {
+    if (val.indexOf(name) === 0) res = val.substring(name.length);
+  })
+  return res
+}
+
+function run() {
+    let c = getCookie("nf_jwt");
+    let headers = new Headers();
+    headers.append('Authorization', 'Bearer ' + c);
+    let request = new Request("/.netlify/functions/peloton-to-oura", { method: "GET", headers: headers });
+    fetch(request).then(function(response) {
+        console.log(response);
+    });
+}
+</script>
+</head>
+<body>
+<div data-netlify-identity-button></div>
+<button onClick="run()">Run</button>
+</body>
+</html>
