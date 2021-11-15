@@ -16,12 +16,9 @@ function getCookie(cName) {
 
 function run() {
     let c = getCookie("nf_jwt");
-    let headers = new Headers();
-    headers.append('Authorization', 'Bearer ' + c);
-    let request = new Request("/.netlify/functions/peloton-to-oura", { method: "GET", headers: headers });
-    fetch(request).then(function(response) {
-        console.log(response);
-    });
+    fetch("/.netlify/functions/peloton-to-oura", { headers: {"Authorization": "Bearer " + c} })
+    .then(resp => resp.text())
+    .then(js => { console.log(js); });
 }
 </script>
 </head>
