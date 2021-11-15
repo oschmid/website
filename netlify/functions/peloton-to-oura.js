@@ -1,4 +1,4 @@
-const { PELOTON_USER_ID, PELOTON_PASSWORD } from process.env;
+const { PELOTON_USER_ID, PELOTON_PASSWORD } = process.env;
 
 exports.handler = async (event, context) => {
   const { user } = context.clientContext;
