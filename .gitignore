@@ -1,3 +1,9 @@
+/public/
+
+# IntelliJ IDEA
 .idea/*
 *.iml
-/public/
+
+# Netlify CLI
+.netlify
+node_modules
