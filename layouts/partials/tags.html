@@ -1,7 +1,7 @@
 <h2 id="tags" class="title">Tags</h2>
 <div class="tags">
-    {{ $tags := $.Site.Taxonomies.tags.Alphabetical }}
-    {{ range $tags }}
-    <a class="tag" href="{{ $.Site.BaseURL }}tags/{{ .Term | urlize }}/">{{ .Term }}{{ if ne 1 .Count }} ({{ .Count }}){{ end }}</a>
-    {{ end }}
+  {{ $tags := $.Site.Taxonomies.tags.Alphabetical }}
+  {{ range $tags }}
+  <a class="tag" href="{{ $.Site.BaseURL }}tags/{{ .Term | urlize }}/">{{ .Term }}{{ if ne 1 .Count }} ({{ .Count }}){{ end }}</a>
+  {{ end }}
 </div>

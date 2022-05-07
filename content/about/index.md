@@ -15,4 +15,4 @@ You can also find some of his projects on [github](https://github.com/oschmid) a
 This website was built using the static site generator [Hugo](https://gohugo.io/) and is hosted by [Netlify](https://www.netlify.com/). The [source code](https://github.com/oschmid/website) is available on GitHub (under MIT License). All content and images, unless otherwise specified, are copyright with All Rights Reserved.
 
 <br>
-<a href='http://ipv6-test.com/validate.php?url=referer'><img src='button-ipv6-small.png' alt='IPv6 ready' title='This website is IPv6 ready' border='0'/></a>
+<a href="http://ipv6-test.com/validate.php?url=referer"><img src="button-ipv6-small.png" alt="IPv6 ready" title="This website is IPv6 ready" border="0"/></a>
