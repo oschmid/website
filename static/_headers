@@ -19,11 +19,9 @@
 /favicon.ico
   Content-Type: image/x-icon
   X-Content-Type-Options: nosniff
-  X-XSS-Protection:
 
 /styles.min.css
   X-Content-Type-Options: nosniff
-  X-XSS-Protection:
 
 /tags/*
   X-Robots-Tag: noindex
