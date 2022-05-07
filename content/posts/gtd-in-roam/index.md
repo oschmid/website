@@ -4,21 +4,23 @@ date = "2020-02-09T08:19:51-08:00"
 image = "gtd-plus-roam.png"
 +++
 
+**Update May 6, 2022:** Now I'm using [Todoist](https://todoist.com) for GTD.
+
 **Update Oct 21, 2021:** I have switched to [Nirvana HQ](https://nirvanahq.com/) for GTD.
 
 **Update Nov 14, 2020:** After some experimentation I returned to using Trello for GTD. Roam is well suited for learning and deep work, but not for juggling a lot of small actions. In particular, clarifying/organizing tasks on Roam mobile was painful due to its slow startup and text based input. (Trello on the other hand is fast to start and has dropdowns for moving actions to different lists.) Roam may be better paired with another task management system. Feel free to still read the below as inspiration for your own Roam workflows.
 
 ---
 
-[Roam Research](https://roamresearch.com/) is a great note taking app where each note page tracks its [linked and unlinked references](https://roamresearch.com/#/v8/help/page/Vu1MmjinS). Even without explicitly linking pages Roam will create connections and help you manage your disparate thoughts.
+[Roam Research](https://roamresearch.com/) is a great note-taking app where each note page tracks its [linked and unlinked references](https://roamresearch.com/#/v8/help/page/Vu1MmjinS). Even without explicitly linking pages Roam will create connections and help you manage your disparate thoughts.
 
-When I was reading through the [Welcome to Roam](https://roamresearch.com/#/v8/help/page/1308) documentation I came across notes on how to setup [Getting Things Done in Roam](https://roamresearch.com/#/v8/help/page/AImpYBcPs). It was a good starting point but it doesn't use GTD Contexts to narrow down Next Actions and relies a lot on drag-and-drop to move actions around. Both of these factors limit the total number of tasks that can be managed without getting overloaded and make it harder to do GTD on a phone.
+When I was reading through the [Welcome to Roam](https://roamresearch.com/#/v8/help/page/1308) documentation I came across notes on how to set up [Getting Things Done in Roam](https://roamresearch.com/#/v8/help/page/AImpYBcPs). It was a good starting point but it doesn't use GTD Contexts to narrow down Next Actions and relies a lot on drag-and-drop to move actions around. Both of these factors limit the total number of tasks that can be managed without getting overloaded and make it harder to do GTD on a phone.
 
 So I've come up with a system that uses Roam's linked references to gather tasks by their context tag, and let me move tasks around without leaving the keyboard.
 
 ## Capturing
 
-Instead of a specific Bucket page for adding new ideas, I write ideas down wherever I am, along with an *#Inbox* tag. This has the nice effect of keeping the idea on the page where I first thought of it (and where it's surrounded by related information). This could be a project page or the Daily Note. Putting new task ideas on the Daily Note page actually makes it possible to track the time between thinking of a it and completing it.
+Instead of a specific Bucket page for adding new ideas, I write ideas down wherever I am, along with an *#Inbox* tag. This has the nice effect of keeping the idea on the page where I first thought of it (and where it's surrounded by related information). This could be a project page or the Daily Note. Putting new task ideas on the Daily Note page actually makes it possible to track the time between thinking of it and completing it.
 
 ![Single Inbox block](inbox-block-with-single-task.png)
 
@@ -119,7 +121,7 @@ I also have a page for GTD **Horizons**. This is the only GTD list where I keep 
 >- Horizon 5: Purpose and principles – The purpose, mission and values at the heart of your existence;
 >- Horizon 4: Vision – A broad overview of what success looks like for you on a 3 – 5 years timeline;
 >- Horizon 3: Goals – The larger outcomes you’d like to make manifest in the next 1 – 2 years;
->- Horizon 2: Areas of Focus and Accountabilities – The roles and areas of life your committed to focussing on in the next 12 months;
+>- Horizon 2: Areas of Focus and Accountability – The roles and areas of life your committed to focussing on in the next 12 months;
 >- Horizon 1: Current projects – The list of any outcome you are committed to realising in < 12 months; and
 >- Ground: Current actions – The comprehensive action list at the core of getting things done.
 
