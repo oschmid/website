@@ -5,6 +5,12 @@ const parser = new Parser();
 const FEEDS = [ "https://astralcodexten.substack.com/feed" ];
 const PAGE_TEMPLATE = `
 <!DOCTYPE html>
+<style>
+  main {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+</style>
 <main>
 {{#items}}
   <article>
