@@ -5,11 +5,15 @@ const parser = new Parser();
 const FEEDS = [ "https://astralcodexten.substack.com/feed" ];
 const PAGE_TEMPLATE = `
 <!DOCTYPE html>
-<ul>
+<main>
 {{#items}}
-  <li>{{title}}
+  <article>
+    <h2><a href="{{link}}">{{title}}</a></h2>
+    <h3>by {{dc:creator}} {{pubDate}}</h3>
+    {{{content:encoded}}}
+  </article>
 {{/items}}
-</ul>`;
+</main>`;
 
 exports.handler = async (event, context) => {
   let feed = await parser.parseURL(FEEDS[0]);
