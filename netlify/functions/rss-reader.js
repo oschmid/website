@@ -29,9 +29,13 @@ const byPubDate = (a, b) => {
   return 0;
 };
 
-exports.handler = async (event, context) => {
+const hello = () => "hello world";
+
+const handler = async (event, context) => {
   let feeds = await Promise.all(FEEDS.map(url => parser.parseURL(url)));
   let items = feeds.reduce((previous, current) => previous.concat(current.items), []).sort(byPubDate);
   let page = Mustache.render(PAGE_TEMPLATE, { items });
   return { statusCode: 200, body: page };
 };
+
+export { hello, handler };

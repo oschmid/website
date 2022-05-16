@@ -1,9 +1,14 @@
 {
+  "type": "module",
   "dependencies": {
     "mustache": "^4.2.0",
     "rss-parser": "^3.12.0"
   },
   "devDependencies": {
-    "netlify-cli": "^6.15.0"
+    "netlify-cli": "^6.15.0",
+    "uvu": "^0.5.3"
+  },
+  "scripts": {
+    "test": "uvu ./netlify/functions \".*\\.test\\.js\""
   }
 }
