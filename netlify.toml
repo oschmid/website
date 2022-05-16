@@ -13,3 +13,4 @@
 
 [functions]
   node_bundler = "esbuild"
+  included_files = ["!*.test.js"]
