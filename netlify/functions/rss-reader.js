@@ -12,6 +12,12 @@ const PAGE_TEMPLATE = `
         margin: 0 auto;
         max-width: 700px;
       }
+      article {
+        display: none;
+      }
+      article.current {
+        display: block;
+      }
     </style>
     <main>
     {{#items}}
@@ -21,7 +27,10 @@ const PAGE_TEMPLATE = `
         <div>{{{body}}}</div>
       </article>
     {{/items}}
-    </main>`;
+    </main>
+    <script>
+      document.getElementsByTagName('article')[0].classList.add('current');
+    </script>`;
 
 const getFeedItems = async () => {
   let feeds = await Promise.all(FEEDS.map(url => parser.parseURL(url)));
