@@ -27,9 +27,40 @@ const PAGE_TEMPLATE = `
         <div>{{{body}}}</div>
       </article>
     {{/items}}
+    <div>
+      <button id="previous">Previous</button>
+      <button id="next">Next</button>
+    </div>
     </main>
     <script>
-      document.getElementsByTagName('article')[0].classList.add('current');
+      // initialize state
+      let current = -1;
+      const articles = document.getElementsByTagName("article");
+      const previous = document.getElementById("previous");
+      const next = document.getElementById("next");
+      if (articles.length > 0) {
+        current = 0;
+        articles[current].classList.add("current");
+      }
+      const updateButtons = () => {
+        previous.disabled = current < 1;
+        next.disabled = current >= articles.length - 1;
+      };
+      updateButtons();
+
+      // add listeners
+      previous.addEventListener("click", (event) => {
+        articles[current].classList.remove("current");
+        current -= 1;
+        articles[current].classList.add("current");
+        updateButtons();
+      });
+      next.addEventListener("click", (event) => {
+        articles[current].classList.remove("current");
+        current += 1;
+        articles[current].classList.add("current");
+        updateButtons();
+      });
     </script>`;
 
 const getFeedItems = async () => {
