@@ -21,7 +21,7 @@ const PAGE_TEMPLATE = `
     </style>
     <main>
     {{#items}}
-      <article>
+      <article id="{{postUrl}}">
         <h2><a href="{{postUrl}}">{{title}}</a></h2>
         <h3><a href="{{siteUrl}}">{{author}}</a><span>{{displayDate}} at {{displayTime}}</span></h3>
         <div>{{{body}}}</div>
