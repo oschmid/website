@@ -52,12 +52,14 @@ const PAGE_TEMPLATE = `
       previous.addEventListener("click", (event) => {
         articles[current].classList.remove("current");
         current -= 1;
+        localStorage.setItem("current", articles[current].id);
         articles[current].classList.add("current");
         updateButtons();
       });
       next.addEventListener("click", (event) => {
         articles[current].classList.remove("current");
         current += 1;
+        localStorage.setItem("current", articles[current].id);
         articles[current].classList.add("current");
         updateButtons();
       });
