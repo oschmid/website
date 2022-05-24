@@ -38,7 +38,16 @@ const PAGE_TEMPLATE = `
       const articles = document.getElementsByTagName("article");
       const previous = document.getElementById("previous");
       const next = document.getElementById("next");
-      if (articles.length > 0) {
+      let currentArticle = localStorage.getItem("current");
+      if (currentArticle) {
+        for (let i = 0; i < articles.length; i++) {
+          if (articles[i].id === currentArticle) {
+            current = i;
+            articles[i].classList.add("current");
+            break;
+          }
+        }
+      } else if (articles.length > 0) {
         current = 0;
         articles[current].classList.add("current");
       }
