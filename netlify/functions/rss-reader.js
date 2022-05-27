@@ -38,7 +38,7 @@ const PAGE_TEMPLATE = `
       const articles = document.getElementsByTagName("article");
       const previous = document.getElementById("previous");
       const next = document.getElementById("next");
-      let currentArticle = localStorage.getItem("current");
+      let currentArticle = location.hash ? decodeURIComponent(location.hash.substring(1)) : null;
       if (currentArticle) {
         for (let i = 0; i < articles.length; i++) {
           if (articles[i].id === currentArticle) {
@@ -61,14 +61,14 @@ const PAGE_TEMPLATE = `
       previous.addEventListener("click", (event) => {
         articles[current].classList.remove("current");
         current -= 1;
-        localStorage.setItem("current", articles[current].id);
+        location.assign("#" + encodeURIComponent(articles[current].id));
         articles[current].classList.add("current");
         updateButtons();
       });
       next.addEventListener("click", (event) => {
         articles[current].classList.remove("current");
         current += 1;
-        localStorage.setItem("current", articles[current].id);
+        location.assign("#" + encodeURIComponent(articles[current].id));
         articles[current].classList.add("current");
         updateButtons();
       });
