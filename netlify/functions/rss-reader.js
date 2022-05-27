@@ -3,8 +3,63 @@ import dateformat from "dateformat";
 import Parser from "rss-parser";
 const parser = new Parser();
 
-const FEEDS = [ "https://astralcodexten.substack.com/feed",
-                "https://mtlynch.io/posts/index.xml" ];
+const FEEDS = [ "http://reasonablypolymorphic.com/feed.rss",
+                "http://www.schneier.com/blog/index.rdf",
+                "http://blog.jessitron.com/feeds/posts/default",
+                "http://www.codinghorror.com/blog/index.xml",
+                "http://www.junauza.com/feeds/posts/default",
+                "http://feeds.feedburner.com/adaptivepath",
+                "http://www.susanjfowler.com/blog?format=RSS",
+                "http://me.veekun.com/atom.xml",
+                "https://squarknotes.substack.com/feed/",
+                "http://rachelbythebay.com/w/atom.xml",
+                "http://dragan.rocks/feed.xml",
+                "http://erratasec.blogspot.com/feeds/posts/default",
+                "http://www.sandimetz.com/atom.xml",
+                "http://www.joelonsoftware.com/rss.xml",
+                "http://www.javaspecialists.eu/archive/tjsn.rss",
+                "http://www.cliffc.org/blog/feed/",
+                "http://danluu.com/atom.xml",
+                "http://hacks.mozilla.org/feed/",
+                "http://tonsky.me/blog/atom.xml",
+                "http://stuartsierra.com/feed",
+                "http://gigasquidsoftware.com/atom.xml",
+                "http://akaptur.com/atom.xml",
+                "http://mrale.ph/atom.xml",
+                "http://tomasp.net/rss.xml",
+                "http://henrikwarne.com/feed/",
+                "http://feeds.feedburner.com/eod_full",
+                "https://chrispenner.ca/atom.xml",
+                "http://pathsensitive.blogspot.com/feeds/posts/default",
+                "http://blog.cleancoder.com/atom.xml",
+                "http://www.stephendiehl.com/feed.rss",
+                "http://kparal.wordpress.com/feed/",
+                "https://veryseriousblog.com/posts?format=rss",
+                "https://juxt.pro/blog/rss.xml",
+                "http://githubengineering.com/atom.xml",
+                "http://www.codesimplicity.com/feed/atom/",
+                "https://mzucker.github.io/feed.xml",
+                "http://psy-lob-saw.blogspot.com/feeds/posts/default",
+                "https://www.micahlerner.com/feed.xml",
+                "http://blog.golang.org/feeds/posts/default",
+                "https://mtlynch.io/index.xml",
+                "http://www.amihaiemil.com/feed.xml",
+                "http://neweconomicperspectives.org/feed",
+                "http://stephaniekelton.com/feed/",
+                "https://thestonesoup.com/blog/feed/",
+                "https://professionalscrublord.tumblr.com/rss",
+                "https://openparliament.ca/politicians/10906/rss/activity/",
+                "http://feeds.feedburner.com/MeltingAsphalt",
+                "https://thezvi.wordpress.com/feed/",
+                "http://acesounderglass.com/feed/",
+                "http://www.edge.org/feed",
+                "https://sideways-view.com/feed/",
+                "http://waitbutwhy.com/feed",
+                "https://commoncog.com/blog/rss/",
+                "http://what-if.xkcd.com/feed.atom",
+                "http://slatestarcodex.com/feed/",
+                "https://dirdle.wordpress.com/feed/",
+                "https://astralcodexten.substack.com/feed/" ];
 const PAGE_TEMPLATE = `
     <!DOCTYPE html>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n" crossorigin="anonymous" />
@@ -99,7 +154,14 @@ const PAGE_TEMPLATE = `
     </script>`;
 
 const getFeedItems = async () => {
-  let feeds = await Promise.all(FEEDS.map(url => parser.parseURL(url)));
+  let feeds = await Promise.all(FEEDS.map(async (url) => {
+    try {
+      return await parser.parseURL(url);
+    } catch (e) {
+      console.log(url + " cannot be reached");
+      return {items:[]};
+    }
+  }));
   return feeds.reduce((previous, current) => previous.concat(current.items), []);
 };
 
