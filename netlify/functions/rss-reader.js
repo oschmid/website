@@ -7,11 +7,9 @@ const FEEDS = [ "https://astralcodexten.substack.com/feed",
                 "https://mtlynch.io/posts/index.xml" ];
 const PAGE_TEMPLATE = `
     <!DOCTYPE html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/styles.min.css">
     <style>
-      main {
-        margin: 0 auto;
-        max-width: 700px;
-      }
       article {
         display: none;
       }
@@ -19,18 +17,20 @@ const PAGE_TEMPLATE = `
         display: block;
       }
     </style>
-    <main>
+    <main class="container is-readable-column">
     {{#items}}
-      <article id="{{postUrl}}">
-        <h2><a href="{{postUrl}}">{{title}}</a></h2>
-        <h3><a href="{{siteUrl}}">{{author}}</a><span>{{displayDate}} at {{displayTime}}</span></h3>
-        <div>{{{body}}}</div>
+      <article id="{{postUrl}}" class="section">
+        <header>
+          <h2><a class="title is-plain" href="{{postUrl}}">{{title}}</a></h2>
+        </header>
+        <p class="subtitle has-text-grey"><a class="has-text-grey" href="{{siteUrl}}">{{author}}</a>&nbsp;\/\/ {{displayDate}} at {{displayTime}}&nbsp;</span></p>
+        <p class="is-plain">{{{body}}}</p>
       </article>
     {{/items}}
-    <div>
-      <button id="previous">Previous</button>
-      <button id="next">Next</button>
-    </div>
+    <nav class="pagination is-centered">
+      <button id="previous" class="button pagination-previous">Previous</button>
+      <button id="next" class="button pagination-next">Next</button>
+    </nav>
     </main>
     <script>
       // initialize state
@@ -102,7 +102,7 @@ const byDate = (a, b) => {
 const handler = async (event, context) => {
   let items = (await getFeedItems()).map(formatItem).sort(byDate);
   let page = Mustache.render(PAGE_TEMPLATE, { items });
-  return { statusCode: 200, body: page };
+  return { statusCode: 200, headers: {"Content-Type": "text/html"}, body: page };
 };
 
 export { getFeedItems, handler };
