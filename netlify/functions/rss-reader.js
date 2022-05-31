@@ -151,6 +151,13 @@ const PAGE_TEMPLATE = `
         articles[current].classList.add("current");
         updateButtons();
       });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "p") {
+          previous.click();
+        } else if (event.key === "n") {
+          next.click();
+        }
+      });
     </script>`;
 
 const getFeedItems = async () => {
