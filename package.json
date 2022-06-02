@@ -10,6 +10,6 @@
     "uvu": "^0.5.3"
   },
   "scripts": {
-    "test": "uvu ./netlify/functions \".*\\.test\\.js\""
+    "test": "uvu ./netlify/tests \".*\\.test\\.js\""
   }
 }
