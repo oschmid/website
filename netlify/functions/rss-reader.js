@@ -46,7 +46,6 @@ const FEEDS = [ "http://reasonablypolymorphic.com/feed.rss",
                 "http://www.amihaiemil.com/feed.xml",
                 "http://neweconomicperspectives.org/feed",
                 "http://stephaniekelton.com/feed/",
-                "https://thestonesoup.com/blog/feed/",
                 "https://professionalscrublord.tumblr.com/rss",
                 "https://openparliament.ca/politicians/10906/rss/activity/",
                 "http://feeds.feedburner.com/MeltingAsphalt",
@@ -175,7 +174,7 @@ const getFeedItems = async () => {
 const formatItem = (item) => {
   let date = new Date(item.pubDate);
   return {
-    title: item.title,
+    title: "title" in item ? item.title : dateformat(date, "mmm d, yyyy"),
     postUrl: item.link,
     author: "dc:creator" in item ? item["dc:creator"] : new URL(item.link).hostname.replace("www", ""),
     siteUrl: new URL(item.link).origin,
