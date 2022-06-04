@@ -1,3 +1,4 @@
+import { builder } from '@netlify/functions';
 import Mustache from "mustache";
 import dateformat from "dateformat";
 import Parser from "rss-parser";
@@ -191,10 +192,10 @@ const byDate = (a, b) => {
   return 0;
 };
 
-const handler = async (event, context) => {
+const handler = builder(async (event, context) => {
   let items = (await getFeedItems()).map(formatItem).sort(byDate);
   let page = Mustache.render(PAGE_TEMPLATE, { items });
-  return { statusCode: 200, headers: {"Content-Type": "text/html"}, body: page };
-};
+  return { statusCode: 200, headers: {"Content-Type": "text/html"}, ttl: 86400 /* 24 hours */, body: page };
+});
 
 export { getFeedItems, handler };
