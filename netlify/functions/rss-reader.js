@@ -60,7 +60,7 @@ const FEEDS = [ "http://reasonablypolymorphic.com/feed.rss",
                 "http://slatestarcodex.com/feed/",
                 "https://dirdle.wordpress.com/feed/",
                 "https://astralcodexten.substack.com/feed/" ];
-const PAGE_TEMPLATE = `
+const PAGE_HEADER = `
     <!DOCTYPE html>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n" crossorigin="anonymous" />
     <link rel="stylesheet" href="/styles.min.css">
@@ -78,16 +78,16 @@ const PAGE_TEMPLATE = `
           <h1><a class="is-plain" href="/">Oliver Schmid</a></h1>
         </header>
       </div>
-      <main class="container is-readable-column">
-      {{#items}}
-        <article id="{{postUrl}}" class="section">
-          <header>
-            <h2><a class="title is-plain" href="{{postUrl}}">{{title}}</a></h2>
-          </header>
-          <p class="subtitle has-text-grey"><a class="has-text-grey" href="{{siteUrl}}">{{author}}</a>&nbsp;\/\/ {{displayDate}} at {{displayTime}}&nbsp;</span></p>
-          <p class="is-plain">{{{body}}}</p>
-        </article>
-      {{/items}}
+      <main class="container is-readable-column">`;
+const ITEM_TEMPLATE = `
+    <article id="{{postUrl}}" class="section">
+      <header>
+        <h2><a class="title is-plain" href="{{postUrl}}">{{title}}</a></h2>
+      </header>
+      <p class="subtitle has-text-grey"><a class="has-text-grey" href="{{siteUrl}}">{{author}}</a>&nbsp;\/\/ {{displayDate}} at {{displayTime}}&nbsp;</span></p>
+      <p class="is-plain">{{{body}}}</p>
+    </article>`;
+const PAGE_FOOTER = `
       <nav class="pagination is-centered">
         <button id="previous" class="button pagination-previous">Previous</button>
         <button id="next" class="button pagination-next">Next</button>
@@ -192,9 +192,25 @@ const byDate = (a, b) => {
   return 0;
 };
 
+const byteSize = (s) => {
+  return (new TextEncoder().encode(s)).length;
+};
+
+const PAGE_SIZE_LIMIT = 6291556; // bytes
+
 const handler = builder(async (event, context) => {
   let items = (await getFeedItems()).map(formatItem).sort(byDate);
-  let page = Mustache.render(PAGE_TEMPLATE, { items });
+  let size = byteSize(PAGE_HEADER) + byteSize(PAGE_FOOTER);
+  let page = PAGE_FOOTER;
+  for (let i = items.length - 1; i >= 0; i--) {
+    let itemHtml = Mustache.render(ITEM_TEMPLATE, items[i]);
+    size += byteSize(itemHtml);
+    if (size > PAGE_SIZE_LIMIT) {
+      break;
+    }
+    page = itemHtml + page;
+  }
+  page = PAGE_HEADER + page;
   return { statusCode: 200, headers: {"Content-Type": "text/html"}, ttl: 86400 /* 24 hours */, body: page };
 });
 
