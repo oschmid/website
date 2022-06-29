@@ -1,7 +1,7 @@
 import { builder } from '@netlify/functions';
-import Parser from "rss-parser";
-const parser = new Parser();
+import fetch from 'node-fetch';
 
+// must match FEEDS in /static/app/reader/index.html
 const FEEDS = [ "http://reasonablypolymorphic.com/feed.rss",
                 "http://www.schneier.com/blog/index.rdf",
                 "http://blog.jessitron.com/feeds/posts/default",
@@ -67,15 +67,12 @@ const handler = builder(async (event, context) => {
   } catch (e) {
     return { statusCode: 402, body: "Index must be a number" };
   }
-  // download feed as JSON
-  let url = FEEDS[index];
-  try {
-    var feed = await parser.parseURL(url);
-  } catch (e) {
-    console.log(url + " cannot be reached");
-    var feed = {items:[]};
-  }
-  return { statusCode: 200, headers: {"Content-Type": "application/json"}, ttl: 86400 /* 24 hours */, body: JSON.stringify(feed) };
+  // fetch feed
+  let response = await fetch(FEEDS[index]);
+  return { statusCode: response.status,
+           headers: {"Content-Type": response.headers.get("Content-Type")},
+           ttl: 86400 /* 24 hours */,
+           body: await response.text() };
 });
 
 export { FEEDS, handler };

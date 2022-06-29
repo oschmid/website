@@ -1,8 +1,9 @@
 import { builder } from '@netlify/functions';
 import { FEEDS } from './rss-feeds';
-import fetch from 'node-fetch';
 import Mustache from "mustache";
 import dateformat from "dateformat";
+import Parser from "rss-parser";
+const parser = new Parser();
 
 const PAGE_HEADER = `
     <!DOCTYPE html>
@@ -107,8 +108,7 @@ const PAGE_FOOTER = `
 const getFeedItems = async () => {
   let feeds = await Promise.all(FEEDS.map(async (url, index) => {
     try {
-      let response = await fetch(process.env.URL + "/.netlify/functions/rss-feeds/" + index);
-      return await response.json();
+      return await parser.parseURL(process.env.URL + "/.netlify/functions/rss-feeds/" + index);
     } catch (e) {
       console.log(url + " cannot be reached: " + e);
       return {items:[]};
