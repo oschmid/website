@@ -1,17 +1,5 @@
 {
-  "type": "module",
-  "dependencies": {
-    "@netlify/functions": "^1.0.0",
-    "dateformat": "^5.0.3",
-    "mustache": "^4.2.0",
-    "node-fetch": "^3.2.6",
-    "rss-parser": "^3.12.0"
-  },
   "devDependencies": {
-    "netlify-cli": "^10.4.0",
-    "uvu": "^0.5.3"
-  },
-  "scripts": {
-    "test": "uvu ./netlify/tests \".*\\.test\\.js\""
+    "netlify-cli": "^10.18.0"
   }
 }
