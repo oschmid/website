@@ -9,8 +9,4 @@
 [dev]
   framework = "hugo"
   port = 8888
-  functionsPort = 9999
 
-[functions]
-  node_bundler = "esbuild"
-  included_files = ["!*.test.js"]
