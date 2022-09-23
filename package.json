@@ -1,4 +1,6 @@
 {
+  "name": "oliverschmid.space",
+  "private": true,
   "dependencies": {
     "netlify-cli": "^11.8.2"
   }
