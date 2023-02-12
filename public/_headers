@@ -22,6 +22,3 @@
 
 /styles.min.css
   X-Content-Type-Options: nosniff
-
-/tags/*
-  X-Robots-Tag: noindex
