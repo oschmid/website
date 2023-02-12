@@ -1,4 +1,102 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Oliver Schmid</title><link>https://oliverschmid.space/</link><description>Recent content on Oliver Schmid</description><generator>Hugo -- gohugo.io</generator><copyright>Oliver Schmid</copyright><lastBuildDate>Tue, 16 Mar 2021 20:57:12 -0700</lastBuildDate><atom:link href="https://oliverschmid.space/index.xml" rel="self" type="application/rss+xml"/><item><title>Pre-Push Checklist</title><link>https://oliverschmid.space/posts/pre-push-checklist/</link><pubDate>Tue, 16 Mar 2021 20:57:12 -0700</pubDate><guid>https://oliverschmid.space/posts/pre-push-checklist/</guid><description>Last week I made two commits that broke really obvious things. I was rushing and thought to myself &amp;ldquo;This is a simple change. Let&amp;rsquo;s just check it in.&amp;rdquo; I should have realized that these are every developer&amp;rsquo;s famous last words&amp;hellip;
-After these two incidents happened so close to each other, I knew I needed a way to remind myself to be more careful. To sanity check my changes for things the Continuous Integration build might miss.</description></item><item><title>Best I've Read Lately 3</title><link>https://oliverschmid.space/posts/best-ive-read-lately-3/</link><pubDate>Sat, 25 Jul 2020 10:08:04 -0700</pubDate><guid>https://oliverschmid.space/posts/best-ive-read-lately-3/</guid><description>A collection of interesting links.</description></item><item><title>GTD in Roam</title><link>https://oliverschmid.space/posts/gtd-in-roam/</link><pubDate>Sun, 09 Feb 2020 08:19:51 -0800</pubDate><guid>https://oliverschmid.space/posts/gtd-in-roam/</guid><description>Update May 6, 2022: Now I&amp;rsquo;m using Todoist for GTD.
-Update Oct 21, 2021: I have switched to Nirvana HQ for GTD.
-Update Nov 14, 2020: After some experimentation I returned to using Trello for GTD. Roam is well suited for learning and deep work, but not for juggling a lot of small actions. In particular, clarifying/organizing tasks on Roam mobile was painful due to its slow startup and text based input.</description></item><item><title>Website Updates</title><link>https://oliverschmid.space/posts/website-updates/</link><pubDate>Sun, 13 Oct 2019 07:34:48 -0700</pubDate><guid>https://oliverschmid.space/posts/website-updates/</guid><description>The site broke recently. Somehow Hugo had stopped rendering posts or tags and the homepage looked like it had no content.</description></item><item><title>Best I've Read Lately 2</title><link>https://oliverschmid.space/posts/best-ive-read-lately-2/</link><pubDate>Sun, 28 Apr 2019 08:57:58 -0700</pubDate><guid>https://oliverschmid.space/posts/best-ive-read-lately-2/</guid><description>A collection of interesting links.</description></item><item><title>Best I've Read Lately</title><link>https://oliverschmid.space/posts/best-ive-read-lately/</link><pubDate>Sun, 27 Jan 2019 11:14:44 -0800</pubDate><guid>https://oliverschmid.space/posts/best-ive-read-lately/</guid><description>A collection of interesting links.</description></item><item><title>Hugo Pagination</title><link>https://oliverschmid.space/posts/hugo-pagination/</link><pubDate>Thu, 27 Dec 2018 10:45:41 -0800</pubDate><guid>https://oliverschmid.space/posts/hugo-pagination/</guid><description>Inspired by Glenn McComb&amp;rsquo;s Hugo pagination tutorial I decided to write my own custom pager.</description></item><item><title>One Month With The Oura Ring</title><link>https://oliverschmid.space/posts/oura-ring-one-month/</link><pubDate>Sat, 01 Dec 2018 12:45:37 -0800</pubDate><guid>https://oliverschmid.space/posts/oura-ring-one-month/</guid><description>I&amp;rsquo;ve been using the new Oura ring sleep tracker for a little over a month now. It&amp;rsquo;s exactly the kind of wearable I&amp;rsquo;m a fan of: invisible, reliable, and focused.</description></item><item><title>No, My Cellphone Won't Blow Up Your Gas Station</title><link>https://oliverschmid.space/posts/no-my-cellphone-wont-blow-up-your-gas-station/</link><pubDate>Sat, 10 Nov 2018 14:25:25 -0800</pubDate><guid>https://oliverschmid.space/posts/no-my-cellphone-wont-blow-up-your-gas-station/</guid><description>I had the strangest encounter this morning. My fiancée and I were driving into work together at the ungodly hour of 5am when we stopped at a gas station to fill up the tank.</description></item><item><title>2018 BC Referendum on Electoral Reform</title><link>https://oliverschmid.space/posts/2018-bc-referendum-on-electoral-reform/</link><pubDate>Mon, 22 Oct 2018 20:12:24 -0700</pubDate><guid>https://oliverschmid.space/posts/2018-bc-referendum-on-electoral-reform/</guid><description>This November BC voters have the duty and opportunity to vote on how we vote. This is BC&amp;rsquo;s third referendum on voting reform, and also the one with the most options.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Oliver Schmid</title>
+        <link>https://oliverschmid.space/</link>
+        <description>Recent content on Oliver Schmid</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>Oliver Schmid</copyright>
+        <lastBuildDate>Tue, 16 Mar 2021 20:57:12 -0700</lastBuildDate>
+        <atom:link href="https://oliverschmid.space/index.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title>Pre-Push Checklist</title>
+            <link>https://oliverschmid.space/posts/pre-push-checklist/</link>
+            <pubDate>Tue, 16 Mar 2021 20:57:12 -0700</pubDate>
+            <guid>https://oliverschmid.space/posts/pre-push-checklist/</guid>
+            <description>Last week I made two commits that broke really obvious things. I was rushing and thought to
+                myself &amp;ldquo;This is a simple change. Let&amp;rsquo;s just check it in.&amp;rdquo; I should have
+                realized that these are every developer&amp;rsquo;s famous last words&amp;hellip;
+                After these two incidents happened so close to each other, I knew I needed a way to remind myself to be
+                more careful. To sanity check my changes for things the Continuous Integration build might miss.
+            </description>
+        </item>
+        <item>
+            <title>Best I've Read Lately 3</title>
+            <link>https://oliverschmid.space/posts/best-ive-read-lately-3/</link>
+            <pubDate>Sat, 25 Jul 2020 10:08:04 -0700</pubDate>
+            <guid>https://oliverschmid.space/posts/best-ive-read-lately-3/</guid>
+            <description>A collection of interesting links.</description>
+        </item>
+        <item>
+            <title>GTD in Roam</title>
+            <link>https://oliverschmid.space/posts/gtd-in-roam/</link>
+            <pubDate>Sun, 09 Feb 2020 08:19:51 -0800</pubDate>
+            <guid>https://oliverschmid.space/posts/gtd-in-roam/</guid>
+            <description>Update May 6, 2022: Now I&amp;rsquo;m using Todoist for GTD.
+                Update Oct 21, 2021: I have switched to Nirvana HQ for GTD.
+                Update Nov 14, 2020: After some experimentation I returned to using Trello for GTD. Roam is well suited
+                for learning and deep work, but not for juggling a lot of small actions. In particular,
+                clarifying/organizing tasks on Roam mobile was painful due to its slow startup and text based input.
+            </description>
+        </item>
+        <item>
+            <title>Website Updates</title>
+            <link>https://oliverschmid.space/posts/website-updates/</link>
+            <pubDate>Sun, 13 Oct 2019 07:34:48 -0700</pubDate>
+            <guid>https://oliverschmid.space/posts/website-updates/</guid>
+            <description>The site broke recently. Somehow Hugo had stopped rendering posts or tags and the homepage
+                looked like it had no content.
+            </description>
+        </item>
+        <item>
+            <title>Best I've Read Lately 2</title>
+            <link>https://oliverschmid.space/posts/best-ive-read-lately-2/</link>
+            <pubDate>Sun, 28 Apr 2019 08:57:58 -0700</pubDate>
+            <guid>https://oliverschmid.space/posts/best-ive-read-lately-2/</guid>
+            <description>A collection of interesting links.</description>
+        </item>
+        <item>
+            <title>Best I've Read Lately</title>
+            <link>https://oliverschmid.space/posts/best-ive-read-lately/</link>
+            <pubDate>Sun, 27 Jan 2019 11:14:44 -0800</pubDate>
+            <guid>https://oliverschmid.space/posts/best-ive-read-lately/</guid>
+            <description>A collection of interesting links.</description>
+        </item>
+        <item>
+            <title>Hugo Pagination</title>
+            <link>https://oliverschmid.space/posts/hugo-pagination/</link>
+            <pubDate>Thu, 27 Dec 2018 10:45:41 -0800</pubDate>
+            <guid>https://oliverschmid.space/posts/hugo-pagination/</guid>
+            <description>Inspired by Glenn McComb&amp;rsquo;s Hugo pagination tutorial I decided to write my own custom
+                pager.
+            </description>
+        </item>
+        <item>
+            <title>One Month With The Oura Ring</title>
+            <link>https://oliverschmid.space/posts/oura-ring-one-month/</link>
+            <pubDate>Sat, 01 Dec 2018 12:45:37 -0800</pubDate>
+            <guid>https://oliverschmid.space/posts/oura-ring-one-month/</guid>
+            <description>I&amp;rsquo;ve been using the new Oura ring sleep tracker for a little over a month now. It&amp;rsquo;s
+                exactly the kind of wearable I&amp;rsquo;m a fan of: invisible, reliable, and focused.
+            </description>
+        </item>
+        <item>
+            <title>No, My Cellphone Won't Blow Up Your Gas Station</title>
+            <link>https://oliverschmid.space/posts/no-my-cellphone-wont-blow-up-your-gas-station/</link>
+            <pubDate>Sat, 10 Nov 2018 14:25:25 -0800</pubDate>
+            <guid>https://oliverschmid.space/posts/no-my-cellphone-wont-blow-up-your-gas-station/</guid>
+            <description>I had the strangest encounter this morning. My fiancée and I were driving into work together at
+                the ungodly hour of 5am when we stopped at a gas station to fill up the tank.
+            </description>
+        </item>
+        <item>
+            <title>2018 BC Referendum on Electoral Reform</title>
+            <link>https://oliverschmid.space/posts/2018-bc-referendum-on-electoral-reform/</link>
+            <pubDate>Mon, 22 Oct 2018 20:12:24 -0700</pubDate>
+            <guid>https://oliverschmid.space/posts/2018-bc-referendum-on-electoral-reform/</guid>
+            <description>This November BC voters have the duty and opportunity to vote on how we vote. This is BC&amp;rsquo;s
+                third referendum on voting reform, and also the one with the most options.
+            </description>
+        </item>
+    </channel>
+</rss>
