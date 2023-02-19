@@ -1,186 +1,127 @@
-<!doctype html><html lang="en"><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta itemprop=name content="Pre-Push Checklist">
-<meta itemprop=description content="Last week I made two commits that broke really obvious things. I was rushing and thought to myself &ldquo;This is a simple change. Let&rsquo;s just check it in.&rdquo; I should have realized that these are every developer&rsquo;s famous last words&mldr;
-After these two incidents happened so close to each other, I knew I needed a way to remind myself to be more careful. To sanity check my changes for things the Continuous Integration build might miss."><meta itemprop=datePublished content="2021-03-16T20:57:12-07:00">
-<meta itemprop=dateModified content="2021-03-16T20:57:12-07:00">
-<meta itemprop=wordCount content="462">
-<meta itemprop=keywords content="Hugo,software development,">
-<title>
-Pre-Push Checklist
-</title>
-<meta name=description content="Personal Blog">
-<link rel=apple-touch-icon href=/favicon-touch.png>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css integrity=sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n crossorigin=anonymous>
-<link rel=stylesheet href=/styles.min.css>
-<div class=section>
-<div class=container>
-<header class=title>
-<h2><a class=is-plain href=/>Oliver Schmid</a></h2>
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta itemprop="name" content="Pre-Push Checklist">
+<meta itemprop="description"
+      content="Last week I made two commits that broke really obvious things. I was rushing and thought to myself &ldquo;This is a simple change. Let&rsquo;s just check it in.&rdquo; I should have realized that these are every developer&rsquo;s famous last words&mldr;
+After these two incidents happened so close to each other, I knew I needed a way to remind myself to be more careful. To sanity check my changes for things the Continuous Integration build might miss.">
+<meta itemprop="datePublished" content="2021-03-16T20:57:12-07:00">
+<meta itemprop="dateModified" content="2021-03-16T20:57:12-07:00">
+<meta itemprop="wordCount" content="462">
+<meta itemprop="keywords" content="Hugo,software development">
+<title>Pre-Push Checklist</title>
+<meta name="description" content="Personal Blog">
+<link rel="apple-touch-icon" href="/favicon-touch.png">
+<link rel="stylesheet" href="/style.css">
+<header class="center">
+    <h1>Pre-Push Checklist</h1>
+    <p>
+        <time datetime="2021-03-16 20:57">March 16, 2021</time>
+        &nbsp;-&nbsp;
+        <span><time datetime="3M">3 min</time> read</span>
+    </p>
 </header>
-</div>
-<main class="container is-readable-column">
-<article class=content>
-<header class=title>
-<h1 class="title is-3">Pre-Push Checklist</h1>
-<p class="subtitle has-text-grey">
-<time datetime="2021-03-16 20:57">March 16, 2021</time>
-&nbsp;-&nbsp;
-<span><time datetime=3M>3 min</time> read</span>
-</p>
-</header>
-<p>Last week I made two commits that broke really obvious things. I was rushing and thought to myself &ldquo;This is a simple change. Let&rsquo;s just check it in.&rdquo; I should have realized that these are every developer&rsquo;s famous last words&mldr;</p>
-<p>After these two incidents happened so close to each other, I knew I needed a way to remind myself to be more careful. To sanity check my changes for things the Continuous Integration build might miss.</p>
-<h3 id=checklist-for-pushing-code>Checklist for Pushing Code</h3>
-<ol>
-<li>Rebase, build, and run tests (it&rsquo;s quicker to run these locally rather than wait for CI build to fail)</li>
-<li>Sanity test changes
-<ol>
-<li>Check that the app still starts</li>
-<li>Do a basic manual end-to-end sanity test to show your changes work</li>
-<li>Check the functionality <a href=https://www.gamasutra.com/view/news/127467/Opinion_A_Precommit_Checklist.php>around your change</a> still works.</li>
-</ol>
-</li>
-<li>Review the list of files in each commit (<code>git log --stat</code>)
-<ol>
-<li>Are all necessary files included?</li>
-<li>Are any files included that shouldn&rsquo;t be?</li>
-</ol>
-</li>
-<li>Read through the diff(s)
-<ol>
-<li>Are there any unfinished sections?</li>
-<li>Are there any sections that you meant to refactor?</li>
-<li>Is each change in a commit related? (e.g. <a href=https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging>separate</a> incidental code cleanups from feature/bug changes for clarity.)</li>
-<li>Do you want to reword the change description? (Remember it should have an <a href=https://chris.beams.io/posts/git-commit/>imperative header, and a body describing what and why</a>)</li>
-</ol>
-</li>
-<li>Update relevant documentation</li>
-</ol>
-<hr>
-<p>Inspired by <a href=https://dev.to/victoria/an-automatic-interactive-pre-commit-checklist-in-the-style-of-infomercials-14i7>Victoria Drake</a> I turned this list into a <a href=https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks>git hook</a>. Copy the following shell script into <code>.git/hooks</code> and name it <code>pre-push</code>.</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=cp>#!/bin/sh
-</span><span class=cp></span>
+<main>
+    <p>Last week I made two commits that broke really obvious things. I was rushing and thought to myself &ldquo;This is
+        a simple change. Let&rsquo;s just check it in.&rdquo; I should have realized that these are every developer&rsquo;s
+        famous last words&mldr;</p>
+    <p>After these two incidents happened so close to each other, I knew I needed a way to remind myself to be more
+        careful. To sanity check my changes for things the Continuous Integration build might miss.</p>
+    <h2>Checklist for Pushing Code</h2>
+    <ol>
+        <li>Rebase, build, and run tests (it&rsquo;s quicker to run these locally rather than wait for CI build to
+            fail)
+        </li>
+        <li>Sanity test changes
+            <ol>
+                <li>Check that the app still starts</li>
+                <li>Do a basic manual end-to-end sanity test to show your changes work</li>
+                <li>Check the functionality <a
+                        href="https://www.gamasutra.com/view/news/127467/Opinion_A_Precommit_Checklist.php">around your
+                    change</a> still works.
+                </li>
+            </ol>
+        </li>
+        <li>Review the list of files in each commit (<code>git log --stat</code>)
+            <ol>
+                <li>Are all necessary files included?</li>
+                <li>Are any files included that shouldn't be?</li>
+            </ol>
+        </li>
+        <li>Read through the diff(s)
+            <ol>
+                <li>Are there any unfinished sections?</li>
+                <li>Are there any sections that you meant to refactor?</li>
+                <li>Is each change in a commit related? (e.g. <a
+                        href="https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging">separate</a> incidental code
+                    cleanups from feature/bug changes for clarity.)
+                </li>
+                <li>Do you want to reword the change description? (Remember it should have an <a
+                        href="https://chris.beams.io/posts/git-commit/">imperative header, and a body describing what and
+                    why</a>)
+                </li>
+            </ol>
+        </li>
+        <li>Update relevant documentation</li>
+    </ol>
+    <hr>
+    <p>Inspired by <a
+            href="https://dev.to/victoria/an-automatic-interactive-pre-commit-checklist-in-the-style-of-infomercials-14i7">Victoria
+        Drake</a> I turned this list into a <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">git
+        hook</a>. Copy the following shell script into <code>.git/hooks</code> and name it <code>pre-push</code>.</p>
+    <pre style="margin: 2rem;">
+#!/bin/sh
+
 git log origin..HEAD
 
-<span class=c1># Read user input, assign stdin to keyboard</span>
-<span class=nb>exec</span> &lt; /dev/tty
+# Read user input, assign stdin to keyboard
+exec < /dev/tty
 
-<span class=nv>D</span><span class=o>=</span><span class=s2>&#34;\e[37m&#34;</span> <span class=c1># default</span>
-<span class=nv>H</span><span class=o>=</span><span class=s2>&#34;\e[39m&#34;</span> <span class=c1># highlight</span>
-<span class=nv>S</span><span class=o>=</span><span class=s2>&#34;\e[33m&#34;</span> <span class=c1>#section</span>
+D="\e[37m" # default
+H="\e[39m" # highlight
+S="\e[33m" #section
 
-<span class=nv>CL</span><span class=o>=</span><span class=k>$(</span>cat <span class=s>&lt;&lt;-EOM
-</span><span class=s>
-</span><span class=s>${S}Checklist${D}
-</span><span class=s>
-</span><span class=s>1 Rebase, build, and unit test
-</span><span class=s>2 App still ${H}starts${D}?
-</span><span class=s>3 ${H}Sanity$D test change
-</span><span class=s>4 Functionality ${H}around$D your change still works?
-</span><span class=s>5 Commit includes ${H}all/only$D necessary files?
-</span><span class=s>6 Review ${H}diffs$D for TODOs and refactors?
-</span><span class=s>7 Is each change in a commit ${H}related${D}?
-</span><span class=s>8 ${H}Clearest$D possible commit messages?
-</span><span class=s>9 Update ${H}docs${D}?
-</span><span class=s>
-</span><span class=s>${S}Continue with push? (Y/n):$D 
-</span><span class=s>EOM</span>
-<span class=k>)</span>
-<span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$CL</span><span class=s2>&#34;</span>
+CL=$(cat <<-EOM
 
-<span class=k>while</span> <span class=nb>read</span> yn<span class=p>;</span> <span class=k>do</span>
-  <span class=k>case</span> <span class=nv>$yn</span> in
-    Y<span class=p>|</span>y<span class=p>|</span><span class=s2>&#34;&#34;</span><span class=o>)</span> break<span class=p>;;</span>
-    N<span class=p>|</span>n<span class=o>)</span> <span class=nb>exit</span> 1<span class=p>;;</span>
-    *<span class=o>)</span> <span class=nb>echo</span> <span class=s2>&#34;Please answer y (yes) or n (no):&#34;</span> <span class=o>&amp;&amp;</span> <span class=k>continue</span><span class=p>;</span>
-  <span class=k>esac</span>
-<span class=k>done</span>
+${S}Checklist${D}
 
-<span class=nb>exec</span> &lt;<span class=p>&amp;</span>-
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>Some notable features:</p>
-<ul>
-<li>First it prints the <code>git log</code> of the commits to be pushed.</li>
-<li>The most meaningful word in each check is highlighted to make the list quicker to read.</li>
-<li>It only asks once whether to continue with the push, rather than after each check.</li>
-<li><code>Enter</code> will default to yes.</li>
-</ul>
-<p>That&rsquo;s it! Let me know if you have a similar checklist process. Especially if it has something you think it has something I should add to mine!</p>
-<footer>
-<div class=tags>
-<a class=tag href=https://oliverschmid.space/tags/hugo/>Hugo</a>
-<a class=tag href=https://oliverschmid.space/tags/software-development/>software development</a>
-</div>
-<div class=level-right>
-<a class="share-link greyscale" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2foliverschmid.space%2fposts%2fpre-push-checklist%2f" target=_blank rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 438.536 438.536"><g><path fill="#4267b2" d="M414.41 24.123C398.333 8.042 378.963.0 356.315.0H82.228C59.58.0 40.21 8.042 24.126 24.123 8.045 40.207.003 59.576.003 82.225v274.084c0 22.647 8.042 42.018 24.123 58.102 16.084 16.084 35.454 24.126 58.102 24.126h274.084c22.648.0 42.018-8.042 58.095-24.126 16.084-16.084 24.126-35.454 24.126-58.102V82.225C438.532 59.576 430.49 40.204 414.41 24.123zM373.155 225.548h-49.963V406.84H248.39V225.548H210.99V163.02h37.401v-37.402c0-26.838 6.283-47.107 18.843-60.813 12.559-13.706 33.304-20.555 62.242-20.555h49.963v62.526h-31.401c-10.663.0-17.467 1.853-20.417 5.568-2.949 3.711-4.428 10.23-4.428 19.558v31.119h56.534L373.155 225.548z"/></g></svg>
-</a>
-<a class="share-link greyscale" title="Share on Reddit" href="https://reddit.com/submit?url=https%3a%2f%2foliverschmid.space%2fposts%2fpre-push-checklist%2f&title=Pre-Push%20Checklist" target=_blank rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height="22" width="22"><circle fill="#ff4500" cx="50" cy="50" r="49"/><path fill="#fff" d="M52.69 18.79a1.62 1.62.0 011.93-1.22L67.86 20.5a5.24 5.24.0 11-.55 2.93l-12-2.66-4.07 17.5A37.77 37.77.0 0173 45.47a7.71 7.71.0 0111.83.93 7.53 7.53.0 01.41.73 8 8 0 01-3.6 10.7 18.67 18.67.0 01-8 17.5A39.59 39.59.0 0150 82.46a39.57 39.57.0 01-23.64-7.13 18.67 18.67.0 01-8-17.5 7.53 7.53.0 01-.73-.41 8 8 0 01-2.46-11 8.27 8.27.0 01.9-1.06A7.74 7.74.0 0127 45.47a37.78 37.78.0 0121.19-7.19zm4.39 37.4a5.3 5.3.0 105.3-5.3 5.29 5.29.0 00-5.3 5.3zM63.39 70.8a1.22 1.22.0 00-1.3-2 20.66 20.66.0 01-24.18.0 1.22 1.22.0 00-1.3 2 22.66 22.66.0 0026.78.0zM32.32 56.19a5.3 5.3.0 105.3-5.3 5.29 5.29.0 00-5.3 5.3z"/></svg></a>
-<a class="share-link greyscale" title="Share on Twitter" href="https://twitter.com/share?url=https%3a%2f%2foliverschmid.space%2fposts%2fpre-push-checklist%2f&text=Pre-Push%20Checklist" target=_blank rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 438.536 438.536"><g><path fill="#1da1f2" d="M414.41 24.123C398.333 8.042 378.963.0 356.315.0H82.228C59.58.0 40.21 8.042 24.126 24.123 8.045 40.207.003 59.576.003 82.225v274.084c0 22.647 8.042 42.018 24.123 58.102 16.084 16.084 35.454 24.126 58.102 24.126h274.084c22.648.0 42.018-8.042 58.095-24.126 16.084-16.084 24.126-35.454 24.126-58.102V82.225C438.532 59.576 430.49 40.204 414.41 24.123zM335.471 168.735c.191 1.713.288 4.278.288 7.71.0 15.989-2.334 32.025-6.995 48.104-4.661 16.087-11.8 31.504-21.416 46.254-9.606 14.749-21.074 27.791-34.396 39.115-13.325 11.32-29.311 20.365-47.968 27.117-18.648 6.762-38.637 10.143-59.953 10.143-33.116.0-63.76-8.952-91.931-26.836 4.568.568 9.329.855 14.275.855 27.6.0 52.439-8.565 74.519-25.7-12.941-.185-24.506-4.179-34.688-11.991-10.185-7.803-17.273-17.699-21.271-29.691 4.947.76 8.658 1.137 11.132 1.137 4.187.0 9.042-.76 14.56-2.279-13.894-2.669-25.598-9.562-35.115-20.697-9.519-11.136-14.277-23.84-14.277-38.114v-.571c10.085 4.755 19.602 7.229 28.549 7.422-17.321-11.613-25.981-28.265-25.981-49.963.0-10.66 2.758-20.747 8.278-30.264 15.035 18.464 33.311 33.213 54.816 44.252 21.507 11.038 44.54 17.227 69.092 18.558-.95-3.616-1.427-8.186-1.427-13.704.0-16.562 5.853-30.692 17.56-42.399 11.703-11.706 25.837-17.561 42.394-17.561 17.515.0 32.079 6.283 43.688 18.846 13.134-2.474 25.892-7.33 38.26-14.56-4.757 14.652-13.613 25.788-26.55 33.402 12.368-1.716 23.88-4.95 34.537-9.708C357.458 149.793 347.462 160.166 335.471 168.735z"/></g></svg>
-</a>
-</div>
-</footer>
-</article>
-<div class=has-text-centered>
-<hr>
-<i>Comments are not available yet but feel free to reach out to me through the <a href=/contact>Contact</a> page. - Oliver</i>
-</div>
+1 Rebase, build, and unit test
+2 App still ${H}starts${D}?
+3 ${H}Sanity$D test change
+4 Functionality ${H}around$D your change still works?
+5 Commit includes ${H}all/only$D necessary files?
+6 Review ${H}diffs$D for TODOs and refactors?
+7 Is each change in a commit ${H}related${D}?
+8 ${H}Clearest$D possible commit messages?
+9 Update ${H}docs${D}?
+
+${S}Continue with push? (Y/n):$D
+EOM
+)
+echo "$CL"
+
+while read yn; do
+case $yn in
+Y|y|"") break;;
+N|n) exit 1;;
+*) echo "Please answer y (yes) or n (no):" && continue;
+esac
+done
+
+exec <&-
+    </pre>
+    <p>Some notable features:</p>
+    <ul>
+        <li>First it prints the <code>git log</code> of the commits to be pushed.</li>
+        <li>The most meaningful word in each check is highlighted to make the list quicker to read.</li>
+        <li>It only asks once whether to continue with the push, rather than after each check.</li>
+        <li><code>Enter</code> will default to yes.</li>
+    </ul>
+    <p>That&rsquo;s it! Let me know if you have a similar checklist process. Especially if it has something you think it
+        has something I should add to mine!</p>
+    <hr>
+    <footer class="justify-center">
+        <a href="/contact/">Comment</a>
+    </footer>
 </main>
-</div>
-<footer class=footer>
-<div class="content has-text-centered">
-<a class=is-plain href=/>Home</a>
-<a class="is-plain is-spaced-footer-link rss-button" title="Subscribe to RSS" href=/index.xml><svg xmlns="http://www.w3.org/2000/svg" class="rss-icon" viewBox="0 0 8 8" width="22" height="22"><title>Subscribe to RSS</title><circle cx="2" cy="6" r="1"/><path d="m1 4a3 3 0 013 3h1A4 4 0 001 3z"/><path d="m1 2a5 5 0 015 5h1A6 6 0 001 1z"/></svg>Subscribe</a>
-<a class="is-plain is-spaced-footer-link" href=/about/>About</a>
-<a class="is-plain is-spaced-footer-link" href=/contact/>Contact</a>
-<p>
-<div>©2023 Oliver Schmid</div>
-<p>
-<div class="section is-italic">Facebook and Twitter icons by <a class="is-plain has-text-underlined" href=https://www.flaticon.com/authors/dave-gandy title="Dave Gandy">Dave Gandy</a> provided under <a class="is-plain has-text-underlined" href=http://creativecommons.org/licenses/by/3.0/ title="Creative Commons BY 3.0">CC BY 3.0</a> license</div>
-</div>
-</footer>

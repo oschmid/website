@@ -1,170 +1,204 @@
-<!doctype html><html lang="en"><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta itemprop=name content="GTD in Roam">
-<meta itemprop=description content="Update May 6, 2022: Now I&rsquo;m using Todoist for GTD.
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta itemprop="name" content="GTD in Roam">
+<meta itemprop="description" content="Update May 6, 2022: Now I&rsquo;m using Todoist for GTD.
 Update Oct 21, 2021: I have switched to Nirvana HQ for GTD.
-Update Nov 14, 2020: After some experimentation I returned to using Trello for GTD. Roam is well suited for learning and deep work, but not for juggling a lot of small actions. In particular, clarifying/organizing tasks on Roam mobile was painful due to its slow startup and text based input."><meta itemprop=datePublished content="2020-02-09T08:19:51-08:00">
-<meta itemprop=dateModified content="2020-02-09T08:19:51-08:00">
-<meta itemprop=wordCount content="1536">
-<meta itemprop=keywords content>
-<title>
-GTD in Roam
-</title>
-<meta name=description content="Personal Blog">
-<link rel=apple-touch-icon href=/favicon-touch.png>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css integrity=sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n crossorigin=anonymous>
-<link rel=stylesheet href=/styles.min.css>
-<div class=section>
-<div class=container>
-<header class=title>
-<h2><a class=is-plain href=/>Oliver Schmid</a></h2>
+Update Nov 14, 2020: After some experimentation I returned to using Trello for GTD. Roam is well suited for learning and deep work, but not for juggling a lot of small actions. In particular, clarifying/organizing tasks on Roam mobile was painful due to its slow startup and text based input.">
+<meta itemprop="datePublished" content="2020-02-09T08:19:51-08:00">
+<meta itemprop="dateModified" content="2020-02-09T08:19:51-08:00">
+<meta itemprop="wordCount" content="1536">
+<meta itemprop="keywords" content="GTD">
+<title>GTD in Roam</title>
+<meta name="description" content="Personal Blog">
+<link rel="apple-touch-icon" href="/favicon-touch.png">
+<link rel="stylesheet" href="/style.css">
+<header class="center">
+    <div class="center"><img src="gtd-plus-roam.png"></div>
+    <h1 class="title is-3">GTD in Roam</h1>
+    <p class="subtitle has-text-grey">
+        <time datetime="2020-02-09 08:19">February 09, 2020</time>
+        &nbsp;-&nbsp;
+        <span><time datetime="8M">8 min</time> read</span>
 </header>
-</div>
-<main class="container is-readable-column">
-<article class=content>
-<header class=title>
-<img src=gtd-plus-roam.png>
-<h1 class="title is-3">GTD in Roam</h1>
-<p class="subtitle has-text-grey">
-<time datetime="2020-02-09 08:19">February 09, 2020</time>
-&nbsp;-&nbsp;
-<span><time datetime=8M>8 min</time> read</span>
-</p>
-</header>
-<p><strong>Update May 6, 2022:</strong> Now I&rsquo;m using <a href=https://todoist.com>Todoist</a> for GTD.</p>
-<p><strong>Update Oct 21, 2021:</strong> I have switched to <a href=https://nirvanahq.com/>Nirvana HQ</a> for GTD.</p>
-<p><strong>Update Nov 14, 2020:</strong> After some experimentation I returned to using Trello for GTD. Roam is well suited for learning and deep work, but not for juggling a lot of small actions. In particular, clarifying/organizing tasks on Roam mobile was painful due to its slow startup and text based input. (Trello on the other hand is fast to start and has dropdowns for moving actions to different lists.) Roam may be better paired with another task management system. Feel free to still read the below as inspiration for your own Roam workflows.</p>
-<hr>
-<p><a href=https://roamresearch.com/>Roam Research</a> is a great note-taking app where each note page tracks its <a href=https://roamresearch.com/#/v8/help/page/Vu1MmjinS>linked and unlinked references</a>. Even without explicitly linking pages Roam will create connections and help you manage your disparate thoughts.</p>
-<p>When I was reading through the <a href=https://roamresearch.com/#/v8/help/page/1308>Welcome to Roam</a> documentation I came across notes on how to set up <a href=https://roamresearch.com/#/v8/help/page/AImpYBcPs>Getting Things Done in Roam</a>. It was a good starting point but it doesn&rsquo;t use GTD Contexts to narrow down Next Actions and relies a lot on drag-and-drop to move actions around. Both of these factors limit the total number of tasks that can be managed without getting overloaded and make it harder to do GTD on a phone.</p>
-<p>So I&rsquo;ve come up with a system that uses Roam&rsquo;s linked references to gather tasks by their context tag, and let me move tasks around without leaving the keyboard.</p>
-<h2 id=capturing>Capturing</h2>
-<p>Instead of a specific Bucket page for adding new ideas, I write ideas down wherever I am, along with an <em>#Inbox</em> tag. This has the nice effect of keeping the idea on the page where I first thought of it (and where it&rsquo;s surrounded by related information). This could be a project page or the Daily Note. Putting new task ideas on the Daily Note page actually makes it possible to track the time between thinking of it and completing it.</p>
-<p><img src=inbox-block-with-single-task.png alt="Single Inbox block"></p>
-<p>Sometimes I save a bit of typing by adding multiple ideas under an <em>#Inbox</em> block. Roam will link the whole thing to the <strong>Inbox</strong> page.</p>
-<p><img src=./inbox-block-with-multiple-tasks.png alt="#Inbox block with multiple tasks"></p>
-<h2 id=clarifyingorganizing>Clarifying/Organizing</h2>
-<p>To remind myself of all my non-Roam (a.k.a. satellite) inboxes I have a list of them on the <strong>Inbox</strong> page. Places like my personal and work emails, my night table, or my desk. I also added orphaned blocks using Roam&rsquo;s <em>/Find orphan blocks</em> command. (The picture of balloons by <a href=https://unsplash.com/@sadswim>ian dooley</a> is there to make processing my Inbox during a Daily Review a bit more fun!)</p>
-<p><img src=./inbox.png alt="Inbox page with balloons and satellite inboxes"></p>
-<p>I start my Daily Review by going to the <strong>Inbox</strong> page, reviewing each linked reference in order, and asking myself GTD&rsquo;s clarifying questions:</p>
-<ul>
-<li>What is it?</li>
-<li>What&rsquo;s the desired outcome?</li>
-<li>What&rsquo;s the next action(s)?</li>
-</ul>
-<p>With the answers to these questions I deal with it in one of the following ways:</p>
-<ul>
-<li><strong>Do It</strong> if it takes &lt;2mins</li>
-<li><strong>Delegate It</strong> if someone else is handling it. In which case I&rsquo;ll tag their name and <em>#Waiting On</em></li>
-<li><strong>Defer It</strong> if it&rsquo;s for a later time.
-<ul>
-<li>Either by creating a calendar event (outside of Roam)</li>
-<li>Creating a phone reminder (if it&rsquo;s something I need to do at a specific time)</li>
-<li>Tagging <em>#Tickler</em> and a future date using <em>/Date Picker</em> if it&rsquo;s something I want to sort at a later time</li>
-<li>Or tagging it with related topics and <em>#Someday/Maybe</em></li>
-</ul>
-</li>
-<li><strong>Tidy It</strong> by creating Next Action(s), <em>#Outcomes</em>, or keeping it somewhere as reference</li>
-<li><strong>Trash It</strong> if it&rsquo;s not necessary anymore</li>
-</ul>
-<h2 id=next-actions>Next Actions</h2>
-<p>To next actions I add a checkbox (using <strong>Ctrl + Enter</strong>), tags for related topics, and a GTD context tag like:</p>
-<ul>
-<li><em>#Anywhere</em></li>
-<li><em>#[[Someone&rsquo;s Name]]</em> and <em>#Agenda</em></li>
-<li><em>#Calls</em></li>
-<li><em>#Errands</em></li>
-<li><em>#Home</em></li>
-<li><em>#Office</em></li>
-</ul>
-<p>Roam linked references can be filtered (and Roam will even remember filters across browsers and sessions). So for each of these context pages, I&rsquo;ve setup filters to only show linked references that are <strong>TODO</strong>s.</p>
-<p><img src=./context-todo-filter.png alt="Context TODO filter"></p>
-<p>I like to complete actions by tagging the current day (using the <em>/Today</em> command) and then checking it off. This adds it to the Daily Note where I journal about what I did during the day.</p>
-<p><img src=./completed-action.png alt="Completed action"></p>
-<h2 id=roam-shortcuts>Roam Shortcuts</h2>
-<p>Roam&rsquo;s left sidebar has space for a list of shortcuts. I added the following to make all parts of the GTD workflow easily accessible:</p>
-<ul>
-<li>Inbox</li>
-<li>Next Actions</li>
-<li>Outcomes</li>
-<li>Someday/Maybe</li>
-</ul>
-<p>I try to keep this list short because scrolling is limited on mobile. On a desktop computer shortcuts can be added by going to <strong>All Pages</strong>, finding the context page, clicking <strong>&mldr;</strong> (in the ACTIONS column), and then <strong>Add to shortcuts</strong>.</p>
-<p><img src=./add-to-shortcuts.png alt="Add to shortcuts"></p>
-<p>On the <strong>Next Actions</strong> page I have a list of different contexts. If you have only a few contexts, go ahead and add them to the shortcuts on the left sidebar.</p>
-<p><img src=./next-actions.png alt="Next Actions page"></p>
-<h2 id=deferring-actions-with-tickler-and-waiting-on>Deferring Actions with <em>#Tickler</em> and <em>#Waiting On</em></h2>
-<p>The original version of GTD had physical folders for each day of the month, each month of the year, and then future years as needed. When using a digital Tickler like Roam, I prefer to skip the folders for months and years and just tag future dates directly (using the <em>/Date Picker</em> command). It helps that Roam will automatically turn those future dates into a Daily Note when the date comes about.</p>
-<p>I used to worry that I might miss a <em>#Tickler</em> or <em>#Waiting On</em> task, if I didn&rsquo;t open Roam every day. But Roam makes it easy to scroll down on the Daily Notes page and see past Daily Notes. To help me remember to do this, I added a reminder to my Daily Review instructions.</p>
-<p>If I scroll down I&rsquo;ll either see blank notes with linked references to <em>#Tickler</em> or <em>#Waiting On</em> tasks that I missed or I&rsquo;ll see the last Daily Note where I wrote a journal entry. Once I see that last journal entry I&rsquo;ll know that I won&rsquo;t need to look any further back.</p>
-<p><img src=./tickler-task-from-previous-date.png alt="#Tickler task from a previous date"></p>
-<h2 id=projectsoutcomes>Projects/Outcomes</h2>
-<p>&ldquo;Projects&rdquo; are what GTD calls any short term goal that takes multiple actions (typically in different contexts). This confused me until I read this article by <a href=http://lauraearnest.com/simplifying-getting-things-done-projects/>Laura Earnest</a>. In Roam I avoid using the term project and instead handle multiple steps by creating an <em>#Outcomes</em> block describing what I want to achieve and listing next actions beneath it.</p>
-<p><img src=./outcome-with-multiple-actions.png alt="Outcome with multiple actions"></p>
-<h2 id=plans>Plans</h2>
-<p>I have a page with a copy of the <strong>Natural Planning Model</strong> that I&rsquo;ll consult when planning long term projects:</p>
-<blockquote>
-<ol>
-<li>Define purpose and principles – Why are you doing this? What are the constraints?</li>
-<li>Visualise outcomes – What does success look like? How about wild success?</li>
-<li>Brainstorm – What are all the ideas you can think of? Get the bad ones out of your head too.</li>
-<li>Organise – What ideas will you use? Which are the most important? What order will you do them in?</li>
-<li>Identify next actions – What is the very next physical action you can take to progress the project?</li>
-</ol>
-</blockquote>
-<div class=level>
-<span class="level-item level-right">
-—&nbsp;<a href=https://fastertomaster.com/getting-things-done-david-allen/#plan>Arthur, Faster to Master</a>
+<main>
+    <p><strong>Update May 6, 2022:</strong> Now I&rsquo;m using <a href="https://todoist.com">Todoist</a> for GTD.
+    <p><strong>Update Oct 21, 2021:</strong> I have switched to <a href="https://nirvanahq.com/">Nirvana HQ</a> for GTD.
+    
+    <p><strong>Update Nov 14, 2020:</strong> After some experimentation I returned to using Trello for GTD. Roam is well
+        suited for learning and deep work, but not for juggling a lot of small actions. In particular,
+        clarifying/organizing tasks on Roam mobile was painful due to its slow startup and text based input. (Trello on
+        the other hand is fast to start and has dropdowns for moving actions to different lists.) Roam may be better
+        paired with another task management system. Feel free to still read the below as inspiration for your own Roam
+        workflows.
+    <hr>
+    <p><a href="https://roamresearch.com/">Roam Research</a> is a great note-taking app where each note page tracks its <a
+            href="https://roamresearch.com/#/v8/help/page/Vu1MmjinS">linked and unlinked references</a>. Even without
+        explicitly linking pages Roam will create connections and help you manage your disparate thoughts.
+    <p>When I was reading through the <a href="https://roamresearch.com/#/v8/help/page/1308">Welcome to Roam</a>
+        documentation I came across notes on how to set up <a href="https://roamresearch.com/#/v8/help/page/AImpYBcPs">Getting
+            Things Done in Roam</a>. It was a good starting point, but it doesn't use GTD Contexts to narrow down
+        Next Actions and relies a lot on drag-and-drop to move actions around. Both of these factors limit the total
+        number of tasks that can be managed without getting overloaded and make it harder to do GTD on a phone.
+    <p>So I&rsquo;ve come up with a system that uses Roam&rsquo;s linked references to gather tasks by their context
+        tag, and let me move tasks around without leaving the keyboard.
+    <h2 id="capturing">Capturing</h2>
+    <p>Instead of a specific Bucket page for adding new ideas, I write ideas down wherever I am, along with an <em>#Inbox</em>
+        tag. This has the nice effect of keeping the idea on the page where I first thought of it (and where it&rsquo;s
+        surrounded by related information). This could be a project page or the Daily Note. Putting new task ideas on
+        the Daily Note page actually makes it possible to track the time between thinking of it and completing it.
+    <p><div class="center"><img src="inbox-block-with-single-task.png" alt="Single Inbox block"></div>
+    <p>Sometimes I save a bit of typing by adding multiple ideas under an <em>#Inbox</em> block. Roam will link the
+        whole thing to the <strong>Inbox</strong> page.
+    <p><div class="center"><img src="./inbox-block-with-multiple-tasks.png" alt="#Inbox block with multiple tasks"></div>
+    <h2 id="clarifying-organizing">Clarifying/Organizing</h2>
+    <p>To remind myself of all my non-Roam (a.k.a. satellite) inboxes I have a list of them on the
+        <strong>Inbox</strong> page. Places like my personal and work emails, my night table, or my desk. I also added
+        orphaned blocks using Roam&rsquo;s <em>/Find orphan blocks</em> command. (The picture of balloons by <a
+                href="https://unsplash.com/@sadswim">ian dooley</a> is there to make processing my Inbox during a Daily
+        Review a bit more fun!)
+    <p><div class="center"><img src="./inbox.png" alt="Inbox page with balloons and satellite inboxes"></div>
+    <p>I start my Daily Review by going to the <strong>Inbox</strong> page, reviewing each linked reference in order,
+        and asking myself GTD&rsquo;s clarifying questions:
+    <ul>
+        <li>What is it?</li>
+        <li>What&rsquo;s the desired outcome?</li>
+        <li>What&rsquo;s the next action(s)?</li>
+    </ul>
+    <p>With the answers to these questions I deal with it in one of the following ways:
+    <ul>
+        <li><strong>Do It</strong> if it takes &lt;2 minutes</li>
+        <li><strong>Delegate It</strong> if someone else is handling it. In which case I&rsquo;ll tag their name and
+            <em>#Waiting On</em></li>
+        <li><strong>Defer It</strong> if it&rsquo;s for a later time.
+            <ul>
+                <li>Either by creating a calendar event (outside of Roam)</li>
+                <li>Creating a phone reminder (if it&rsquo;s something I need to do at a specific time)</li>
+                <li>Tagging <em>#Tickler</em> and a future date using <em>/Date Picker</em> if it&rsquo;s something I
+                    want to sort at a later time
+                </li>
+                <li>Or tagging it with related topics and <em>#Someday/Maybe</em></li>
+            </ul>
+        </li>
+        <li><strong>Tidy It</strong> by creating Next Action(s), <em>#Outcomes</em>, or keeping it somewhere as
+            reference
+        </li>
+        <li><strong>Trash It</strong> if it&rsquo;s not necessary anymore</li>
+    </ul>
+    <h2 id="next-actions">Next Actions</h2>
+    <p>To next actions I add a checkbox (using <strong>Ctrl + Enter</strong>), tags for related topics, and a GTD
+        context tag like:
+    <ul>
+        <li><em>#Anywhere</em></li>
+        <li><em>#[[Someone&rsquo;s Name]]</em> and <em>#Agenda</em></li>
+        <li><em>#Calls</em></li>
+        <li><em>#Errands</em></li>
+        <li><em>#Home</em></li>
+        <li><em>#Office</em></li>
+    </ul>
+    <p>Roam linked references can be filtered (and Roam will even remember filters across browsers and sessions). So for
+        each of these context pages, I&rsquo;ve set up filters to only show linked references that are
+        <strong>TODO</strong>s.
+    <p><div class="center"><img src="./context-todo-filter.png" alt="Context TODO filter"></div>
+    <p>I like to complete actions by tagging the current day (using the <em>/Today</em> command) and then checking it
+        off. This adds it to the Daily Note where I journal about what I did during the day.
+    <p><div class="center"><img src="./completed-action.png" alt="Completed action"></div>
+    <h2 id="roam-shortcuts">Roam Shortcuts</h2>
+    <p>Roam&rsquo;s left sidebar has space for a list of shortcuts. I added the following to make all parts of the GTD
+        workflow easily accessible:
+    <ul>
+        <li>Inbox</li>
+        <li>Next Actions</li>
+        <li>Outcomes</li>
+        <li>Someday/Maybe</li>
+    </ul>
+    <p>I try to keep this list short because scrolling is limited on mobile. On a desktop computer shortcuts can be
+        added by going to <strong>All Pages</strong>, finding the context page, clicking <strong>&mldr;</strong> (in the
+        ACTIONS column), and then <strong>Add to shortcuts</strong>.
+    <p><div class="center"><img src="./add-to-shortcuts.png" alt="Add to shortcuts"></div>
+    <p>On the <strong>Next Actions</strong> page I have a list of different contexts. If you have only a few contexts,
+        go ahead and add them to the shortcuts on the left sidebar.
+    <p><div class="center"><img src="./next-actions.png" alt="Next Actions page"></div>
+    <h2 id="deferring-actions-with-tickler-and-waiting-on">Deferring Actions with <em>#Tickler</em> and <em>#Waiting
+        On</em></h2>
+    <p>The original version of GTD had physical folders for each day of the month, each month of the year, and then
+        future years as needed. When using a digital Tickler like Roam, I prefer to skip the folders for months and
+        years and just tag future dates directly (using the <em>/Date Picker</em> command). It helps that Roam will
+        automatically turn those future dates into a Daily Note when the date comes about.
+    <p>I used to worry that I might miss a <em>#Tickler</em> or <em>#Waiting On</em> task, if I didn't open Roam
+        every day. But Roam makes it easy to scroll down on the Daily Notes page and see past Daily Notes. To help me
+        remember to do this, I added a reminder to my Daily Review instructions.
+    <p>If I scroll down I&rsquo;ll either see blank notes with linked references to <em>#Tickler</em> or <em>#Waiting
+        On</em> tasks that I missed or I&rsquo;ll see the last Daily Note where I wrote a journal entry. Once I see that
+        last journal entry I&rsquo;ll know that I won&rsquo;t need to look any further back.
+    <p><div class="center"><img src="./tickler-task-from-previous-date.png" alt="#Tickler task from a previous date"></div>
+    <h2 id="projects-outcomes">Projects/Outcomes</h2>
+    <p>&ldquo;Projects&rdquo; are what GTD calls any short term goal that takes multiple actions (typically in different
+        contexts). This confused me until I read this article by <a
+                href="http://lauraearnest.com/simplifying-getting-things-done-projects/">Laura Earnest</a>. In Roam, I
+        avoid using the term project and instead handle multiple steps by creating an <em>#Outcomes</em> block
+        describing what I want to achieve and listing next actions beneath it.
+    <p><div class="center"><img src="./outcome-with-multiple-actions.png" alt="Outcome with multiple actions"></div>
+    <h2 id="plans">Plans</h2>
+    <p>I have a page with a copy of the <strong>Natural Planning Model</strong> that I&rsquo;ll consult when planning
+        long term projects:
+    <blockquote>
+        <ol>
+            <li>Define purpose and principles – Why are you doing this? What are the constraints?</li>
+            <li>Visualise outcomes – What does success look like? How about wild success?</li>
+            <li>Brainstorm – What are all the ideas you can think of? Get the bad ones out of your head too.</li>
+            <li>Organise – What ideas will you use? Which are the most important? What order will you do them in?</li>
+            <li>Identify next actions – What is the very next physical action you can take to progress the project?</li>
+        </ol>
+    </blockquote>
+    <div style="text-align:right;">
+<span>
+—&nbsp;<a href="https://fastertomaster.com/getting-things-done-david-allen/#plan">Arthur, Faster to Master</a>
 </span>
-</div>
-<p>I also have a page for GTD <strong>Horizons</strong>. This is the only GTD list where I keep notes on the page itself, rather than use Roam&rsquo;s' linked references. This is fine since Horizon planning is very structured and Horizon items change infrequently.</p>
-<blockquote>
-<ul>
-<li>Horizon 5: Purpose and principles – The purpose, mission and values at the heart of your existence;</li>
-<li>Horizon 4: Vision – A broad overview of what success looks like for you on a 3 – 5 years timeline;</li>
-<li>Horizon 3: Goals – The larger outcomes you’d like to make manifest in the next 1 – 2 years;</li>
-<li>Horizon 2: Areas of Focus and Accountability – The roles and areas of life your committed to focussing on in the next 12 months;</li>
-<li>Horizon 1: Current projects – The list of any outcome you are committed to realising in &lt; 12 months; and</li>
-<li>Ground: Current actions – The comprehensive action list at the core of getting things done.</li>
-</ul>
-</blockquote>
-<div class=level>
-<span class="level-item level-right">
-—&nbsp;<a href=https://fastertomaster.com/getting-things-done-david-allen/#plan>Arthur, Faster to Master</a>
+    </div>
+    <p>I also have a page for GTD <strong>Horizons</strong>. This is the only GTD list where I keep notes on the page
+        itself, rather than use Roam&rsquo;s' linked references. This is fine since Horizon planning is very structured
+        and Horizon items change infrequently.
+    <blockquote>
+        <ul>
+            <li>Horizon 5: Purpose and principles – The purpose, mission and values at the heart of your existence;</li>
+            <li>Horizon 4: Vision – A broad overview of what success looks like for you on a 3 – 5 years timeline;</li>
+            <li>Horizon 3: Goals – The larger outcomes you’d like to make manifest in the next 1 – 2 years;</li>
+            <li>Horizon 2: Areas of Focus and Accountability – The roles and areas of life your committed to focussing
+                on in the next 12 months;
+            </li>
+            <li>Horizon 1: Current projects – The list of any outcome you are committed to realising in &lt; 12 months;
+                and
+            </li>
+            <li>Ground: Current actions – The comprehensive action list at the core of getting things done.</li>
+        </ul>
+    </blockquote>
+    <div style="text-align:right;">
+<span>
+—&nbsp;<a href="https://fastertomaster.com/getting-things-done-david-allen/#plan">Arthur, Faster to Master</a>
 </span>
-</div>
-<h2 id=reference>Reference</h2>
-<p>This is the easiest part of GTD to handle in Roam. Roam&rsquo;s reference linking will naturally bring notes back up when they&rsquo;re written about again. When I&rsquo;m writing I just try to maintain consistent terminology and let Roam do its thing.</p>
-<h2 id=reviews>Reviews</h2>
-<p>I start my Daily Reviews on the <strong>Inbox</strong> page. Clarifying and organizing what Roam has linked, and then looking through my list of satellite inboxes. Then I&rsquo;ll go to the <strong>Daily Notes</strong> page (using <strong>Alt + D</strong>) and scroll down to see if I missed any <em>#Tickler</em> or <em>#Waiting On</em> tasks. I could also go to the <strong>Tickler</strong> or <strong>Waiting On</strong> pages directly but these lists can get long (for me at least) and Roam has no way of sorting by date. Plus I use Roam frequently enough that I have yet to need to scroll far. Finally I&rsquo;ll plan my day by reading through my Next Actions, and adding block references in the Daily Note I open in the right sidebar.</p>
-<p><img src=./daily-review-planning.png alt="Daily Review planning"></p>
-<p>Once a week, in addition to the usual Daily Review, I&rsquo;ll also review my <strong>Outcomes</strong>, <strong>Someday/Maybe</strong>, and <strong>Horizons</strong> pages to see if there&rsquo;s anything that I now want to tackle.</p>
-<p>Once a year I&rsquo;ll also review a <a href=https://fastertomaster.com/getting-things-done-david-allen/>summary of GTD</a>, compare it to my <strong>GTD</strong> page in Roam, and think about where my system can be improved. And that&rsquo;s how to do GTD with Roam&rsquo;s linked references and filtering!</p>
-<footer>
-<div class=level-right>
-<a class="share-link greyscale" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2foliverschmid.space%2fposts%2fgtd-in-roam%2f" target=_blank rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 438.536 438.536"><g><path fill="#4267b2" d="M414.41 24.123C398.333 8.042 378.963.0 356.315.0H82.228C59.58.0 40.21 8.042 24.126 24.123 8.045 40.207.003 59.576.003 82.225v274.084c0 22.647 8.042 42.018 24.123 58.102 16.084 16.084 35.454 24.126 58.102 24.126h274.084c22.648.0 42.018-8.042 58.095-24.126 16.084-16.084 24.126-35.454 24.126-58.102V82.225C438.532 59.576 430.49 40.204 414.41 24.123zM373.155 225.548h-49.963V406.84H248.39V225.548H210.99V163.02h37.401v-37.402c0-26.838 6.283-47.107 18.843-60.813 12.559-13.706 33.304-20.555 62.242-20.555h49.963v62.526h-31.401c-10.663.0-17.467 1.853-20.417 5.568-2.949 3.711-4.428 10.23-4.428 19.558v31.119h56.534L373.155 225.548z"/></g></svg>
-</a>
-<a class="share-link greyscale" title="Share on Reddit" href="https://reddit.com/submit?url=https%3a%2f%2foliverschmid.space%2fposts%2fgtd-in-roam%2f&title=GTD%20in%20Roam" target=_blank rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height="22" width="22"><circle fill="#ff4500" cx="50" cy="50" r="49"/><path fill="#fff" d="M52.69 18.79a1.62 1.62.0 011.93-1.22L67.86 20.5a5.24 5.24.0 11-.55 2.93l-12-2.66-4.07 17.5A37.77 37.77.0 0173 45.47a7.71 7.71.0 0111.83.93 7.53 7.53.0 01.41.73 8 8 0 01-3.6 10.7 18.67 18.67.0 01-8 17.5A39.59 39.59.0 0150 82.46a39.57 39.57.0 01-23.64-7.13 18.67 18.67.0 01-8-17.5 7.53 7.53.0 01-.73-.41 8 8 0 01-2.46-11 8.27 8.27.0 01.9-1.06A7.74 7.74.0 0127 45.47a37.78 37.78.0 0121.19-7.19zm4.39 37.4a5.3 5.3.0 105.3-5.3 5.29 5.29.0 00-5.3 5.3zM63.39 70.8a1.22 1.22.0 00-1.3-2 20.66 20.66.0 01-24.18.0 1.22 1.22.0 00-1.3 2 22.66 22.66.0 0026.78.0zM32.32 56.19a5.3 5.3.0 105.3-5.3 5.29 5.29.0 00-5.3 5.3z"/></svg></a>
-<a class="share-link greyscale" title="Share on Twitter" href="https://twitter.com/share?url=https%3a%2f%2foliverschmid.space%2fposts%2fgtd-in-roam%2f&text=GTD%20in%20Roam" target=_blank rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 438.536 438.536"><g><path fill="#1da1f2" d="M414.41 24.123C398.333 8.042 378.963.0 356.315.0H82.228C59.58.0 40.21 8.042 24.126 24.123 8.045 40.207.003 59.576.003 82.225v274.084c0 22.647 8.042 42.018 24.123 58.102 16.084 16.084 35.454 24.126 58.102 24.126h274.084c22.648.0 42.018-8.042 58.095-24.126 16.084-16.084 24.126-35.454 24.126-58.102V82.225C438.532 59.576 430.49 40.204 414.41 24.123zM335.471 168.735c.191 1.713.288 4.278.288 7.71.0 15.989-2.334 32.025-6.995 48.104-4.661 16.087-11.8 31.504-21.416 46.254-9.606 14.749-21.074 27.791-34.396 39.115-13.325 11.32-29.311 20.365-47.968 27.117-18.648 6.762-38.637 10.143-59.953 10.143-33.116.0-63.76-8.952-91.931-26.836 4.568.568 9.329.855 14.275.855 27.6.0 52.439-8.565 74.519-25.7-12.941-.185-24.506-4.179-34.688-11.991-10.185-7.803-17.273-17.699-21.271-29.691 4.947.76 8.658 1.137 11.132 1.137 4.187.0 9.042-.76 14.56-2.279-13.894-2.669-25.598-9.562-35.115-20.697-9.519-11.136-14.277-23.84-14.277-38.114v-.571c10.085 4.755 19.602 7.229 28.549 7.422-17.321-11.613-25.981-28.265-25.981-49.963.0-10.66 2.758-20.747 8.278-30.264 15.035 18.464 33.311 33.213 54.816 44.252 21.507 11.038 44.54 17.227 69.092 18.558-.95-3.616-1.427-8.186-1.427-13.704.0-16.562 5.853-30.692 17.56-42.399 11.703-11.706 25.837-17.561 42.394-17.561 17.515.0 32.079 6.283 43.688 18.846 13.134-2.474 25.892-7.33 38.26-14.56-4.757 14.652-13.613 25.788-26.55 33.402 12.368-1.716 23.88-4.95 34.537-9.708C357.458 149.793 347.462 160.166 335.471 168.735z"/></g></svg>
-</a>
-</div>
-</footer>
-</article>
-<div class=has-text-centered>
-<hr>
-<i>Comments are not available yet but feel free to reach out to me through the <a href=/contact>Contact</a> page. - Oliver</i>
-</div>
+    </div>
+    <h2 id="reference">Reference</h2>
+    <p>This is the easiest part of GTD to handle in Roam. Roam&rsquo;s reference linking will naturally bring notes back
+        up when they're written about again. When I&rsquo;m writing I just try to maintain consistent terminology
+        and let Roam do its thing.
+    <h2 id="reviews">Reviews</h2>
+    <p>I start my Daily Reviews on the <strong>Inbox</strong> page. Clarifying and organizing what Roam has linked, and
+        then looking through my list of satellite inboxes. Then I&rsquo;ll go to the <strong>Daily Notes</strong> page
+        (using <strong>Alt + D</strong>) and scroll down to see if I missed any <em>#Tickler</em> or <em>#Waiting
+            On</em> tasks. I could also go to the <strong>Tickler</strong> or <strong>Waiting On</strong> pages directly
+        but these lists can get long (for me at least) and Roam has no way of sorting by date. Plus I use Roam
+        frequently enough that I have yet to need to scroll far. Finally, I&rsquo;ll plan my day by reading through my
+        Next Actions, and adding block references in the Daily Note I open in the right sidebar.
+    <p><div class="center"><img src="./daily-review-planning.png" alt="Daily Review planning"></div>
+    <p>Once a week, in addition to the usual Daily Review, I&rsquo;ll also review my <strong>Outcomes</strong>, <strong>Someday/Maybe</strong>,
+        and <strong>Horizons</strong> pages to see if there&rsquo;s anything that I now want to tackle.
+    <p>Once a year I&rsquo;ll also review a <a href="https://fastertomaster.com/getting-things-done-david-allen/">summary
+        of GTD</a>, compare it to my <strong>GTD</strong> page in Roam, and think about where my system can be improved.
+        And that&rsquo;s how to do GTD with Roam&rsquo;s linked references and filtering!
+    <hr>
+    <footer class="justify-center">
+        <a href="/contact/">Comment</a>
+    </footer>
 </main>
-</div>
-<footer class=footer>
-<div class="content has-text-centered">
-<a class=is-plain href=/>Home</a>
-<a class="is-plain is-spaced-footer-link rss-button" title="Subscribe to RSS" href=/index.xml><svg xmlns="http://www.w3.org/2000/svg" class="rss-icon" viewBox="0 0 8 8" width="22" height="22"><title>Subscribe to RSS</title><circle cx="2" cy="6" r="1"/><path d="m1 4a3 3 0 013 3h1A4 4 0 001 3z"/><path d="m1 2a5 5 0 015 5h1A6 6 0 001 1z"/></svg>Subscribe</a>
-<a class="is-plain is-spaced-footer-link" href=/about/>About</a>
-<a class="is-plain is-spaced-footer-link" href=/contact/>Contact</a>
-<p>
-<div>©2023 Oliver Schmid</div>
-<p>
-<div class="section is-italic">Facebook and Twitter icons by <a class="is-plain has-text-underlined" href=https://www.flaticon.com/authors/dave-gandy title="Dave Gandy">Dave Gandy</a> provided under <a class="is-plain has-text-underlined" href=http://creativecommons.org/licenses/by/3.0/ title="Creative Commons BY 3.0">CC BY 3.0</a> license</div>
-</div>
-</footer>
