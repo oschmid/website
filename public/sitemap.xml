@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://oliverschmid.space/tags/hugo/</loc>
-        <lastmod>2021-03-16T20:57:12-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
         <loc>https://oliverschmid.space/</loc>
         <lastmod>2021-03-16T20:57:12-07:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -25,109 +19,7 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://oliverschmid.space/tags/software-development/</loc>
-        <lastmod>2021-03-16T20:57:12-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/</loc>
-        <lastmod>2021-03-16T20:57:12-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/art/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
         <loc>https://oliverschmid.space/posts/best-ive-read-lately-3/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/economics/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/engineering/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/entrepreneurism/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/evolution/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/futurology/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/geoengineering/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/geography/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/health/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/psychology/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/quantum-computers/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/rationalism/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/social-media/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/sociology/</loc>
-        <lastmod>2020-07-25T10:08:04-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/space/</loc>
         <lastmod>2020-07-25T10:08:04-07:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -151,97 +43,7 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://oliverschmid.space/tags/climate-change/</loc>
-        <lastmod>2019-04-28T08:57:58-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/cooking/</loc>
-        <lastmod>2019-04-28T08:57:58-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/cosmology/</loc>
-        <lastmod>2019-04-28T08:57:58-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/genetics/</loc>
-        <lastmod>2019-04-28T08:57:58-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/media/</loc>
-        <lastmod>2019-04-28T08:57:58-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/mmt/</loc>
-        <lastmod>2019-04-28T08:57:58-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/music/</loc>
-        <lastmod>2019-04-28T08:57:58-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/astrophysics/</loc>
-        <lastmod>2019-01-27T11:14:44-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
         <loc>https://oliverschmid.space/posts/best-ive-read-lately/</loc>
-        <lastmod>2019-01-27T11:14:44-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/biotech/</loc>
-        <lastmod>2019-01-27T11:14:44-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/comics/</loc>
-        <lastmod>2019-01-27T11:14:44-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/internet/</loc>
-        <lastmod>2019-01-27T11:14:44-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/investing/</loc>
-        <lastmod>2019-01-27T11:14:44-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/neuroscience/</loc>
-        <lastmod>2019-01-27T11:14:44-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/nutrition/</loc>
-        <lastmod>2019-01-27T11:14:44-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/politics/</loc>
         <lastmod>2019-01-27T11:14:44-08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -259,32 +61,8 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://oliverschmid.space/tags/sleep/</loc>
-        <lastmod>2018-12-01T12:45:37-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/wearables/</loc>
-        <lastmod>2018-12-01T12:45:37-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
         <loc>https://oliverschmid.space/contact/</loc>
         <lastmod>2018-11-24T12:17:15-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/about/</loc>
-        <lastmod>2018-11-23T10:04:29-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/mythbuster/</loc>
-        <lastmod>2018-11-10T14:25:25-08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -295,25 +73,7 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://oliverschmid.space/tags/safety/</loc>
-        <lastmod>2018-11-10T14:25:25-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
         <loc>https://oliverschmid.space/posts/2018-bc-referendum-on-electoral-reform/</loc>
-        <lastmod>2018-10-22T20:12:24-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/british-columbia/</loc>
-        <lastmod>2018-10-22T20:12:24-07:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/tags/voting/</loc>
         <lastmod>2018-10-22T20:12:24-07:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>

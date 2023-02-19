@@ -1,0 +1,61 @@
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+body {
+  background-color: #fafafa;
+  color: #161718;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.5rem;
+}
+.center {
+  text-align: center;
+}
+.field {
+  margin-bottom: .75rem;
+}
+.hidden {
+  display: none;
+}
+header {
+  padding: 7rem 0 5rem;
+}
+h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+  margin: 1rem;
+}
+input, textarea {
+  max-width: 100%;
+  width: 100%;
+  border-color: #dbdbdb;
+  border-radius: .375em;
+}
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+label {
+  font-weight: 700;
+}
+img {
+  max-width: 100%;
+}
+main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+section {
+  padding-bottom: 2rem;
+}
+textarea {
+  height: 6rem;
+}
+@media (prefers-color-scheme: dark) {
+  color: #fafafa;
+  background-color: #337ab7;
+}

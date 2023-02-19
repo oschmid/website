@@ -1,316 +1,179 @@
-<!doctype html><html lang="en"><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta itemprop=name content="Hugo Pagination">
-<meta itemprop=description content="Inspired by Glenn McComb&rsquo;s Hugo pagination tutorial I decided to write my own custom pager."><meta itemprop=datePublished content="2018-12-27T10:45:41-08:00">
-<meta itemprop=dateModified content="2018-12-27T10:45:41-08:00">
-<meta itemprop=wordCount content="772">
-<meta itemprop=keywords content="Hugo,software development,">
-<title>
-Hugo Pagination
-</title>
-<meta name=description content="Personal Blog">
-<link rel=apple-touch-icon href=/favicon-touch.png>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css integrity=sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n crossorigin=anonymous>
-<link rel=stylesheet href=/styles.min.css>
-<div class=section>
-<div class=container>
-<header class=title>
-<h2><a class=is-plain href=/>Oliver Schmid</a></h2>
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta itemprop="name" content="Hugo Pagination">
+<meta itemprop="description"
+      content="Inspired by Glenn McComb&rsquo;s Hugo pagination tutorial I decided to write my own custom pager.">
+<meta itemprop="datePublished" content="2018-12-27T10:45:41-08:00">
+<meta itemprop="dateModified" content="2018-12-27T10:45:41-08:00">
+<meta itemprop="wordCount" content="772">
+<meta itemprop="keywords" content="Hugo,software development">
+<title>Hugo Pagination</title>
+<meta name="description" content="Personal Blog">
+<link rel="apple-touch-icon" href="/favicon-touch.png">
+<link rel="stylesheet" href="/style.css">
+<header class="center">
+    <h1>Hugo Pagination</h1>
+    <p>
+        <time datetime="2018-12-27 10:45">December 27, 2018</time>
+        &nbsp;-&nbsp;
+        <span><time datetime="4M">4 min</time> read</span>
 </header>
-</div>
-<main class="container is-readable-column">
-<article class=content>
-<header class=title>
-<h1 class="title is-3">Hugo Pagination</h1>
-<p class="subtitle has-text-grey">
-<time datetime="2018-12-27 10:45">December 27, 2018</time>
-&nbsp;-&nbsp;
-<span><time datetime=4M>4 min</time> read</span>
-</p>
-</header>
-<p>Inspired by <a href=https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/>Glenn McComb&rsquo;s Hugo pagination tutorial</a> I decided to write my own custom pager. The specific features I&rsquo;m interested in for pagination are:</p>
-<ol>
-<li>Dedicated <strong>Previous</strong> and <strong>Next</strong> links, so the reader can quickly find these 2 common actions at similar locations on each page.</li>
-<li>A clearly marked current page number.</li>
-<li>Always visible first and last page number. Combined with the current page number, this gives the reader a sense of how many pages they&rsquo;ve read and how many there are to go.</li>
-<li>A configurable number of adjacent pages.</li>
-<li>Ellipses when there are more pages than can be displayed.</li>
-<li><a href=https://bulma.io/documentation/components/pagination/>Bulma CSS styles</a>.</li>
-</ol>
-<p>Like so:</p>
-<p>Here&rsquo;s what I came up with:</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>  1
-</span><span class=lnt>  2
-</span><span class=lnt>  3
-</span><span class=lnt>  4
-</span><span class=lnt>  5
-</span><span class=lnt>  6
-</span><span class=lnt>  7
-</span><span class=lnt>  8
-</span><span class=lnt>  9
-</span><span class=lnt> 10
-</span><span class=lnt> 11
-</span><span class=lnt> 12
-</span><span class=lnt> 13
-</span><span class=lnt> 14
-</span><span class=lnt> 15
-</span><span class=lnt> 16
-</span><span class=lnt> 17
-</span><span class=lnt> 18
-</span><span class=lnt> 19
-</span><span class=lnt> 20
-</span><span class=lnt> 21
-</span><span class=lnt> 22
-</span><span class=lnt> 23
-</span><span class=lnt> 24
-</span><span class=lnt> 25
-</span><span class=lnt> 26
-</span><span class=lnt> 27
-</span><span class=lnt> 28
-</span><span class=lnt> 29
-</span><span class=lnt> 30
-</span><span class=lnt> 31
-</span><span class=lnt> 32
-</span><span class=lnt> 33
-</span><span class=lnt> 34
-</span><span class=lnt> 35
-</span><span class=lnt> 36
-</span><span class=lnt> 37
-</span><span class=lnt> 38
-</span><span class=lnt> 39
-</span><span class=lnt> 40
-</span><span class=lnt> 41
-</span><span class=lnt> 42
-</span><span class=lnt> 43
-</span><span class=lnt> 44
-</span><span class=lnt> 45
-</span><span class=lnt> 46
-</span><span class=lnt> 47
-</span><span class=lnt> 48
-</span><span class=lnt> 49
-</span><span class=lnt> 50
-</span><span class=lnt> 51
-</span><span class=lnt> 52
-</span><span class=lnt> 53
-</span><span class=lnt> 54
-</span><span class=lnt> 55
-</span><span class=lnt> 56
-</span><span class=lnt> 57
-</span><span class=lnt> 58
-</span><span class=lnt> 59
-</span><span class=lnt> 60
-</span><span class=lnt> 61
-</span><span class=lnt> 62
-</span><span class=lnt> 63
-</span><span class=lnt> 64
-</span><span class=lnt> 65
-</span><span class=lnt> 66
-</span><span class=lnt> 67
-</span><span class=lnt> 68
-</span><span class=lnt> 69
-</span><span class=lnt> 70
-</span><span class=lnt> 71
-</span><span class=lnt> 72
-</span><span class=lnt> 73
-</span><span class=lnt> 74
-</span><span class=lnt> 75
-</span><span class=lnt> 76
-</span><span class=lnt> 77
-</span><span class=lnt> 78
-</span><span class=lnt> 79
-</span><span class=lnt> 80
-</span><span class=lnt> 81
-</span><span class=lnt> 82
-</span><span class=lnt> 83
-</span><span class=lnt> 84
-</span><span class=lnt> 85
-</span><span class=lnt> 86
-</span><span class=lnt> 87
-</span><span class=lnt> 88
-</span><span class=lnt> 89
-</span><span class=lnt> 90
-</span><span class=lnt> 91
-</span><span class=lnt> 92
-</span><span class=lnt> 93
-</span><span class=lnt> 94
-</span><span class=lnt> 95
-</span><span class=lnt> 96
-</span><span class=lnt> 97
-</span><span class=lnt> 98
-</span><span class=lnt> 99
-</span><span class=lnt>100
-</span><span class=lnt>101
-</span><span class=lnt>102
-</span><span class=lnt>103
-</span><span class=lnt>104
-</span><span class=lnt>105
-</span><span class=lnt>106
-</span><span class=lnt>107
-</span><span class=lnt>108
-</span><span class=lnt>109
-</span><span class=lnt>110
-</span><span class=lnt>111
-</span><span class=lnt>112
-</span><span class=lnt>113
-</span><span class=lnt>114
-</span><span class=lnt>115
-</span><span class=lnt>116
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class="language-go html template" data-lang="go html template"><span class=c>&lt;!-- Inspired by https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/
-</span><span class=c>
-</span><span class=c>  This paginator prints the first and last page number along with a configurable number of adjacent pages (see
-</span><span class=c>  $adjacent_links).
-</span><span class=c>
-</span><span class=c>    e.g. [1] ... [4] [5] [*6*] [7] [8] ... [12]
-</span><span class=c>
-</span><span class=c>  Rather than including &#34;First&#34; and &#34;Last&#34; links, including the page number of the first and last pages gives the
-</span><span class=c>  user some context into how far they&#39;ve gone into the page list. With that info they can make better decisions about
-</span><span class=c>  whether or not to continue.
-</span><span class=c>
-</span><span class=c>  &#34;Previous&#34; and &#34;Next&#34; links are included even though the adjacent page numbers seemingly make them redundant. As
-</span><span class=c>  these are the most common paging actions (and often clicked repeatedly) we want them at the same location on each
-</span><span class=c>  page.
-</span><span class=c>
-</span><span class=c>  Additionally, if the user is on one of the first few pages (see $lower_limit) more pages are printed after the
-</span><span class=c>  current page.
-</span><span class=c>
-</span><span class=c>    e.g. [1] [*2*] [3] [4] [5] ... [12]
-</span><span class=c>
-</span><span class=c>  Similarly, if the user is on one of the last few pages (see $upper_limit) more pages are printed before the
-</span><span class=c>  current page.
-</span><span class=c>
-</span><span class=c>    e.g. [1] ... [8] [9] [10] [*11*] [12]
-</span><span class=c>--&gt;</span>
-<span class=cp>{{</span><span class=w> </span><span class=nx>$paginator</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=na>.Paginator</span><span class=w> </span><span class=cp>}}</span>
+<main>
+    Inspired by <a href="https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/">Glenn McComb&rsquo;s Hugo
+    pagination tutorial</a> I decided to write my own custom pager. The specific features I&rsquo;m interested in for
+    pagination are:
+    <ol>
+        <li>Dedicated <strong>Previous</strong> and <strong>Next</strong> links, so the reader can quickly find these 2
+            common actions at similar locations on each page.
+        </li>
+        <li>A clearly marked current page number.</li>
+        <li>Always visible first and last page number. Combined with the current page number, this gives the reader a
+            sense of how many pages they&rsquo;ve read and how many there are to go.
+        </li>
+        <li>A configurable number of adjacent pages.</li>
+        <li>Ellipses when there are more pages than can be displayed.</li>
+        <li><a href="https://bulma.io/documentation/components/pagination/">Bulma CSS styles</a>.</li>
+    </ol>
+    <p>Like so:</p>
+    <p>Here&rsquo;s what I came up with:</p>
+    <pre>
+&lt;!-- Inspired by https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/
 
-<span class=c>&lt;!-- Number of links either side of the current page --&gt;</span>
-<span class=cp>{{</span><span class=w> </span><span class=nx>$adjacent_links</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>1</span><span class=w> </span><span class=cp>}}</span>
+  This paginator prints the first and last page number along with a configurable number of adjacent pages (see
+  $adjacent_links).
 
-<span class=c>&lt;!-- $max_links = ($adjacent_links * 2) + 1 --&gt;</span>
-<span class=cp>{{</span><span class=w> </span><span class=nx>$max_links</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=o>(</span><span class=nx>add</span><span class=w> </span><span class=o>(</span><span class=nx>mul</span><span class=w> </span><span class=nx>$adjacent_links</span><span class=w> </span><span class=nx>2</span><span class=o>)</span><span class=w> </span><span class=nx>1</span><span class=o>)</span><span class=w> </span><span class=cp>}}</span>
+    e.g. [1] ... [4] [5] [*6*] [7] [8] ... [12]
 
-<span class=c>&lt;!-- Pages to print --&gt;</span>
-<span class=cp>{{</span><span class=w> </span><span class=nx>$lower_limit</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>1</span><span class=w> </span><span class=cp>}}</span>
-<span class=cp>{{</span><span class=w> </span><span class=nx>$upper_limit</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.TotalPages</span><span class=w> </span><span class=cp>}}</span>
-<span class=cp>{{</span><span class=w> </span><span class=nx>$include_lower_ellipsis</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=k>false</span><span class=w> </span><span class=cp>}}</span>
-<span class=cp>{{</span><span class=w> </span><span class=nx>$include_upper_ellipsis</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=k>false</span><span class=w> </span><span class=cp>}}</span>
+  Rather than including "First" and "Last" links, including the page number of the first and last pages gives the
+  user some context into how far they've gone into the page list. With that info they can make better decisions about
+  whether or not to continue.
 
-<span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>gt</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.TotalPages</span><span class=w> </span><span class=o>(</span><span class=nx>add</span><span class=w> </span><span class=nx>$max_links</span><span class=w> </span><span class=nx>2</span><span class=o>)</span><span class=w> </span><span class=cp>}}</span>
+  "Previous" and "Next" links are included even though the adjacent page numbers seemingly make them redundant. As
+  these are the most common paging actions (and often clicked repeatedly) we want them at the same location on each
+  page.
 
-  <span class=c>&lt;!-- If we have more pages before the current page than we can print --&gt;</span>
-  <span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>ge</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.PageNumber</span><span class=w> </span><span class=nx>$adjacent_links</span><span class=w> </span><span class=cp>}}</span>
+  Additionally, if the user is on one of the first few pages (see $lower_limit) more pages are printed after the
+  current page.
 
-    <span class=cp>{{</span><span class=w> </span><span class=nx>$lower_limit</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>sub</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.PageNumber</span><span class=w> </span><span class=nx>$adjacent_links</span><span class=w> </span><span class=cp>}}</span>
+    e.g. [1] [*2*] [3] [4] [5] ... [12]
 
-    <span class=c>&lt;!-- Show more pages at the end of the range --&gt;</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>lt</span><span class=w> </span><span class=o>(</span><span class=nx>sub</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.TotalPages</span><span class=w> </span><span class=nx>$lower_limit</span><span class=o>)</span><span class=w> </span><span class=nx>$max_links</span><span class=w> </span><span class=cp>}}</span>
-      <span class=cp>{{</span><span class=w> </span><span class=nx>$lower_limit</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>add</span><span class=w> </span><span class=nx>1</span><span class=w> </span><span class=o>(</span><span class=nx>sub</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.TotalPages</span><span class=w> </span><span class=nx>$max_links</span><span class=o>)</span><span class=w> </span><span class=cp>}}</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+  Similarly, if the user is on one of the last few pages (see $upper_limit) more pages are printed before the
+  current page.
 
-    <span class=c>&lt;!-- Show ellipsis --&gt;</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>gt</span><span class=w> </span><span class=o>(</span><span class=nx>sub</span><span class=w> </span><span class=nx>$lower_limit</span><span class=w> </span><span class=nx>1</span><span class=o>)</span><span class=w> </span><span class=nx>1</span><span class=w> </span><span class=cp>}}</span>
-      <span class=cp>{{</span><span class=w> </span><span class=nx>$include_lower_ellipsis</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>true</span><span class=w> </span><span class=cp>}}</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+    e.g. [1] ... [8] [9] [10] [*11*] [12]
+--&gt;
+{{ $paginator := .Paginator }}
 
-  <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+        &lt;!-- Number of links either side of the current page --&gt;
+{{ $adjacent_links := 1 }}
 
-  <span class=c>&lt;!-- If we have more pages after the current page than we can print --&gt;</span>
-  <span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>gt</span><span class=w> </span><span class=o>(</span><span class=nx>sub</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.TotalPages</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.PageNumber</span><span class=o>)</span><span class=w> </span><span class=nx>$adjacent_links</span><span class=w> </span><span class=cp>}}</span>
+        &lt;!-- $max_links = ($adjacent_links * 2) + 1 --&gt;
+{{ $max_links := (add (mul $adjacent_links 2) 1) }}
 
-    <span class=cp>{{</span><span class=w> </span><span class=nx>$upper_limit</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>add</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.PageNumber</span><span class=w> </span><span class=nx>$adjacent_links</span><span class=w> </span><span class=cp>}}</span>
+        &lt;!-- Pages to print --&gt;
+{{ $lower_limit := 1 }}
+{{ $upper_limit := $paginator.TotalPages }}
+{{ $include_lower_ellipsis := false }}
+{{ $include_upper_ellipsis := false }}
 
-    <span class=c>&lt;!-- Show more pages at the beginning of the range --&gt;</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>le</span><span class=w> </span><span class=nx>$upper_limit</span><span class=w> </span><span class=nx>$max_links</span><span class=w> </span><span class=cp>}}</span>
-      <span class=cp>{{</span><span class=w> </span><span class=nx>$upper_limit</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>$max_links</span><span class=w> </span><span class=cp>}}</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+{{ if gt $paginator.TotalPages (add $max_links 2) }}
 
-    <span class=c>&lt;!-- Show ellipsis --&gt;</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>gt</span><span class=w> </span><span class=o>(</span><span class=nx>sub</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.TotalPages</span><span class=w> </span><span class=nx>$upper_limit</span><span class=o>)</span><span class=w> </span><span class=nx>1</span><span class=w> </span><span class=cp>}}</span>
-      <span class=cp>{{</span><span class=w> </span><span class=nx>$include_upper_ellipsis</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>true</span><span class=w> </span><span class=cp>}}</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+        &lt;!-- If we have more pages before the current page than we can print --&gt;
+  {{ if ge $paginator.PageNumber $adjacent_links }}
 
-  <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+    {{ $lower_limit = sub $paginator.PageNumber $adjacent_links }}
 
-<span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+        &lt;!-- Show more pages at the end of the range --&gt;
+    {{ if lt (sub $paginator.TotalPages $lower_limit) $max_links }}
+      {{ $lower_limit = add 1 (sub $paginator.TotalPages $max_links) }}
+    {{ end }}
 
-<span class=c>&lt;!-- If there&#39;s more than one page --&gt;</span>
-<span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>gt</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.TotalPages</span><span class=w> </span><span class=nx>1</span><span class=w> </span><span class=cp>}}</span>
-<span class=p>&lt;</span><span class=nt>section</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;section&#34;</span><span class=p>&gt;</span>
-  <span class=p>&lt;</span><span class=nt>nav</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;pagination is-centered&#34;</span><span class=p>&gt;</span>
+        &lt;!-- Show ellipsis --&gt;
+    {{ if gt (sub $lower_limit 1) 1 }}
+      {{ $include_lower_ellipsis = true }}
+    {{ end }}
 
-    <span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.HasPrev</span><span class=w> </span><span class=cp>}}</span>
-      <span class=p>&lt;</span><span class=nt>a</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;pagination-previous&#34;</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;</span><span class=cp>{{</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.Prev.URL</span><span class=w> </span><span class=cp>}}</span><span class=s>&#34;</span><span class=p>&gt;</span>Previous<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=cp>}}</span>
-      <span class=p>&lt;</span><span class=nt>a</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;pagination-previous&#34;</span> <span class=na>title</span><span class=o>=</span><span class=s>&#34;On first page&#34;</span> <span class=na>disabled</span><span class=p>&gt;</span>Previous<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+  {{ end }}
 
-    <span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.HasNext</span><span class=w> </span><span class=cp>}}</span>
-      <span class=p>&lt;</span><span class=nt>a</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;pagination-next button is-link&#34;</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;</span><span class=cp>{{</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.Next.URL</span><span class=w> </span><span class=cp>}}</span><span class=s>&#34;</span><span class=p>&gt;</span>Next page<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=cp>}}</span>
-      <span class=p>&lt;</span><span class=nt>a</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;pagination-next&#34;</span> <span class=na>title</span><span class=o>=</span><span class=s>&#34;On last page&#34;</span> <span class=na>disabled</span><span class=p>&gt;</span>Next page<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
-    <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+        &lt;!-- If we have more pages after the current page than we can print --&gt;
+  {{ if gt (sub $paginator.TotalPages $paginator.PageNumber) $adjacent_links }}
 
-    <span class=p>&lt;</span><span class=nt>ul</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;pagination-list&#34;</span><span class=p>&gt;</span>
+    {{ $upper_limit = add $paginator.PageNumber $adjacent_links }}
 
-    <span class=cp>{{</span><span class=w> </span><span class=k>range</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.Pagers</span><span class=w> </span><span class=cp>}}</span>
+        &lt;!-- Show more pages at the beginning of the range --&gt;
+    {{ if le $upper_limit $max_links }}
+      {{ $upper_limit = $max_links }}
+    {{ end }}
 
-      <span class=c>&lt;!-- Include first, last, and middle pages --&gt;</span>
-      <span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>or</span><span class=w> </span><span class=o>(</span><span class=k>or</span><span class=w> </span><span class=o>(</span><span class=k>eq</span><span class=w> </span><span class=na>.PageNumber</span><span class=w> </span><span class=nx>1</span><span class=o>)</span><span class=w> </span><span class=o>(</span><span class=k>eq</span><span class=w> </span><span class=na>.PageNumber</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.TotalPages</span><span class=o>))</span><span class=w> </span><span class=o>(</span><span class=k>and</span><span class=w> </span><span class=o>(</span><span class=k>ge</span><span class=w> </span><span class=na>.PageNumber</span><span class=w> </span><span class=nx>$lower_limit</span><span class=o>)</span><span class=w> </span><span class=o>(</span><span class=k>le</span><span class=w> </span><span class=na>.PageNumber</span><span class=w> </span><span class=nx>$upper_limit</span><span class=o>))</span><span class=w> </span><span class=cp>}}</span>
+        &lt;!-- Show ellipsis --&gt;
+    {{ if gt (sub $paginator.TotalPages $upper_limit) 1 }}
+      {{ $include_upper_ellipsis = true }}
+    {{ end }}
 
-        <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;</span><span class=cp>{{</span><span class=w> </span><span class=na>.URL</span><span class=w> </span><span class=cp>}}</span><span class=s>&#34;</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;pagination-link</span><span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>eq</span><span class=w> </span><span class=nx>$paginator</span><span class=na>.PageNumber</span><span class=w> </span><span class=na>.PageNumber</span><span class=w> </span><span class=cp>}}</span><span class=s> is-current</span><span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span><span class=s>&#34;</span><span class=p>&gt;</span><span class=cp>{{</span><span class=w> </span><span class=na>.PageNumber</span><span class=w> </span><span class=cp>}}</span><span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
+  {{ end }}
 
-        <span class=c>&lt;!-- If we&#39;re on the first page and inserting an ellipsis, or just before the last page and inserting an ellipsis --&gt;</span>
-        <span class=cp>{{</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=k>or</span><span class=w> </span><span class=o>(</span><span class=k>and</span><span class=w> </span><span class=o>(</span><span class=k>eq</span><span class=w> </span><span class=na>.PageNumber</span><span class=w> </span><span class=nx>1</span><span class=o>)</span><span class=w> </span><span class=o>(</span><span class=k>eq</span><span class=w> </span><span class=nx>$include_lower_ellipsis</span><span class=w> </span><span class=k>true</span><span class=o>))</span><span class=w> </span><span class=o>(</span><span class=k>and</span><span class=w> </span><span class=o>(</span><span class=k>eq</span><span class=w> </span><span class=na>.PageNumber</span><span class=w> </span><span class=nx>$upper_limit</span><span class=o>)</span><span class=w> </span><span class=o>(</span><span class=k>eq</span><span class=w> </span><span class=nx>$include_upper_ellipsis</span><span class=w> </span><span class=k>true</span><span class=o>))</span><span class=w> </span><span class=cp>}}</span>
-          <span class=p>&lt;</span><span class=nt>li</span><span class=p>&gt;&lt;</span><span class=nt>span</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;pagination-ellipsis&#34;</span><span class=p>&gt;</span><span class=ni>&amp;hellip;</span><span class=p>&lt;/</span><span class=nt>span</span><span class=p>&gt;</span>
-        <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+{{ end }}
 
-      <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+        &lt;!-- If there's more than one page --&gt;
+{{ if gt $paginator.TotalPages 1 }}
+&lt;section class="section"&gt;
+  &lt;nav class="pagination is-centered"&gt;
 
-    <span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span>
+    {{ if $paginator.HasPrev }}
+      &lt;a class="pagination-previous" href="{{ $paginator.Prev.URL }}"&gt;Previous&lt;/a&gt;
+    {{ else }}
+      &lt;a class="pagination-previous" title="On first page" disabled&gt;Previous&lt;/a&gt;
+    {{ end }}
 
-    <span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
-  <span class=p>&lt;/</span><span class=nt>nav</span><span class=p>&gt;</span>
-<span class=p>&lt;/</span><span class=nt>section</span><span class=p>&gt;</span>
-<span class=cp>{{</span><span class=w> </span><span class=k>end</span><span class=w> </span><span class=cp>}}</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>Note <a href=https://github.com/oschmid/website/blob/master/layouts/partials/pagination.html>this code is available on github</a> (along with the code for the rest of this site).</p>
-<p>The biggest stylistic difference from Glenn McComb&rsquo;s version is that the adjacent pages are pre-computed outside the loop. I doubt there&rsquo;s any performance difference as both versions are still O(n) but it did shorten the code somewhat.</p>
-<p>I noticed a couple things about the go template language while developing. For one, <a href=https://stackoverflow.com/questions/49816911/how-to-split-a-long-golang-template-function-across-multiple-lines>go template expressions can&rsquo;t stretch across multiple lines</a>. This forced the complicated boolean logic to stretch quite wide.</p>
-<p>The go template language is also missing slice expressions (i.e. <code>a[2:5]</code>). Had these existed I would have attempted to range only over the adjacent links and reduce the algorithm to O(m) (where m is the number of adjacent links). It&rsquo;s possible to get around this in regular usage of go templates by adding a <a href=https://stackoverflow.com/questions/25012467/golang-templates-how-to-define-array-in-a-variable>custom mkSlice function</a> but <a href=https://discourse.gohugo.io/t/adding-custom-functions/14164/5>Hugo does not allow custom go template functions</a>.</p>
-<p>Oh well, the performance implications are minimal. It was still a fun little coding exercise :)</p>
-<footer>
-<div class=tags>
-<a class=tag href=https://oliverschmid.space/tags/hugo/>Hugo</a>
-<a class=tag href=https://oliverschmid.space/tags/software-development/>software development</a>
-</div>
-<div class=level-right>
-<a class="share-link greyscale" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2foliverschmid.space%2fposts%2fhugo-pagination%2f" target=_blank rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 438.536 438.536"><g><path fill="#4267b2" d="M414.41 24.123C398.333 8.042 378.963.0 356.315.0H82.228C59.58.0 40.21 8.042 24.126 24.123 8.045 40.207.003 59.576.003 82.225v274.084c0 22.647 8.042 42.018 24.123 58.102 16.084 16.084 35.454 24.126 58.102 24.126h274.084c22.648.0 42.018-8.042 58.095-24.126 16.084-16.084 24.126-35.454 24.126-58.102V82.225C438.532 59.576 430.49 40.204 414.41 24.123zM373.155 225.548h-49.963V406.84H248.39V225.548H210.99V163.02h37.401v-37.402c0-26.838 6.283-47.107 18.843-60.813 12.559-13.706 33.304-20.555 62.242-20.555h49.963v62.526h-31.401c-10.663.0-17.467 1.853-20.417 5.568-2.949 3.711-4.428 10.23-4.428 19.558v31.119h56.534L373.155 225.548z"/></g></svg>
-</a>
-<a class="share-link greyscale" title="Share on Reddit" href="https://reddit.com/submit?url=https%3a%2f%2foliverschmid.space%2fposts%2fhugo-pagination%2f&title=Hugo%20Pagination" target=_blank rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height="22" width="22"><circle fill="#ff4500" cx="50" cy="50" r="49"/><path fill="#fff" d="M52.69 18.79a1.62 1.62.0 011.93-1.22L67.86 20.5a5.24 5.24.0 11-.55 2.93l-12-2.66-4.07 17.5A37.77 37.77.0 0173 45.47a7.71 7.71.0 0111.83.93 7.53 7.53.0 01.41.73 8 8 0 01-3.6 10.7 18.67 18.67.0 01-8 17.5A39.59 39.59.0 0150 82.46a39.57 39.57.0 01-23.64-7.13 18.67 18.67.0 01-8-17.5 7.53 7.53.0 01-.73-.41 8 8 0 01-2.46-11 8.27 8.27.0 01.9-1.06A7.74 7.74.0 0127 45.47a37.78 37.78.0 0121.19-7.19zm4.39 37.4a5.3 5.3.0 105.3-5.3 5.29 5.29.0 00-5.3 5.3zM63.39 70.8a1.22 1.22.0 00-1.3-2 20.66 20.66.0 01-24.18.0 1.22 1.22.0 00-1.3 2 22.66 22.66.0 0026.78.0zM32.32 56.19a5.3 5.3.0 105.3-5.3 5.29 5.29.0 00-5.3 5.3z"/></svg></a>
-<a class="share-link greyscale" title="Share on Twitter" href="https://twitter.com/share?url=https%3a%2f%2foliverschmid.space%2fposts%2fhugo-pagination%2f&text=Hugo%20Pagination" target=_blank rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 438.536 438.536"><g><path fill="#1da1f2" d="M414.41 24.123C398.333 8.042 378.963.0 356.315.0H82.228C59.58.0 40.21 8.042 24.126 24.123 8.045 40.207.003 59.576.003 82.225v274.084c0 22.647 8.042 42.018 24.123 58.102 16.084 16.084 35.454 24.126 58.102 24.126h274.084c22.648.0 42.018-8.042 58.095-24.126 16.084-16.084 24.126-35.454 24.126-58.102V82.225C438.532 59.576 430.49 40.204 414.41 24.123zM335.471 168.735c.191 1.713.288 4.278.288 7.71.0 15.989-2.334 32.025-6.995 48.104-4.661 16.087-11.8 31.504-21.416 46.254-9.606 14.749-21.074 27.791-34.396 39.115-13.325 11.32-29.311 20.365-47.968 27.117-18.648 6.762-38.637 10.143-59.953 10.143-33.116.0-63.76-8.952-91.931-26.836 4.568.568 9.329.855 14.275.855 27.6.0 52.439-8.565 74.519-25.7-12.941-.185-24.506-4.179-34.688-11.991-10.185-7.803-17.273-17.699-21.271-29.691 4.947.76 8.658 1.137 11.132 1.137 4.187.0 9.042-.76 14.56-2.279-13.894-2.669-25.598-9.562-35.115-20.697-9.519-11.136-14.277-23.84-14.277-38.114v-.571c10.085 4.755 19.602 7.229 28.549 7.422-17.321-11.613-25.981-28.265-25.981-49.963.0-10.66 2.758-20.747 8.278-30.264 15.035 18.464 33.311 33.213 54.816 44.252 21.507 11.038 44.54 17.227 69.092 18.558-.95-3.616-1.427-8.186-1.427-13.704.0-16.562 5.853-30.692 17.56-42.399 11.703-11.706 25.837-17.561 42.394-17.561 17.515.0 32.079 6.283 43.688 18.846 13.134-2.474 25.892-7.33 38.26-14.56-4.757 14.652-13.613 25.788-26.55 33.402 12.368-1.716 23.88-4.95 34.537-9.708C357.458 149.793 347.462 160.166 335.471 168.735z"/></g></svg>
-</a>
-</div>
-</footer>
-</article>
-<div class=has-text-centered>
-<hr>
-<i>Comments are not available yet but feel free to reach out to me through the <a href=/contact>Contact</a> page. - Oliver</i>
-</div>
+    {{ if $paginator.HasNext }}
+      &lt;a class="pagination-next button is-link" href="{{ $paginator.Next.URL }}"&gt;Next page&lt;/a&gt;
+    {{ else }}
+      &lt;a class="pagination-next" title="On last page" disabled&gt;Next page&lt;/a&gt;
+    {{ end }}
+
+    &lt;ul class="pagination-list"&gt;
+
+    {{ range $paginator.Pagers }}
+
+        &lt;!-- Include first, last, and middle pages --&gt;
+      {{ if or (or (eq .PageNumber 1) (eq .PageNumber $paginator.TotalPages)) (and (ge .PageNumber $lower_limit) (le .PageNumber $upper_limit)) }}
+
+        &lt;li&gt;&lt;a href="{{ .URL }}" class="pagination-link{{ if eq $paginator.PageNumber .PageNumber }} is-current{{ end }}"&gt;{{ .PageNumber }}&lt;/a&gt;
+
+            &lt;!-- If we're on the first page and inserting an ellipsis, or just before the last page and inserting an ellipsis --&gt;
+        {{ if or (and (eq .PageNumber 1) (eq $include_lower_ellipsis true)) (and (eq .PageNumber $upper_limit) (eq $include_upper_ellipsis true)) }}
+          &lt;li&gt;&lt;span class="pagination-ellipsis"&gt;&hellip;&lt;/span&gt;
+        {{ end }}
+
+      {{ end }}
+
+    {{ end }}
+
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/section&gt;
+{{ end }}
+    </pre>
+    <p>Note <a href="https://github.com/oschmid/website/blob/84b6cdd9ebd3bd665e0850ca28a92bd6cffcb32f/layouts/partials/pagination.html">this code is
+        available on github</a> (along with the code for the rest of this site).</p>
+    <p>The biggest stylistic difference from Glenn McComb&rsquo;s version is that the adjacent pages are pre-computed
+        outside the loop. I doubt there&rsquo;s any performance difference as both versions are still O(n) but it did
+        shorten the code somewhat.</p>
+    <p>I noticed a couple of things about the go template language while developing. For one, <a
+            href="https://stackoverflow.com/questions/49816911/how-to-split-a-long-golang-template-function-across-multiple-lines">go
+        template expressions can&rsquo;t stretch across multiple lines</a>. This forced the complicated boolean logic to
+        stretch quite wide.</p>
+    <p>The go template language is also missing slice expressions (i.e. <code>a[2:5]</code>). Had these existed I would
+        have attempted to range only over the adjacent links and reduce the algorithm to O(m) (where m is the number of
+        adjacent links). It&rsquo;s possible to get around this in regular usage of go templates by adding a <a
+                href="https://stackoverflow.com/questions/25012467/golang-templates-how-to-define-array-in-a-variable">custom
+            mkSlice function</a> but <a href="https://discourse.gohugo.io/t/adding-custom-functions/14164/5">Hugo does not
+            allow custom go template functions</a>.</p>
+    <p>Oh well, the performance implications are minimal. It was still a fun little coding exercise :)</p>
+    <hr>
+    <footer class="justify-center">
+        <a href="/contact/">Comment</a>
+    </footer>
 </main>
-</div>
-<footer class=footer>
-<div class="content has-text-centered">
-<a class=is-plain href=/>Home</a>
-<a class="is-plain is-spaced-footer-link rss-button" title="Subscribe to RSS" href=/index.xml><svg xmlns="http://www.w3.org/2000/svg" class="rss-icon" viewBox="0 0 8 8" width="22" height="22"><title>Subscribe to RSS</title><circle cx="2" cy="6" r="1"/><path d="m1 4a3 3 0 013 3h1A4 4 0 001 3z"/><path d="m1 2a5 5 0 015 5h1A6 6 0 001 1z"/></svg>Subscribe</a>
-<a class="is-plain is-spaced-footer-link" href=/about/>About</a>
-<a class="is-plain is-spaced-footer-link" href=/contact/>Contact</a>
-<p>
-<div>©2023 Oliver Schmid</div>
-<p>
-<div class="section is-italic">Facebook and Twitter icons by <a class="is-plain has-text-underlined" href=https://www.flaticon.com/authors/dave-gandy title="Dave Gandy">Dave Gandy</a> provided under <a class="is-plain has-text-underlined" href=http://creativecommons.org/licenses/by/3.0/ title="Creative Commons BY 3.0">CC BY 3.0</a> license</div>
-</div>
-</footer>

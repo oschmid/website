@@ -1,36 +1,62 @@
-<!doctype html><html lang="en"><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta itemprop=name content="Contact">
-<meta itemprop=description content><meta itemprop=datePublished content="2018-11-24T12:17:15-08:00">
-<meta itemprop=dateModified content="2018-11-24T12:17:15-08:00">
-<meta itemprop=wordCount content="0">
-<meta itemprop=keywords content>
-<title>
-Contact
-</title>
-<meta name=description content="Personal Blog">
-<link rel=apple-touch-icon href=/favicon-touch.png>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css integrity=sha384-n+0XPuNbU1PaXosJ2ARqt1UgnvuTZqsh+D9uoJRHCanp/VOTJXtZaWOzCzwMZF0n crossorigin=anonymous>
-<link rel=stylesheet href=/styles.min.css>
-<div class=section>
-<div class=container>
-<header class=title>
-<h2><a class=is-plain href=/>Oliver Schmid</a></h2>
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Oliver Schmid</title>
+<meta name="description" content="Contact Form">
+<link rel="apple-touch-icon" href="/favicon-touch.png">
+<link rel="stylesheet" href="/style.css">
+<header class="center">
+    <h1>Contact Me</h1>
 </header>
-</div>
-<main class="container is-readable-column">
-<article class=content>
-</article>
+<main>
+    <form name="contact" action="/contact-success/" method="POST" netlify-honeypot="pooh" netlify>
+        <div class="field hidden">
+            <label class="label" for="pooh">Don't fill this out if you're human</label>
+            <div class="control">
+                <input class="input" id="pooh" name="pooh"/>
+            </div>
+        </div>
+        <div class="field hidden">
+            <label class="label" for="referrer">Don't fill this out if you're human</label>
+            <div class="control">
+                <input class="input" id="referrer" name="referrer"/>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="name">Name</label>
+            <div class="control">
+                <input class="input" id="name" name="name" autocomplete="name" type="text"/>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="email">Email</label>
+            <div class="control">
+                <input class="input" id="email" name="email" autocomplete="email" type="email"/>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="message">Message</label>
+            <div class="control">
+                <textarea class="textarea" id="message" name="message"></textarea>
+            </div>
+        </div>
+        <div class="control">
+            <a id="cancel" href="/">Cancel</a>
+            <button class="button is-link is-pulled-right" type="submit">Send</button>
+        </div>
+    </form>
 </main>
-</div>
-<footer class=footer>
-<div class="content has-text-centered">
-<a class=is-plain href=/>Home</a>
-<a class="is-plain is-spaced-footer-link rss-button" title="Subscribe to RSS" href=/index.xml><svg xmlns="http://www.w3.org/2000/svg" class="rss-icon" viewBox="0 0 8 8" width="22" height="22"><title>Subscribe to RSS</title><circle cx="2" cy="6" r="1"/><path d="m1 4a3 3 0 013 3h1A4 4 0 001 3z"/><path d="m1 2a5 5 0 015 5h1A6 6 0 001 1z"/></svg>Subscribe</a>
-<a class="is-plain is-spaced-footer-link" href=/about/>About</a>
-<a class="is-plain is-spaced-footer-link" href=/contact/>Contact</a>
-<p>
-<div>©2023 Oliver Schmid</div>
-<p>
-</div>
-</footer>
+<script type="text/javascript">
+    // https://stackoverflow.com/a/46163215
+    if (document.referrer) {
+        document.getElementById('referrer').value = document.referrer;
+
+        var element = document.getElementById('cancel');
+        element.setAttribute('href', document.referrer);
+        element.onclick = function() {
+            history.back();
+            return false;
+        }
+    }
+</script>
