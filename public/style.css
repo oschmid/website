@@ -1,11 +1,12 @@
 a {
-  color: #35579B;
   text-decoration: none;
   padding: 4px;
 }
 a:hover {
-  color: #35579B;
   text-decoration: underline;
+}
+a, a:hover, a:visited {
+  color: #360BA2;
 }
 body {
   background-color: #fafafa;
@@ -58,10 +59,11 @@ textarea {
   height: 6rem;
 }
 @media (prefers-color-scheme: dark) {
-  color: #fafafa;
-  background-color: #161718;
-
-  a {
-    color: #4B89BF;
+  a, a:hover, a:visited {
+    color: #66AADE;
+  }
+  body {
+    color: #dadada;
+    background-color: #161718;
   }
 }
