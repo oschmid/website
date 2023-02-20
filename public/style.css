@@ -10,7 +10,7 @@ a:hover {
 body {
   background-color: #fafafa;
   color: #161718;
-  font-family: Inter,BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 1.75rem;
   font-size: 1.2rem;
 }
@@ -64,12 +64,4 @@ textarea {
   a {
     color: #4B89BF;
   }
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/Inter-VariableFont_slnt,wght.woff2) format("woff2"), local(BlinkMacSystemFont), local(-apple-system), local("Segoe UI"), local(Roboto), local(Oxygen), local(Ubuntu), local(Cantarell), local("Fira Sans"), local("Droid Sans"), local("Helvetica Neue"), local(Helvetica), local(Arial), local(sans-serif);
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
