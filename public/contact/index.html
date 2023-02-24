@@ -12,38 +12,25 @@
 </header>
 <main>
     <form name="contact" action="/contact-success/" method="POST" netlify-honeypot="pooh" netlify>
-        <div class="field hidden">
-            <label class="label" for="pooh">Don't fill this out if you're human</label>
-            <div>
-                <input id="pooh" name="pooh"/>
-            </div>
-        </div>
-        <div class="field hidden">
-            <label class="label" for="referrer">Don't fill this out if you're human</label>
-            <div>
-                <input id="referrer" name="referrer"/>
-            </div>
-        </div>
-        <div class="field">
-            <label class="label" for="name">Name</label>
-            <div>
-                <input id="name" name="name" autocomplete="name" type="text"/>
-            </div>
-        </div>
-        <div class="field">
-            <label class="label" for="email">Email</label>
-            <div>
-                <input id="email" name="email" autocomplete="email" type="email"/>
-            </div>
-        </div>
-        <div class="field">
-            <label class="label" for="message">Message</label>
-            <div>
-                <textarea id="message" name="message"></textarea>
-            </div>
-        </div>
+        <label class="hidden label" for="pooh">
+            <span>Don't fill this out if you're human</span>
+            <input id="pooh" name="pooh"/>
+        </label>
+        <label class="label" for="email">
+            <span>Email</span>
+            <input id="email" name="email" autocomplete="email" type="email" placeholder="your@email.com"/>
+        </label>
+        <p>
+        <label class="label" for="message">
+            <span>Message</span>
+            <textarea id="message" name="message"></textarea>
+        </label>
+        <label class="hidden label" for="referrer">
+            <span>Referrer</span>
+            <input id="referrer" name="referrer"/>
+        </label>
         <div style="text-align:right;">
-            <a id="cancel" href="/">Cancel</a>
+            <a id="cancel" href="/" style="margin-right: 1em;">Cancel</a>
             <button type="submit">Send</button>
         </div>
     </form>

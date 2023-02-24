@@ -15,11 +15,21 @@ body {
   line-height: 1.75rem;
   font-size: 1.2rem;
 }
+button {
+  background-color: #360BA2;
+  color: #fff;
+  cursor: pointer;
+  padding: calc(.5em - 1px) 1em;
+  border: 1px solid transparent;
+  border-radius: .375em;
+  box-shadow: none;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #300892;
+}
 .center {
   text-align: center;
-}
-.field {
-  margin-bottom: .75rem;
 }
 .hidden {
   display: none;
@@ -65,5 +75,17 @@ textarea {
   body {
     color: #dadada;
     background-color: #161718;
+  }
+  button {
+    background-color: #3e8ed0;
+  }
+  button:hover {
+    background-color: #3488ce;
+  }
+  input, textarea {
+    background-color: #292827;
+  }
+  input::placeholder {
+    color: #fafafa;
   }
 }
