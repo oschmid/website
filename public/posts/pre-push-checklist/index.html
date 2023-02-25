@@ -77,13 +77,13 @@ After these two incidents happened so close to each other, I knew I needed a way
 git log origin..HEAD
 
 # Read user input, assign stdin to keyboard
-exec < /dev/tty
+exec &lt; /dev/tty
 
 D="\e[37m" # default
 H="\e[39m" # highlight
 S="\e[33m" #section
 
-CL=$(cat <<-EOM
+CL=$(cat &lt;&lt;-EOM
 
 ${S}Checklist${D}
 
@@ -106,11 +106,11 @@ while read yn; do
 case $yn in
 Y|y|"") break;;
 N|n) exit 1;;
-*) echo "Please answer y (yes) or n (no):" && continue;
+*) echo "Please answer y (yes) or n (no):" &amp;&amp; continue;
 esac
 done
 
-exec <&-
+exec &lt;&amp;-
     </pre>
     <p>Some notable features:</p>
     <ul>
