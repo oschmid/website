@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /404.html
 Disallow: /contact-success/
+Disallow: /tags/
 Sitemap: https://oliverschmid.space/sitemap.xml
