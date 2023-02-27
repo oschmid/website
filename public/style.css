@@ -68,6 +68,13 @@ label {
 img {
   max-width: 100%;
 }
+.img-link > a {
+  display: flex;
+  align-items: center;
+}
+.img-link > a > img, .img-link > a > svg {
+  margin-right: 4px;
+}
 main {
   max-width: 700px;
   margin: 0 auto;
@@ -77,6 +84,9 @@ main {
 }
 .margin-right-1 {
   margin-right: 1rem;
+}
+.max-width-500 {
+  max-width: 500px;
 }
 .padding-6 {
   padding: 6rem;
@@ -109,6 +119,9 @@ textarea {
   }
   button:hover {
     background-color: #3488ce;
+  }
+  #github-logo {
+    filter: invert(1);
   }
   input, textarea {
     background-color: #292827;
