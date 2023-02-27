@@ -13,7 +13,7 @@
 <meta name="description" content="Personal Blog">
 <link rel="apple-touch-icon" href="/favicon-touch.png">
 <link rel="stylesheet" href="/style.css">
-<a href="/" title="Home" style="position:absolute;"><img src="/favicon-touch.png" alt="Oliver Schmid Owl Logo" height="48" width="48"/></a>
+<a href="/" title="Home" class="home"><img src="/favicon-touch.png" alt="Oliver Schmid Owl Logo" height="48" width="48"/></a>
 <header class="center">
     <h1>Website Updates</h1>
     <p>
@@ -24,10 +24,10 @@
 <main>
     <p>The site broke recently. Somehow Hugo had stopped rendering posts or tags and the homepage looked like it had no
         content.
-    <p><img src="./missing-posts-and-tags.png" alt="Homepage missing Posts and Tags" style="width: 100%;">
+    <p><img src="./missing-posts-and-tags.png" alt="Homepage missing Posts and Tags">
     <p>Turns out a Page&rsquo;s <code>.URL</code> field was deprecated for new syntax in an update of Hugo:
     <p>
-    <code style="display: inline-block;">9:15:43 AM: WARN 2019/04/28 16:15:43 Page&#39;s .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.</code>
+    <code>9:15:43 AM: WARN 2019/04/28 16:15:43 Page&#39;s .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.</code>
     <p>I&rsquo;m not sure why exactly this broke things though. Back in April I configured Netlify to use a version of Hugo
     that still has a <code>.URL</code> field: 0.55.4. Maybe Netlify rebuilt my site in the intervening months?
     <p>In any case, this became a good moment to upgrade Hugo and give my site some much-needed maintenance.

@@ -14,7 +14,7 @@ After these two incidents happened so close to each other, I knew I needed a way
 <meta name="description" content="Personal Blog">
 <link rel="apple-touch-icon" href="/favicon-touch.png">
 <link rel="stylesheet" href="/style.css">
-<a href="/" title="Home" style="position:absolute;"><img src="/favicon-touch.png" alt="Oliver Schmid Owl Logo" height="48" width="48"/></a>
+<a href="/" title="Home" class="home"><img src="/favicon-touch.png" alt="Oliver Schmid Owl Logo" height="48" width="48"/></a>
 <header class="center">
     <h1>Pre-Push Checklist</h1>
     <p>
@@ -71,7 +71,7 @@ After these two incidents happened so close to each other, I knew I needed a way
             href="https://dev.to/victoria/an-automatic-interactive-pre-commit-checklist-in-the-style-of-infomercials-14i7">Victoria
         Drake</a> I turned this list into a <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">git
         hook</a>. Copy the following shell script into <code>.git/hooks</code> and name it <code>pre-push</code>.</p>
-    <pre style="margin: 2rem;">
+    <pre class="margin-2">
 #!/bin/sh
 
 git log origin..HEAD
