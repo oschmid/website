@@ -7,6 +7,12 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://oliverschmid.space/contact/</loc>
+        <lastmod>2018-11-24T12:17:15-08:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://oliverschmid.space/posts/</loc>
         <lastmod>2021-03-16T20:57:12-07:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -57,12 +63,6 @@
     <url>
         <loc>https://oliverschmid.space/posts/oura-ring-one-month/</loc>
         <lastmod>2018-12-01T12:45:37-08:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://oliverschmid.space/contact/</loc>
-        <lastmod>2018-11-24T12:17:15-08:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
