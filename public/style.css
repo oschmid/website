@@ -5,8 +5,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
-a, a:hover, a:visited {
+a, a:hover {
   color: #360BA2;
+}
+a:visited {
+  color: #761958;
 }
 .align-right {
   text-align: right;
@@ -107,8 +110,11 @@ textarea {
   width: 100%;
 }
 @media (prefers-color-scheme: dark) {
-  a, a:hover, a:visited {
+  a, a:hover {
     color: #66AADE;
+  }
+  a:visited {
+    color: #D741A7;
   }
   body {
     color: #dadada;
