@@ -1,5 +1,6 @@
 const onerms = [];
 const percentages = [];
+const values = []; // contains either {weight:10} or {percent:10}
 
 window.onload = () => {
     const onermElement = document.getElementById("onerm");
@@ -9,7 +10,7 @@ window.onload = () => {
     const addPercentageElement = document.getElementById("add-percentage");
 
     addOneRmElement.onclick = () => {
-        onerms.push(onermElement.value);
+        values.push({weight: onermElement.value});
         onermElement.value = "";
         render();
         onermElement.focus();
@@ -21,8 +22,7 @@ window.onload = () => {
         }
     };
     addPercentageElement.onclick = () => {
-        percentages.push(percentageElement.value);
-        percentages.sort((a, b) => {return a-b;});
+        values.push({percent: percentageElement.value});
         percentageElement.value = "";
         render();
         percentageElement.focus();
@@ -33,21 +33,31 @@ window.onload = () => {
             addPercentageElement.click();
         }
     };
+    document.getElementById("undo").onclick = () => {
+        if (values.length == 0) {
+            return;
+        }
+        values.length = values.length - 1;
+        render();
+    };
     document.getElementById("reset").onclick = () => {
-        onerms.length = 0;
-        percentages.length = 0;
+        values.length = 0;
         render();
     };
     const render = () => {
         var content = "<tr><th></th>";
+        const onerms = values.filter(v => 'weight' in v).map(v => v.weight);
         for (onerm of onerms) {
             content += "<th>" + onerm + "</th>";
         }
         content += "</tr>";
-        for (percentage of percentages) {
-            content += "<tr><th>" + percentage + "%</th>";
+        for (v of values) {
+            if (!('percent' in v)) {
+                continue;
+            }
+            content += "<tr><th>" + v.percent + "%</th>";
             for (onerm of onerms) {
-                content += "<td>" + (onerm * percentage / 100) + "</td>";
+                content += "<td>" + (onerm * v.percent / 100) + "</td>";
             }
             content += "</tr>"
         }
