@@ -1,0 +1,29 @@
+{
+  "short_name": "1RM",
+  "name": "1RM Percentages",
+  "icons": [
+    {
+      "src": "/apps/1RM/weightlifting.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "id": "/apps/1RM/",
+  "start_url": "/apps/1RM/",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "/apps/1RM/",
+  "theme_color": "#fafafa",
+  "shortcuts": [
+    {
+      "name": "1RM Percentages",
+      "short_name": "1RM",
+      "description": "Calculate percentages of 1RM",
+      "url": "/apps/1RM/",
+      "icons": [{ "src": "/apps/1RM/weightlifting.png", "sizes": "512x512" }]
+    }
+  ],
+  "description": "Calculate percentages of 1RM",
+  "screenshots": []
+}
