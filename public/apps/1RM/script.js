@@ -3,7 +3,7 @@ const explosiveEfforts = [ 20, 23, 27 ];
 const dynamicEfforts = [ 25, 50, 55, 60 ];
 const repetitiveEfforts = [ 68.5, 73.5, 75, 78.5, 83.5 ];
 const maxEfforts = [ 85, 93.5 ];
-var efforts = 0; // 0=all, 1=explosive, 2=dynamic, 3=repetitive, 4=max, 5=custom TODO localStorage
+var efforts = 5; // 0=all, 1=explosive, 2=dynamic, 3=repetitive, 4=max, 5=custom TODO localStorage
 
 window.onload = () => {
     const onermElement = document.getElementById("onerm");
@@ -72,13 +72,16 @@ window.onload = () => {
         render();
     };
     const render = () => {
-        var content = "<tr><th></th>";
+        var content = "<tr>";
         const onerms = values.filter(v => 'weight' in v).map(v => v.weight);
+        var percentages = values.filter(v => 'percent' in v).map(v => v.percent);
+        if (onerms.length > 0 && (efforts != 5 || percentages.length > 0)) {
+            content += "<th></th>"
+        }
         for (onerm of onerms) {
             content += "<th>" + onerm + "</th>";
         }
         content += "</tr>";
-        var percentages = values.filter(v => 'percent' in v).map(v => v.percent);
         switch (efforts) {
             case 0:
                 percentages = percentages.concat(explosiveEfforts, dynamicEfforts, repetitiveEfforts, maxEfforts);
