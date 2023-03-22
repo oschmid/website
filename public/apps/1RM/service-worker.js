@@ -1,9 +1,14 @@
-const CACHE_NAME = 'v2';
+// Incrementing VERSION will kick off the install event and force
+// previously cached resources to be updated from the network.
+// This variable is intentionally declared and unused.
+const VERSION = 3;
+const CACHE_NAME = '1RM';
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll([
+                '/bulma-0.9.4.min.css',
                 '/apps/1RM/index.html',
                 '/apps/1RM/script.js',
                 '/apps/1RM/weightlifting.png']);
