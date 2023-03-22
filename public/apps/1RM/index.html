@@ -13,13 +13,13 @@
     <div class="container">
         <div class="field has-addons">
             <p class="control"><input id="weight" class="input" type="number" inputmode="decimal" min="0" placeholder="Weight" aria-label="Weight"></p>
-            <p class="control"><button id="add-weight" class="button">+</button></p>
-            <button id="undo" class="button ml-6">Undo</button>
+            <p class="control"><button id="add-weight" class="button" disabled>+</button></p>
+            <button id="undo" class="button ml-6" disabled>Undo</button>
         </div>
         <div class="field has-addons">
             <p class="control"><input id="percentage" class="input" type="number" inputmode="decimal" min="0" placeholder="Percentage" aria-label="Percentage"></p>
-            <p class="control"><button id="add-percentage" class="button">+</button></p>
-            <button id="reset" class="button ml-6">Reset</button>
+            <p class="control"><button id="add-percentage" class="button" disabled>+</button></p>
+            <button id="reset" class="button ml-6" disabled>Reset</button>
         </div>
         <div class="buttons has-addons mt-6">
             <button id="all-efforts" class="button">All Efforts</button>
@@ -27,7 +27,7 @@
             <button id="dynamic-efforts" class="button">Dynamic</button>
             <button id="repetitive-efforts" class="button">Repetitive</button>
             <button id="max-efforts" class="button">Max</button>
-            <button id="custom-efforts" class="button">Custom</button>
+            <button id="custom-efforts" class="button is-dark" disabled>Custom</button>
         </div>
         <table id="table" class="table is-bordered is-striped is-narrow"></table>
     </div>

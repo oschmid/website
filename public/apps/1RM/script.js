@@ -11,30 +11,40 @@ window.onload = () => {
     const tableElement = document.getElementById("table");
     const addWeightElement = document.getElementById("add-weight");
     const addPercentageElement = document.getElementById("add-percentage");
+    const allEffortsElement = document.getElementById("all-efforts");
+    const explosiveEffortsElement = document.getElementById("explosive-efforts");
+    const dynamicEffortsElement = document.getElementById("dynamic-efforts");
+    const repetitiveEffortsElement = document.getElementById("repetitive-efforts");
+    const maxEffortsElement = document.getElementById("max-efforts");
+    const customEffortsElement = document.getElementById("custom-efforts");
 
     addWeightElement.onclick = () => {
         values.push({weight: weightElement.value});
-        weightElement.value = "";
         render();
+        weightElement.value = "";
         weightElement.focus();
+        addWeightElement.disabled = weightElement.value === "";
     };
     weightElement.onkeyup = (event) => {
-        if (event.key === "Enter") {
+        if (event.key === "Enter" && weightElement.value !== "") {
             event.preventDefault();
             addWeightElement.click();
         }
+        addWeightElement.disabled = weightElement.value === "";
     };
     addPercentageElement.onclick = () => {
         values.push({percent: parseInt(percentageElement.value)});
-        percentageElement.value = "";
         render();
+        percentageElement.value = "";
         percentageElement.focus();
+        addPercentageElement.disabled = percentageElement.value === "";
     };
     percentageElement.onkeyup = (event) => {
-        if (event.key === "Enter") {
+        if (event.key === "Enter" && percentageElement.value !== "") {
             event.preventDefault();
             addPercentageElement.click();
         }
+        addPercentageElement.disabled = percentageElement.value === "";
     };
     document.getElementById("undo").onclick = () => {
         if (values.length == 0) {
@@ -47,31 +57,67 @@ window.onload = () => {
         values.length = 0;
         render();
     };
-    document.getElementById("all-efforts").onclick = () => {
+    allEffortsElement.onclick = () => {
         efforts = 0;
         render();
+        clearEfforts();
+        allEffortsElement.classList.add("is-dark");
+        allEffortsElement.disabled = true;
     };
-    document.getElementById("explosive-efforts").onclick = () => {
+    explosiveEffortsElement.onclick = () => {
         efforts = 1;
         render();
+        clearEfforts();
+        explosiveEffortsElement.classList.add("is-dark");
+        explosiveEffortsElement.disabled = true;
     };
-    document.getElementById("dynamic-efforts").onclick = () => {
+    dynamicEffortsElement.onclick = () => {
         efforts = 2;
         render();
+        clearEfforts();
+        dynamicEffortsElement.classList.add("is-dark");
+        dynamicEffortsElement.disabled = true;
     };
-    document.getElementById("repetitive-efforts").onclick = () => {
+    repetitiveEffortsElement.onclick = () => {
         efforts = 3;
         render();
+        clearEfforts();
+        repetitiveEffortsElement.classList.add("is-dark");
+        repetitiveEffortsElement.disabled = true;
     };
-    document.getElementById("max-efforts").onclick = () => {
+    maxEffortsElement.onclick = () => {
         efforts = 4;
         render();
+        clearEfforts();
+        maxEffortsElement.classList.add("is-dark");
+        maxEffortsElement.disabled = true;
     };
-    document.getElementById("custom-efforts").onclick = () => {
+    customEffortsElement.onclick = () => {
         efforts = 5;
         render();
+        clearEfforts();
+        customEffortsElement.classList.add("is-dark");
+        customEffortsElement.disabled = true;
+    };
+    const clearEfforts = () => {
+        allEffortsElement.classList.remove("is-dark");
+        explosiveEffortsElement.classList.remove("is-dark");
+        dynamicEffortsElement.classList.remove("is-dark");
+        repetitiveEffortsElement.classList.remove("is-dark");
+        maxEffortsElement.classList.remove("is-dark");
+        customEffortsElement.classList.remove("is-dark");
+
+        allEffortsElement.disabled = false;
+        explosiveEffortsElement.disabled = false;
+        dynamicEffortsElement.disabled = false;
+        repetitiveEffortsElement.disabled = false;
+        maxEffortsElement.disabled = false;
+        customEffortsElement.disabled = false;
     };
     const render = () => {
+        undo.disabled = values.length === 0;
+        reset.disabled = values.length === 0;
+
         var content = "<thead><tr>";
         const weights = values.filter(v => 'weight' in v).map(v => v.weight);
         var percentages = values.filter(v => 'percent' in v).map(v => v.percent);
