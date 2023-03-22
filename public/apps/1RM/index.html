@@ -7,23 +7,29 @@
 <meta name="description" content="1RM Percentages">
 <link rel="shortcut icon" type="image/png" href="./weightlifting.png"/>
 <link rel="apple-touch-icon" href="./weightlifting.png">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link rel="manifest" href="./manifest.json"/>
-<main>
-    <input id="onerm" type="number" inputmode="decimal" min="0" placeholder="Weight" aria-label="Weight">
-    <button id="add-onerm">Add 1RM</button>
-    <button id="undo">Undo</button>
-    <br>
-    <input id="percentage" type="number" inputmode="decimal" min="0" placeholder="Percentage" aria-label="Percentage">
-    <button id="add-percentage">Add Percentage</button>
-    <button id="reset">Reset</button>
-    <br>
-    <button id="all-efforts">All Efforts</button>
-    <button id="explosive-efforts">Explosive</button>
-    <button id="dynamic-efforts">Dynamic</button>
-    <button id="repetitive-efforts">Repetitive</button>
-    <button id="max-efforts">Max</button>
-    <button id="custom-efforts">Custom</button>
-    <table id="table"></table>
+<main class="section">
+    <div class="container">
+        <div class="field has-addons">
+            <p class="control"><input id="weight" class="input" type="number" inputmode="decimal" min="0" placeholder="Weight" aria-label="Weight"></p>
+            <p class="control"><button id="add-weight" class="button">+</button></p>
+            <button id="undo" class="button ml-6">Undo</button>
+        </div>
+        <div class="field has-addons">
+            <p class="control"><input id="percentage" class="input" type="number" inputmode="decimal" min="0" placeholder="Percentage" aria-label="Percentage"></p>
+            <p class="control"><button id="add-percentage" class="button">+</button></p>
+            <button id="reset" class="button ml-6">Reset</button>
+        </div>
+        <div class="buttons has-addons mt-6">
+            <button id="all-efforts" class="button">All Efforts</button>
+            <button id="explosive-efforts" class="button">Explosive</button>
+            <button id="dynamic-efforts" class="button">Dynamic</button>
+            <button id="repetitive-efforts" class="button">Repetitive</button>
+            <button id="max-efforts" class="button">Max</button>
+            <button id="custom-efforts" class="button">Custom</button>
+        </div>
+        <table id="table" class="table is-bordered is-striped is-narrow"></table>
+    </div>
 </main>
 <script async type="text/javascript" src="./script.js"></script>
