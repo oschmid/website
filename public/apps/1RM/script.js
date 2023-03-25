@@ -17,9 +17,84 @@ window.onload = () => {
     const repetitiveEffortsElement = document.getElementById("repetitive-efforts");
     const maxEffortsElement = document.getElementById("max-efforts");
     const customEffortsElement = document.getElementById("custom-efforts");
+    // TODO load values from local storage
 
+    // Updates
+    const addValue = (value) => {
+        values.push(value);
+        // TODO add to local storage
+    };
+    const clearEfforts = () => {
+        allEffortsElement.classList.remove("is-dark");
+        explosiveEffortsElement.classList.remove("is-dark");
+        dynamicEffortsElement.classList.remove("is-dark");
+        repetitiveEffortsElement.classList.remove("is-dark");
+        maxEffortsElement.classList.remove("is-dark");
+        customEffortsElement.classList.remove("is-dark");
+
+        allEffortsElement.disabled = false;
+        explosiveEffortsElement.disabled = false;
+        dynamicEffortsElement.disabled = false;
+        repetitiveEffortsElement.disabled = false;
+        maxEffortsElement.disabled = false;
+        customEffortsElement.disabled = false;
+    };
+
+    // View
+    const renderWeightElement = () => {
+        const w = parseInt(weightElement.value);
+        addWeightElement.disabled = isNaN(w) || w == 0;
+    };
+    const renderPercentageElement = () => {
+        const w = parseInt(percentageElement.value);
+        addPercentageElement.disabled = isNaN(w) || w == 0;
+    };
+    const render = () => {
+        undo.disabled = values.length === 0;
+        reset.disabled = values.length === 0;
+
+        var content = "<thead><tr>";
+        const weights = values.filter(v => 'weight' in v).map(v => v.weight);
+        var percentages = values.filter(v => 'percent' in v).map(v => v.percent);
+        if (weights.length > 0 && (efforts != 5 || percentages.length > 0)) {
+            content += "<th></th>"
+        }
+        for (weight of weights) {
+            content += "<th>" + weight + "</th>";
+        }
+        content += "</tr></thead><tbody>";
+        switch (efforts) {
+            case 0:
+                percentages = percentages.concat(explosiveEfforts, dynamicEfforts, repetitiveEfforts, maxEfforts);
+                break;
+            case 1:
+                percentages = percentages.concat(explosiveEfforts);
+                break;
+            case 2:
+                percentages = percentages.concat(dynamicEfforts);
+                break;
+            case 3:
+                percentages = percentages.concat(repetitiveEfforts);
+                break;
+            case 4:
+                percentages = percentages.concat(maxEfforts);
+                break;
+        }
+        percentages.sort((a, b) => a - b);
+        for (percent of percentages) {
+            content += "<tr><th>" + percent + "%</th>";
+            for (weight of weights) {
+                content += "<td>" + (weight * percent / 100) + "</td>";
+            }
+            content += "</tr>"
+        }
+        content += "</tbody>";
+        tableElement.innerHTML = content;
+    };
+
+    // Events
     addWeightElement.onclick = () => {
-        values.push({weight: weightElement.value});
+        addValue({weight: parseInt(weightElement.value)});
         render();
         weightElement.value = "";
         weightElement.focus();
@@ -35,12 +110,8 @@ window.onload = () => {
     weightElement.onmouseup = (event) => {
         renderWeightElement();
     };
-    renderWeightElement = () => {
-        const w = parseInt(weightElement.value);
-        addWeightElement.disabled = isNaN(w) || w == 0;
-    };
     addPercentageElement.onclick = () => {
-        values.push({percent: parseInt(percentageElement.value)});
+        addValue({percent: parseInt(percentageElement.value)});
         render();
         percentageElement.value = "";
         percentageElement.focus();
@@ -55,10 +126,6 @@ window.onload = () => {
     };
     percentageElement.onmouseup = (event) => {
         renderPercentageElement();
-    };
-    renderPercentageElement = () => {
-        const w = parseInt(percentageElement.value);
-        addPercentageElement.disabled = isNaN(w) || w == 0;
     };
     document.getElementById("undo").onclick = () => {
         if (values.length == 0) {
@@ -113,65 +180,9 @@ window.onload = () => {
         customEffortsElement.classList.add("is-dark");
         customEffortsElement.disabled = true;
     };
-    const clearEfforts = () => {
-        allEffortsElement.classList.remove("is-dark");
-        explosiveEffortsElement.classList.remove("is-dark");
-        dynamicEffortsElement.classList.remove("is-dark");
-        repetitiveEffortsElement.classList.remove("is-dark");
-        maxEffortsElement.classList.remove("is-dark");
-        customEffortsElement.classList.remove("is-dark");
 
-        allEffortsElement.disabled = false;
-        explosiveEffortsElement.disabled = false;
-        dynamicEffortsElement.disabled = false;
-        repetitiveEffortsElement.disabled = false;
-        maxEffortsElement.disabled = false;
-        customEffortsElement.disabled = false;
-    };
-    const render = () => {
-        undo.disabled = values.length === 0;
-        reset.disabled = values.length === 0;
-
-        var content = "<thead><tr>";
-        const weights = values.filter(v => 'weight' in v).map(v => v.weight);
-        var percentages = values.filter(v => 'percent' in v).map(v => v.percent);
-        if (weights.length > 0 && (efforts != 5 || percentages.length > 0)) {
-            content += "<th></th>"
-        }
-        for (weight of weights) {
-            content += "<th>" + weight + "</th>";
-        }
-        content += "</tr></thead><tbody>";
-        switch (efforts) {
-            case 0:
-                percentages = percentages.concat(explosiveEfforts, dynamicEfforts, repetitiveEfforts, maxEfforts);
-                break;
-            case 1:
-                percentages = percentages.concat(explosiveEfforts);
-                break;
-            case 2:
-                percentages = percentages.concat(dynamicEfforts);
-                break;
-            case 3:
-                percentages = percentages.concat(repetitiveEfforts);
-                break;
-            case 4:
-                percentages = percentages.concat(maxEfforts);
-                break;
-        }
-        percentages.sort((a, b) => a - b);
-        for (percent of percentages) {
-            content += "<tr><th>" + percent + "%</th>";
-            for (weight of weights) {
-                content += "<td>" + (weight * percent / 100) + "</td>";
-            }
-            content += "</tr>"
-        }
-        content += "</tbody>";
-        tableElement.innerHTML = content;
-    };
+    // Init
     render();
-
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./service-worker.js');
     }
