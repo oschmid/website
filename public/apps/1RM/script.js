@@ -23,14 +23,21 @@ window.onload = () => {
         render();
         weightElement.value = "";
         weightElement.focus();
-        addWeightElement.disabled = weightElement.value === "";
+        renderWeightElement();
     };
     weightElement.onkeyup = (event) => {
-        if (event.key === "Enter" && weightElement.value !== "") {
+        if (event.key === "Enter" && parseInt(weightElement.value) > 0) {
             event.preventDefault();
             addWeightElement.click();
         }
-        addWeightElement.disabled = weightElement.value === "";
+        renderWeightElement();
+    };
+    weightElement.onmouseup = (event) => {
+        renderWeightElement();
+    };
+    renderWeightElement = () => {
+        const w = parseInt(weightElement.value);
+        addWeightElement.disabled = isNaN(w) || w == 0;
     };
     addPercentageElement.onclick = () => {
         values.push({percent: parseInt(percentageElement.value)});
@@ -40,11 +47,18 @@ window.onload = () => {
         addPercentageElement.disabled = percentageElement.value === "";
     };
     percentageElement.onkeyup = (event) => {
-        if (event.key === "Enter" && percentageElement.value !== "") {
+        if (event.key === "Enter" && parseInt(percentageElement.value) > 0) {
             event.preventDefault();
             addPercentageElement.click();
         }
-        addPercentageElement.disabled = percentageElement.value === "";
+        renderPercentageElement();
+    };
+    percentageElement.onmouseup = (event) => {
+        renderPercentageElement();
+    };
+    renderPercentageElement = () => {
+        const w = parseInt(percentageElement.value);
+        addPercentageElement.disabled = isNaN(w) || w == 0;
     };
     document.getElementById("undo").onclick = () => {
         if (values.length == 0) {
