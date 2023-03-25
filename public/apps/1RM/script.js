@@ -3,7 +3,7 @@ const explosiveEfforts = [ 20, 23, 27 ];
 const dynamicEfforts = [ 25, 50, 55, 60 ];
 const repetitiveEfforts = [ 68.5, 73.5, 75, 78.5, 83.5 ];
 const maxEfforts = [ 85, 93.5 ];
-var efforts = 5; // 0=all, 1=explosive, 2=dynamic, 3=repetitive, 4=max, 5=custom TODO localStorage
+var efforts = 5; // 0=all, 1=explosive, 2=dynamic, 3=repetitive, 4=max, 5=custom
 
 window.onload = () => {
     const weightElement = document.getElementById("weight");
@@ -23,7 +23,11 @@ window.onload = () => {
         values.push(value);
         localStorage.setItem('values', JSON.stringify(values));
     };
-    const clearEfforts = () => {
+    const setEfforts = (e) => {
+        if (isNaN(e)) return;
+        efforts = e;
+        localStorage.setItem('efforts', JSON.stringify(efforts));
+
         allEffortsElement.classList.remove("is-dark");
         explosiveEffortsElement.classList.remove("is-dark");
         dynamicEffortsElement.classList.remove("is-dark");
@@ -37,6 +41,33 @@ window.onload = () => {
         repetitiveEffortsElement.disabled = false;
         maxEffortsElement.disabled = false;
         customEffortsElement.disabled = false;
+
+        switch (e) {
+            case 0:
+                allEffortsElement.classList.add("is-dark");
+                allEffortsElement.disabled = true;
+                break;
+            case 1:
+                explosiveEffortsElement.classList.add("is-dark");
+                explosiveEffortsElement.disabled = true;
+                break;
+            case 2:
+                dynamicEffortsElement.classList.add("is-dark");
+                dynamicEffortsElement.disabled = true;
+                break;
+            case 3:
+                repetitiveEffortsElement.classList.add("is-dark");
+                repetitiveEffortsElement.disabled = true;
+                break;
+            case 4:
+                maxEffortsElement.classList.add("is-dark");
+                maxEffortsElement.disabled = true;
+                break;
+            case 5:
+                customEffortsElement.classList.add("is-dark");
+                customEffortsElement.disabled = true;
+                break;
+        }
     };
 
     // View
@@ -138,50 +169,33 @@ window.onload = () => {
         render();
     };
     allEffortsElement.onclick = () => {
-        efforts = 0;
+        setEfforts(0);
         render();
-        clearEfforts();
-        allEffortsElement.classList.add("is-dark");
-        allEffortsElement.disabled = true;
     };
     explosiveEffortsElement.onclick = () => {
-        efforts = 1;
+        setEfforts(1);
         render();
-        clearEfforts();
-        explosiveEffortsElement.classList.add("is-dark");
-        explosiveEffortsElement.disabled = true;
     };
     dynamicEffortsElement.onclick = () => {
-        efforts = 2;
+        setEfforts(2);
         render();
-        clearEfforts();
-        dynamicEffortsElement.classList.add("is-dark");
-        dynamicEffortsElement.disabled = true;
     };
     repetitiveEffortsElement.onclick = () => {
-        efforts = 3;
+        setEfforts(3);
         render();
-        clearEfforts();
-        repetitiveEffortsElement.classList.add("is-dark");
-        repetitiveEffortsElement.disabled = true;
     };
     maxEffortsElement.onclick = () => {
-        efforts = 4;
+        setEfforts(4);
         render();
-        clearEfforts();
-        maxEffortsElement.classList.add("is-dark");
-        maxEffortsElement.disabled = true;
     };
     customEffortsElement.onclick = () => {
-        efforts = 5;
+        setEfforts(5);
         render();
-        clearEfforts();
-        customEffortsElement.classList.add("is-dark");
-        customEffortsElement.disabled = true;
     };
 
     // Init
     values.push(...(JSON.parse(localStorage.getItem('values') || "[]")));
+    setEfforts(parseInt(JSON.parse(localStorage.getItem('efforts'))));
     render();
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./service-worker.js');
