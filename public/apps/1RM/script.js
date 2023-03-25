@@ -1,4 +1,4 @@
-const values = []; // contains either {weight:10} or {percent:10} TODO localStorage
+const values = []; // contains either {weight:10} or {percent:10}
 const explosiveEfforts = [ 20, 23, 27 ];
 const dynamicEfforts = [ 25, 50, 55, 60 ];
 const repetitiveEfforts = [ 68.5, 73.5, 75, 78.5, 83.5 ];
@@ -17,12 +17,11 @@ window.onload = () => {
     const repetitiveEffortsElement = document.getElementById("repetitive-efforts");
     const maxEffortsElement = document.getElementById("max-efforts");
     const customEffortsElement = document.getElementById("custom-efforts");
-    // TODO load values from local storage
 
     // Updates
     const addValue = (value) => {
         values.push(value);
-        // TODO add to local storage
+        localStorage.setItem('values', JSON.stringify(values));
     };
     const clearEfforts = () => {
         allEffortsElement.classList.remove("is-dark");
@@ -182,6 +181,7 @@ window.onload = () => {
     };
 
     // Init
+    values.push(...(JSON.parse(localStorage.getItem('values') || "[]")));
     render();
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./service-worker.js');
