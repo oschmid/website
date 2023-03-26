@@ -1,0 +1,27 @@
+{
+  "name": "Conjugate Calculator",
+  "icons": [
+    {
+      "src": "/apps/conjugate-calculator/weightlifting.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "id": "/apps/conjugate-calculator/",
+  "start_url": "/apps/conjugate-calculator/",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#fafafa",
+  "shortcuts": [
+    {
+      "name": "Conjugate Calculator",
+      "description": "Calculate Method Training Calculator",
+      "url": "/apps/conjugate-calculator/",
+      "icons": [{ "src": "/apps/conjugate-calculator/weightlifting.png", "sizes": "512x512" }]
+    }
+  ],
+  "description": "Conjugate Method Training Calculator",
+  "screenshots": []
+}
