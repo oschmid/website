@@ -9,6 +9,7 @@ self.addEventListener('install', (event) => {
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll([
                 '/bulma-0.9.4.min.css',
+                '/favicon-touch.png',
                 '/apps/conjugate-calculator/index.html',
                 '/apps/conjugate-calculator/script.js',
                 '/apps/conjugate-calculator/weightlifting.png']);
