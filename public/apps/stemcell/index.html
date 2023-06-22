@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Department Positions</title>
+<meta name="description" content="Stemcell Department Positions Quiz">
+<link rel="shortcut icon" type="image/png" href="./stemcell.png"/>
+<link rel="apple-touch-icon" href="./stemcell.png">
+<style type="text/css">
+    .center {
+        margin: auto;
+        text-align: center;
+        padding: 70px 0 0 0;
+    }
+    .bold {
+        font-weight: bold;
+    }
+</style>
+<main>
+    <div id="department" class="center bold"></div>
+    <div id="position" class="center bold"></div>
+    <div class="center"><button onclick="randomize()">Randomize</button></div>
+</main>
+<script type="text/javascript">
+    let departments = 'Manufacturing|Sales|Research & Development'.split('|');
+    let positions = 'Entry Level|Manager'.split('|');
+
+    function randomize() {
+        document.getElementById('department').textContent = departments[Math.floor(Math.random()*departments.length)];
+        document.getElementById('position').textContent = positions[Math.floor(Math.random()*positions.length)];
+    }
+
+    randomize();
+</script>
