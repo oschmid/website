@@ -7,29 +7,10 @@
 <meta name="description" content="Stemcell Department Positions Quiz">
 <link rel="shortcut icon" type="image/png" href="./stemcell.png"/>
 <link rel="apple-touch-icon" href="./stemcell.png">
-<style type="text/css">
-    .center {
-        margin: auto;
-        text-align: center;
-        padding: 70px 0 0 0;
-    }
-    .bold {
-        font-weight: bold;
-    }
-</style>
+<link rel="stylesheet" href="./style.css">
 <main>
     <div id="department" class="center bold"></div>
     <div id="position" class="center bold"></div>
-    <div class="center"><button onclick="randomize()">Randomize</button></div>
+    <div class="center"><button id="randomize">Randomize</button></div>
 </main>
-<script type="text/javascript">
-    let departments = 'Manufacturing|Sales|Research & Development'.split('|');
-    let positions = 'Entry Level|Manager'.split('|');
-
-    function randomize() {
-        document.getElementById('department').textContent = departments[Math.floor(Math.random()*departments.length)];
-        document.getElementById('position').textContent = positions[Math.floor(Math.random()*positions.length)];
-    }
-
-    randomize();
-</script>
+<script async type="text/javascript" src="./script.js"></script>
