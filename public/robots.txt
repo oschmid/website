@@ -1,4 +1,8 @@
+User-agent: GPTBot
+Disallow: /
+
 User-agent: *
 Disallow: /404.html
 Disallow: /contact-success/
+
 Sitemap: https://oliverschmid.space/sitemap.xml
