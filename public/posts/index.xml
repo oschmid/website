@@ -2,70 +2,70 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Oliver Schmid</title>
-        <link>https://oliverschmid.space/</link>
+        <link>https://oliverschmid.ca/</link>
         <description>Recent content on Oliver Schmid</description>
         <copyright>Oliver Schmid</copyright>
         <lastBuildDate>Tue, 16 Mar 2021 20:57:12 -0700</lastBuildDate>
-        <atom:link href="https://oliverschmid.space/index.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://oliverschmid.ca/index.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title>Pre-Push Checklist</title>
-            <link>https://oliverschmid.space/posts/pre-push-checklist/</link>
+            <link>https://oliverschmid.ca/posts/pre-push-checklist/</link>
             <pubDate>Tue, 16 Mar 2021 20:57:12 -0700</pubDate>
-            <guid>https://oliverschmid.space/posts/pre-push-checklist/</guid>
+            <guid>https://oliverschmid.ca/posts/pre-push-checklist/</guid>
         </item>
         <item>
             <title>Best I've Read Lately 3</title>
-            <link>https://oliverschmid.space/posts/best-ive-read-lately-3/</link>
+            <link>https://oliverschmid.ca/posts/best-ive-read-lately-3/</link>
             <pubDate>Sat, 25 Jul 2020 10:08:04 -0700</pubDate>
-            <guid>https://oliverschmid.space/posts/best-ive-read-lately-3/</guid>
+            <guid>https://oliverschmid.ca/posts/best-ive-read-lately-3/</guid>
         </item>
         <item>
             <title>GTD in Roam</title>
-            <link>https://oliverschmid.space/posts/gtd-in-roam/</link>
+            <link>https://oliverschmid.ca/posts/gtd-in-roam/</link>
             <pubDate>Sun, 09 Feb 2020 08:19:51 -0800</pubDate>
-            <guid>https://oliverschmid.space/posts/gtd-in-roam/</guid>
+            <guid>https://oliverschmid.ca/posts/gtd-in-roam/</guid>
         </item>
         <item>
             <title>Website Updates</title>
-            <link>https://oliverschmid.space/posts/website-updates/</link>
+            <link>https://oliverschmid.ca/posts/website-updates/</link>
             <pubDate>Sun, 13 Oct 2019 07:34:48 -0700</pubDate>
-            <guid>https://oliverschmid.space/posts/website-updates/</guid>
+            <guid>https://oliverschmid.ca/posts/website-updates/</guid>
         </item>
         <item>
             <title>Best I've Read Lately 2</title>
-            <link>https://oliverschmid.space/posts/best-ive-read-lately-2/</link>
+            <link>https://oliverschmid.ca/posts/best-ive-read-lately-2/</link>
             <pubDate>Sun, 28 Apr 2019 08:57:58 -0700</pubDate>
-            <guid>https://oliverschmid.space/posts/best-ive-read-lately-2/</guid>
+            <guid>https://oliverschmid.ca/posts/best-ive-read-lately-2/</guid>
         </item>
         <item>
             <title>Best I've Read Lately</title>
-            <link>https://oliverschmid.space/posts/best-ive-read-lately/</link>
+            <link>https://oliverschmid.ca/posts/best-ive-read-lately/</link>
             <pubDate>Sun, 27 Jan 2019 11:14:44 -0800</pubDate>
-            <guid>https://oliverschmid.space/posts/best-ive-read-lately/</guid>
+            <guid>https://oliverschmid.ca/posts/best-ive-read-lately/</guid>
         </item>
         <item>
             <title>Hugo Pagination</title>
-            <link>https://oliverschmid.space/posts/hugo-pagination/</link>
+            <link>https://oliverschmid.ca/posts/hugo-pagination/</link>
             <pubDate>Thu, 27 Dec 2018 10:45:41 -0800</pubDate>
-            <guid>https://oliverschmid.space/posts/hugo-pagination/</guid>
+            <guid>https://oliverschmid.ca/posts/hugo-pagination/</guid>
         </item>
         <item>
             <title>One Month With The Oura Ring</title>
-            <link>https://oliverschmid.space/posts/oura-ring-one-month/</link>
+            <link>https://oliverschmid.ca/posts/oura-ring-one-month/</link>
             <pubDate>Sat, 01 Dec 2018 12:45:37 -0800</pubDate>
-            <guid>https://oliverschmid.space/posts/oura-ring-one-month/</guid>
+            <guid>https://oliverschmid.ca/posts/oura-ring-one-month/</guid>
         </item>
         <item>
             <title>No, My Cellphone Won't Blow Up Your Gas Station</title>
-            <link>https://oliverschmid.space/posts/no-my-cellphone-wont-blow-up-your-gas-station/</link>
+            <link>https://oliverschmid.ca/posts/no-my-cellphone-wont-blow-up-your-gas-station/</link>
             <pubDate>Sat, 10 Nov 2018 14:25:25 -0800</pubDate>
-            <guid>https://oliverschmid.space/posts/no-my-cellphone-wont-blow-up-your-gas-station/</guid>
+            <guid>https://oliverschmid.ca/posts/no-my-cellphone-wont-blow-up-your-gas-station/</guid>
         </item>
         <item>
             <title>2018 BC Referendum on Electoral Reform</title>
-            <link>https://oliverschmid.space/posts/2018-bc-referendum-on-electoral-reform/</link>
+            <link>https://oliverschmid.ca/posts/2018-bc-referendum-on-electoral-reform/</link>
             <pubDate>Mon, 22 Oct 2018 20:12:24 -0700</pubDate>
-            <guid>https://oliverschmid.space/posts/2018-bc-referendum-on-electoral-reform/</guid>
+            <guid>https://oliverschmid.ca/posts/2018-bc-referendum-on-electoral-reform/</guid>
         </item>
     </channel>
 </rss>

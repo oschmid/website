@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
-Domain: oliverschmid.space
+Domain: oliverschmid.ca
 Token: 8592ccd62f0bea60bb737698fd00aa5d17bd58aabd996999c8762c3f77814ba7
