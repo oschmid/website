@@ -5,4 +5,4 @@ User-agent: *
 Disallow: /404.html
 Disallow: /contact-success/
 
-Sitemap: https://oliverschmid.space/sitemap.xml
+Sitemap: https://oliverschmid.ca/sitemap.xml
