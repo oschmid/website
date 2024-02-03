@@ -3,10 +3,16 @@
     <channel>
         <title>Oliver Schmid</title>
         <link>https://oliverschmid.ca/</link>
-        <description>Recent content on Oliver Schmid</description>
+        <description>Recent content from Oliver Schmid</description>
         <copyright>Oliver Schmid</copyright>
-        <lastBuildDate>Tue, 16 Mar 2021 20:57:12 -0700</lastBuildDate>
-        <atom:link href="https://oliverschmid.ca/index.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Fri, 2 Feb 2023 21:46:00 -0700</lastBuildDate>
+	<atom:link href="https://oliverschmid.ca/index.xml" rel="self" type="application/rss+xml"/>
+	<item>
+	    <title>SuperMemo Tasks in Google Sheets</title>
+	    <link>https://oliverschmid.ca/posts/supermemo-tasks-in-google-sheets/</link>
+	    <pubDate>Fri, 2 Feb 2023 21:46:00 -0700</pubDate>
+	    <guid>https://oliverschmid.ca/posts/supermemo-tasks-in-google-sheets/</guid>
+	</item>
         <item>
             <title>Pre-Push Checklist</title>
             <link>https://oliverschmid.ca/posts/pre-push-checklist/</link>
