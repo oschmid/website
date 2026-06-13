@@ -1,7 +1,4 @@
-# IntelliJ IDEA
-.idea/*
-*.iml
+# Hugo
+.hugo_build.lock
+public
 
-# Netlify CLI
-.netlify
-node_modules
