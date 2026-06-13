@@ -1,7 +1,7 @@
 <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            {{- $label_text := (site.Params.label.text | default site.Title) }}
+            {{- $label_text := site.Params.label.text }}
             {{- if site.Title }}
             <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
                 {{- if site.Params.label.icon }}

@@ -15,7 +15,6 @@ params:
     icon: "/safari-pinned-tab.svg"
     iconHeight: 35
     iconWidth: 35
-    text: ">"
   profileMode:
     enabled: true
     imageTitle: "Owl Predator Flying Free by BarbaraALane"
