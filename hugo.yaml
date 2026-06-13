@@ -1,0 +1,35 @@
+title: Oliver Schmid
+theme: ["PaperMod"]
+baseURL: https://oliverschmid.ca/
+locale: en-ca
+enableRobotsTXT: true
+params:
+  assets:
+    apple_touch_icon: "/apple-touch-icon.png"
+    favicon: "/favicon.ico" # Created using https://favicon.io/favicon-generator/ usng #FFF Almendra SC initials on #A00 background
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+  label:
+    icon: "/apple-touch-icon.png"
+    iconHeight: 35
+    text: ">"
+  profileMode:
+    enabled: true
+    imageTitle: "Owl Predator Flying Free by BarbaraALane"
+    imageUrl: "/owl-2223092_1280.png"
+    imageHeight: 200
+    imageWidth: 200
+    buttons:
+      - name: "Apps"
+        url: "/apps/"
+      - name: "Contact"
+        url: "/contact/"
+  socialIcons:
+    - name: "GitHub"
+      url: "https://github.com/oschmid"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/oliver-schmid-62625514/"
+security:
+  allowContent:
+    - '.*'
+

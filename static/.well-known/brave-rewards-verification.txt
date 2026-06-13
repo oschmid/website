@@ -1,0 +1,4 @@
+This is a Brave Creators publisher verification file.
+
+Domain: oliverschmid.ca
+Token: f2a1b1ccca42cd20a07e5675e37f3402aa40c4b8e95ba64dbba609d452b17f02
