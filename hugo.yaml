@@ -28,6 +28,8 @@ params:
         url: "/contact/"
       - name: "Posts"
         url: "/posts/"
+      - name: "Recipes"
+        url: "/recipes"
   socialIcons:
     - name: "GitHub"
       url: "https://github.com/oschmid"
