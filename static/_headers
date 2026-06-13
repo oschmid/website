@@ -3,21 +3,21 @@
   X-Content-Type-Options: nosniff
 
 /*.html
-  Content-Security-Policy: default-src 'self'; object-src 'none'; frame-src https://www.youtube-nocookie.com; frame-ancestors 'none'; img-src 'self' i.ytimg.com *.cloudfront.net; script-src 'unsafe-inline'; style-src 'unsafe-inline'; style-src-elem 'https://oliverschmid.ca'; upgrade-insecure-requests; block-all-mixed-content
+  Content-Security-Policy: default-src 'self'; object-src 'none'; frame-src https://www.youtube-nocookie.com; frame-ancestors 'none'; img-src 'self' i.ytimg.com *.cloudfront.net; script-src 'unsafe-inline'; style-src 'unsafe-inline'; style-src-elem https://oliverschmid.ca; upgrade-insecure-requests; block-all-mixed-content
   Cross-Origin-Opener-Policy: same-origin
   Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 /*/
-  Content-Security-Policy: default-src 'self'; object-src 'none'; frame-src https://www.youtube-nocookie.com; frame-ancestors 'none'; img-src 'self' i.ytimg.com *.cloudfront.net; script-src 'unsafe-inline'; style-src 'unsafe-inline'; style-src-elem 'https://oliverschmid.ca'; upgrade-insecure-requests; block-all-mixed-content
+  Content-Security-Policy: default-src 'self'; object-src 'none'; frame-src https://www.youtube-nocookie.com; frame-ancestors 'none'; img-src 'self' i.ytimg.com *.cloudfront.net; script-src 'unsafe-inline'; style-src 'unsafe-inline'; style-src-elem https://oliverschmid.ca; upgrade-insecure-requests; block-all-mixed-content
   Cross-Origin-Opener-Policy: same-origin
   Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 /
-  Content-Security-Policy: default-src 'self'; object-src 'none'; frame-src https://www.youtube-nocookie.com; frame-ancestors 'none'; img-src 'self' i.ytimg.com *.cloudfront.net; script-src 'unsafe-inline'; style-src 'unsafe-inline'; style-src-elem 'https://oliverschmid.ca'; upgrade-insecure-requests; block-all-mixed-content
+  Content-Security-Policy: default-src 'self'; object-src 'none'; frame-src https://www.youtube-nocookie.com; frame-ancestors 'none'; img-src 'self' i.ytimg.com *.cloudfront.net; script-src 'unsafe-inline'; style-src 'unsafe-inline'; style-src-elem https://oliverschmid.ca; upgrade-insecure-requests; block-all-mixed-content
   Cross-Origin-Opener-Policy: same-origin
   Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
   Referrer-Policy: strict-origin-when-cross-origin
