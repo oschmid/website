@@ -19,8 +19,8 @@ params:
     enabled: true
     imageTitle: "Owl Predator Flying Free by BarbaraALane"
     imageUrl: "/owl-2223092_1280.png"
-    imageHeight: 200
-    imageWidth: 200
+    imageHeight: 300
+    imageWidth: 300
     buttons:
       - name: "Apps"
         url: "/apps/"
