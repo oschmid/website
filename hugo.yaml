@@ -9,6 +9,7 @@ params:
     favicon: "/favicon.ico" # Created using https://favicon.io/favicon-generator/ usng #FFF Almendra SC initials on #A00 background
     favicon16x16: "/favicon-16x16.png"
     favicon32x32: "/favicon-32x32.png"
+  description: 'Oliver Schmid'
   label:
     icon: "/apple-touch-icon.png"
     iconHeight: 35
