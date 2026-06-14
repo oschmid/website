@@ -2,6 +2,7 @@
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 summary: ''
 tags: []
+ShowReadingTime: false
 ---
 *Preparation: _ mins. Baking/Cooking: _ hour* 
 

@@ -2,6 +2,7 @@
 title: "Mom's Carrot Soufflé"
 summary: 'Preparation: 30 mins. Baking 1 hour'
 tags: ['French', 'side', 'vegetable']
+ShowReadingTime: false
 ---
 *Preparation: 30 mins. Baking: 1 hour*
 
