@@ -38,4 +38,6 @@ params:
 security:
   allowContent:
     - '.*'
+taxonomies:
+  tag: tags
 
