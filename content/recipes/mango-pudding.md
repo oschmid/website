@@ -4,8 +4,6 @@ summary: 'Preparation: 20 mins. Chilling: 2 hours'
 tags: ['dessert', 'fruit', 'Hongkonger']
 ShowReadingTime: false
 ---
-*Preparation: 20 mins. Chilling: 2 hours*
-
 **Ingredients**
 
 - 4 packages of gelatine
