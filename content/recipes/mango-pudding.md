@@ -1,7 +1,7 @@
 ---
 title: 'Mango Pudding'
 summary: 'Preparation: 20 mins. Chilling: 2 hours'
-tags: ['dessert', 'fruit', 'Hong Kong']
+tags: ['dessert', 'fruit', 'Hongkonger']
 ShowReadingTime: false
 ---
 *Preparation: 20 mins. Chilling: 2 hours*
