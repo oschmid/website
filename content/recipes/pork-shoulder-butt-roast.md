@@ -4,8 +4,6 @@ summary: 'Preparation: 10 mins. Roasting: 4 hours'
 tags: ['French', 'main', 'pork']
 ShowReadingTime: false
 ---
-*Preparation: 10 mins. Roasting: 4 hours* 
-
 **Ingredients**
 *Serves 4-6*
 

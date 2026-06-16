@@ -4,8 +4,6 @@ summary: 'Preparation: 15 mins. Baking: 1 hour'
 tags: ['baking', 'cake', 'dessert', 'North American']
 ShowReadingTime: false
 ---
-*Preparation: 15 mins. Baking: 1 hour* 
-
 **Ingredients**
 *Serves 4*
 
