@@ -1,7 +1,7 @@
 ---
-title: "Mom's Zucchini Orange Cake"
+title: "Zucchini Orange Cake"
 summary: 'Preparation: 15 mins. Baking: 1 hour'
-tags: ['baking', 'cake', 'dessert', 'North American']
+tags: ['baking', 'cake', 'dessert', "Mom's Recipes", 'North American']
 ShowReadingTime: false
 ---
 **Ingredients**

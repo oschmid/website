@@ -1,7 +1,7 @@
 ---
-title: "Mom's Pork Shoulder Butt Roast"
+title: "Pork Shoulder Butt Roast"
 summary: 'Preparation: 10 mins. Roasting: 4 hours'
-tags: ['French', 'main', 'pork']
+tags: ['French', 'main', "Mom's Recipes", 'pork']
 ShowReadingTime: false
 ---
 **Ingredients**
