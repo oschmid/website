@@ -3,3 +3,6 @@
 public
 resources
 
+# IntelliJ IDEA
+.idea
+
