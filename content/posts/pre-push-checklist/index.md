@@ -30,7 +30,7 @@ After these two incidents happened so close to each other, I knew I  needed a wa
 
 Inspired by [Victoria Drake](https://dev.to/victoria/an-automatic-interactive-pre-commit-checklist-in-the-style-of-infomercials-14i7) I turned this list into a [git hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks). Copy the following shell script into `.git/hooks` and name it `pre-push`.
 
-{{< highlightFile "pre-push" "sh" "linenos=table" >}}
+{{< highlightFile "pre-push" "sh" "linenos=table,noClasses=false" >}}
 
 Some notable features:
 
