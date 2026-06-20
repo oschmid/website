@@ -21,21 +21,21 @@ func cspHash(s string) string {
 
 type cspHashes struct {
 	ScriptSrc    map[string]struct{}
-	StyleSrc     map[string]struct{}
+	StyleSrcAttr     map[string]struct{}
 	StyleSrcElem map[string]struct{}
 }
 
 func newCSPHashes() cspHashes {
 	return cspHashes{
 		ScriptSrc:    make(map[string]struct{}),
-		StyleSrc:     make(map[string]struct{}),
+		StyleSrcAttr:     make(map[string]struct{}),
 		StyleSrcElem: make(map[string]struct{}),
 	}
 }
 
 func (dst *cspHashes) add(src cspHashes) *cspHashes {
 	maps.Copy(dst.ScriptSrc, src.ScriptSrc)
-	maps.Copy(dst.StyleSrc, src.StyleSrc)
+	maps.Copy(dst.StyleSrcAttr, src.StyleSrcAttr)
 	maps.Copy(dst.StyleSrcElem, src.StyleSrcElem)
 	return dst
 }
@@ -53,8 +53,8 @@ func (dst cspHashes) ScriptSrcHashes() string {
     return cspHashesString(dst.ScriptSrc)
 }
 
-func (dst cspHashes) StyleSrcHashes() string {
-    return cspHashesString(dst.StyleSrc)
+func (dst cspHashes) StyleSrcAttrHashes() string {
+    return cspHashesString(dst.StyleSrcAttr)
 }
 
 func (dst cspHashes) StyleSrcElemHashes() string {
@@ -62,8 +62,9 @@ func (dst cspHashes) StyleSrcElemHashes() string {
 }
 
 var reScriptSrc = regexp.MustCompile(`(?i)<script[^>]*>([\s\S]*?)<\/script>`)
-var reStyleSrc = regexp.MustCompile(`style="([^"]*)"`)
+var reStyleSrcAttr = regexp.MustCompile(`style="([^"]*)"`)
 var reStyleSrcElem = regexp.MustCompile(`(?i)<style[^>]*>([\s\S]*?)<\/style>`)
+var reStyleLink
 
 func cspHashMatches(dst map[string]struct{}, re *regexp.Regexp, content string) {
 	matches := re.FindAllStringSubmatch(content, -1)
@@ -85,7 +86,7 @@ func cspHashFile(path string) cspHashes {
 	content := string(bytes)
 
 	cspHashMatches(csp.ScriptSrc, reScriptSrc, content)
-	cspHashMatches(csp.StyleSrc, reStyleSrc, content)
+	cspHashMatches(csp.StyleSrcAttr, reStyleSrcAttr, content)
 	cspHashMatches(csp.StyleSrcElem, reStyleSrcElem, content)
 	return csp
 }
