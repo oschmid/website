@@ -68,6 +68,7 @@ func run() int {
 		return 1
 	}
 
+    fmt.Println("gen-csp-hash finished successfully")
 	return 0
 }
 
