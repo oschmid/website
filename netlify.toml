@@ -1,5 +1,5 @@
 [build]
-  command = "hugo --minify"
+  command = "hugo --minify; bin/gen-csp-hash public layouts/_headers public/_headers"
   publish = "public"
 
 [build.environment]
