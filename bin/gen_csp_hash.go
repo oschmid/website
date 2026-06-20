@@ -30,12 +30,12 @@ func run() int {
 	dir := os.Args[1]
 	tmpl, err := template.ParseFiles(os.Args[2])
 	if err != nil {
-		fmt.Printf(`Error loading template file '%s': %s`, os.Args[2], err)
+		fmt.Printf(`Error loading template file '%s': %v\n`, os.Args[2], err)
 		return 1
 	}
 	out, err := os.Create(os.Args[3])
 	if err != nil {
-		fmt.Printf("Failed to create file'%s': %v", os.Args[3], err)
+		fmt.Printf("Failed to create file'%s': %v\n", os.Args[3], err)
 		return 1
 	}
 	defer out.Close()
@@ -44,7 +44,7 @@ func run() int {
 	csp := newCSP()
 	err = filepath.WalkDir(dir, func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
-			fmt.Errorf("Skipping error at path %q: %v\n", path, err)
+			fmt.Printf("Skipping error at path %q: %v\n", path, err)
 			return nil
 		}
 
@@ -76,7 +76,7 @@ func cspHashFile(path string) CSP {
 
 	bytes, err := os.ReadFile(path)
 	if err != nil {
-		fmt.Errorf(`Failed to read %s: %s`, path, err)
+		fmt.Printf(`Failed to read %s: %v\n`, path, err)
 		return csp
 	}
 	content := string(bytes)
@@ -90,7 +90,7 @@ func cspHashFile(path string) CSP {
 func cspHashMatches(dst map[string]struct{}, re *regexp.Regexp, content string) {
 	matches := re.FindAllStringSubmatch(content, -1)
 	for _, match := range matches {
-		if len(match) != 0 {
+		if len(match) > 1 {
 			dst[cspHash(match[1])] = struct{}{}
 		}
 	}
