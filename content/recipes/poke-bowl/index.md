@@ -2,10 +2,12 @@
 title: 'Poké Bowl'
 summary: 'Preparation: 20 mins'
 tags: ['Hawaiian', 'prawns']
+cover:
+  image: 'poke-bowl.jpg'
+  alt: 'Poké Bowl'
+  relative: true
 ShowReadingTime: false
 ---
-![](poke-bowl.jpg)
-
 **Ingredients**
 *Serves 2*
 
