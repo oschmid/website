@@ -3,7 +3,11 @@
         <div class="logo">
             {{- $label_text := site.Params.label.text }}
             {{- if site.Title }}
+            {{- if .IsHome }}
+            <span class="logo-home" title="{{ $label_text }}">
+            {{- else }}
             <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
+            {{- end }}
                 {{- if site.Params.label.icon }}
                 {{- $img := resources.Get site.Params.label.icon }}
                 {{- if $img }}
@@ -29,7 +33,11 @@
                     {{ site.Params.label.iconSVG | safeHTML }}
                 {{- end -}}
                 {{- $label_text -}}
+            {{- if .IsHome }}
+            </span>
+            {{- else }}
             </a>
+            {{- end }}
             {{- end }}
 
             {{- $lsenabled := (or (not site.Params.disableThemeToggle) (and (not site.Params.disableLangToggle) (hugo.IsMultilingual))) }}
