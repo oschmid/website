@@ -30,7 +30,7 @@ func run() int {
 	dir := os.Args[1]
 	tmpl, err := template.ParseFiles(os.Args[2])
 	if err != nil {
-		fmt.Printf(`Error loading template file '%s': %v\n`, os.Args[2], err)
+		fmt.Printf("Error loading template file '%s': %v\n", os.Args[2], err)
 		return 1
 	}
 	out, err := os.Create(os.Args[3])
@@ -68,7 +68,7 @@ func run() int {
 		return 1
 	}
 
-    fmt.Println("csp-inline-hashes finished successfully")
+    fmt.Printf("csp-inline-hashes finished successfully with %d script-src-elem, %d style-src-attr, %d style-src-elem\n", len(csp.ScriptSrcElem), len(csp.StyleSrcAttr), len(csp.StyleSrcElem))
 	return 0
 }
 
@@ -77,7 +77,7 @@ func cspHashFile(path string) CSP {
 
 	bytes, err := os.ReadFile(path)
 	if err != nil {
-		fmt.Printf(`Failed to read %s: %v\n`, path, err)
+		fmt.Printf("Failed to read %s: %v\n", path, err)
 		return csp
 	}
 	content := string(bytes)
@@ -92,7 +92,7 @@ func cspHashMatches(dst map[string]struct{}, re *regexp.Regexp, content string) 
 	matches := re.FindAllStringSubmatch(content, -1)
 	for _, match := range matches {
 		if len(match) > 1 {
-			dst[cspHash(match[1])] = struct{}{}
+			dst["'" + cspHash(match[1]) + "'"] = struct{}{}
 		}
 	}
 }
@@ -140,5 +140,5 @@ func cspHashesString(m map[string]struct{}) string {
 		return ""
 	}
 	slices.Sort(keys)
-	return "'" + strings.Join(keys, "' '") + "'"
+	return strings.Join(keys, " ")
 }
