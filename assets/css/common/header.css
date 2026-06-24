@@ -25,6 +25,10 @@
     margin-top: 13px;
 }
 
+.logo-home img {
+    border-radius: 6px;
+}
+
 .logo a {
     font-size: 24px;
     font-weight: 700;
