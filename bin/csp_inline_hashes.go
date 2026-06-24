@@ -14,9 +14,9 @@ import (
 	"text/template"
 )
 
-var reScriptSrcElem = regexp.MustCompile(`(?i)<script[^>]*>([\s\S]*?)<\/script>`)
+var reScriptSrcElem = regexp.MustCompile(`(?i)<script>([\s\S]*?)<\/script>`)
 var reStyleSrcAttr = regexp.MustCompile(`style="([^"]*)"`)
-var reStyleSrcElem = regexp.MustCompile(`(?i)<style[^>]*>([\s\S]*?)<\/style>`)
+var reStyleSrcElem = regexp.MustCompile(`(?i)<style>([\s\S]*?)<\/style>`)
 
 func main() {
 	os.Exit(run())
