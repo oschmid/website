@@ -36,7 +36,7 @@ Like so:
 {{< /rawhtml >}}
 Here's what I came up with:
 
-{{< highlightFile "/layouts/_partials/pagination.html" "go html template" "linenos=table" >}}
+{{< highlightFile "/layouts/_partials/pagination.html" "go html template" "linenos=table,noClasses=false" >}}
 
 Note [this code is available on github](https://github.com/oschmid/website/blob/master/layouts/_partials/pagination.html) (along with the code for the rest of this site).
 
