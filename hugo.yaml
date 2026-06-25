@@ -32,7 +32,6 @@ params:
         url: "/recipes"
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
-  ShowReadingTime: true
   socialIcons:
     - name: "GitHub"
       url: "https://github.com/oschmid"
