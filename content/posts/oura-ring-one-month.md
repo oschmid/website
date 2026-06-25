@@ -14,7 +14,7 @@ While activity tracking isn't a huge focus for Oura, I like the fact that the go
 
 The one technical issue I've run into is that the Android app sometimes can't find the ring. This only seems to happen if I have the app open earlier in the day but then keep it open in the background for a while. Closing and restarting the app fixes it though.
 
-Along with the app, Oura also has an online platform called [Oura Cloud](https://cloud.ouraring.com) that lets you do more fine tuned analysis of your data. For instance you can compare your <b>Bedtime Start</b> with your total <b>Deep Sleep Time</b> for each night to see if something jumps out.
+Along with the app, Oura also has an online platform called [Oura Cloud](https://cloud.ouraring.com) that lets you do more fine tuned analysis of your data. For instance you can compare your **Bedtime Start** with your total **Deep Sleep Time** for each night to see if something jumps out.
 
 The problem with Oura Cloud though, is that none of the notes or activities manually tagged in the app are available for comparison. So I can't use it to see for instance, how much of an effect taking melatonin might have on my sleep.
 
