@@ -26,7 +26,7 @@
                     <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
 			 height="{{- site.Params.label.iconHeight | default "30" -}}" width="{{- site.Params.label.iconWidth | default "30" -}}">
                 {{- else }}
-                <img src="{{- site.Params.label.icon | absURL -}}" alt="" aria-label="logo"
+                <img src="{{- site.Params.label.icon | absURL -}}" alt="" {{- if (not .IsHome) -}}aria-label="logo"{{- end -}}
 		     height="{{- site.Params.label.iconHeight | default "30" -}}" width="{{- site.Params.label.iconWidth | default "30" -}}">
                 {{- end -}}
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
