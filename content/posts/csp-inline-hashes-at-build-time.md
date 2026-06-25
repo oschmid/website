@@ -3,6 +3,7 @@ date: '2026-06-20T17:34:16-07:00'
 title: 'CSP Inline Hashes at Build Time'
 summary: ''
 tags: [golang, Hugo, security, 'software development', 'web development']
+ShowReadingTime: true
 ---
 This website has a [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) header that 
 tells browsers to block inlined scripts and styles except for those matching trusted sha256 hashes. Rather than 
