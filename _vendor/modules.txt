@@ -1,0 +1,1 @@
+# github.com/oschmid/csp-inline-hashes v0.0.0-20260626153728-76556ebfc23e
