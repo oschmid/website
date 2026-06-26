@@ -1,0 +1,8 @@
+{{- $file := printf "%s.js" (hash.XxHash .) -}}
+{{- $resource := resources.FromString $file . -}}
+{{- if eq hugo.Environment "production" -}}
+    {{- $resource = minify $resource -}}
+{{- end -}}
+{{- $quoted := printf "'%s'" (fingerprint "sha256" $resource).Data.Integrity -}}
+{{- hugo.Store.SetInMap "script-src-elem" $quoted true -}}
+<script>{{- $resource.Content | safeJS -}}</script>

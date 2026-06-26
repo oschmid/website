@@ -1,7 +1,7 @@
 {{- define "main" }}
 
-<style>
-    .post-entry {
+{{- partialCached "style.html"
+    `.post-entry {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -13,12 +13,11 @@
     }
     .entry-cover {
         margin: 0;
-	width: 117px;
+        width: 117px;
     }
     .entry-cover img {
         border-radius: 0 var(--radius) var(--radius) 0;
-    }
-</style>
+    }` "list-entry" -}}
 
 {{- if (and site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}

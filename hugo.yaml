@@ -42,4 +42,13 @@ security:
     - '.*'
 taxonomies:
   tag: tags
-
+outputs:
+  home:
+    - HTML
+    - RSS
+    - HEADERS
+outputFormats:
+  HEADERS:
+    baseName: "_headers"
+    isPlainText: true
+    notAlternative: true
