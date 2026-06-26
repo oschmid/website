@@ -23,7 +23,7 @@
 
 .buttons {
     flex-wrap: wrap;
-    max-width: 400px;
+    max-width: 350px;
     gap: 1rem;
 }
 
