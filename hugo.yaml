@@ -28,12 +28,14 @@ params:
     buttons:
       - name: "Apps"
         url: "/apps/"
-      - name: "Contact"
-        url: "/contact/"
       - name: "Posts"
         url: "/posts/"
       - name: "Recipes"
-        url: "/recipes"
+        url: "/recipes/"
+      - name: "Contact"
+        url: "/contact/"
+      - name: "Search"
+        url: "/search/"
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   socialIcons:
@@ -50,9 +52,11 @@ outputs:
   home:
     - HTML
     - RSS
+    - JSON # for search
     - HEADERS
 outputFormats:
   HEADERS:
     baseName: "_headers"
     isPlainText: true
     notAlternative: true
+
