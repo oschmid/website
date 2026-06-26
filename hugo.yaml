@@ -3,6 +3,10 @@ theme: ["PaperMod"]
 baseURL: https://oliverschmid.ca/
 locale: en-ca
 enableRobotsTXT: true
+module:
+  imports:
+    disable: false
+    path: "github.com/oschmid/csp-inline-hashes"
 params:
   assets:
     apple_touch_icon: "/apple-touch-icon.png"
