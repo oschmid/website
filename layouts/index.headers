@@ -2,22 +2,25 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
 
+{{ $scriptSrcElem := partial "cspHashes.html" "script-src-elem" -}}
+{{ $styleSrcElem := partial "cspHashes.html" "style-src-elem" -}}
+{{ $csp := printf "default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src-elem 'self' %s; style-src-attr 'self'; style-src-elem https://oliverschmid.ca %s; upgrade-insecure-requests; block-all-mixed-content" $scriptSrcElem $styleSrcElem -}}
 /*.html
-  Content-Security-Policy: default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src-elem 'self' {{ .ScriptSrcElemHashes }}; style-src-attr 'self' {{ .StyleSrcAttrHashes }}; style-src-elem https://oliverschmid.ca {{ .StyleSrcElemHashes }}; upgrade-insecure-requests; block-all-mixed-content
+  Content-Security-Policy: {{ $csp }}
   Cross-Origin-Opener-Policy: same-origin
   Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 /*/
-  Content-Security-Policy: default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src-elem 'self' {{ .ScriptSrcElemHashes }}; style-src-attr 'self' {{ .StyleSrcAttrHashes }}; style-src-elem https://oliverschmid.ca {{ .StyleSrcElemHashes }}; upgrade-insecure-requests; block-all-mixed-content
+  Content-Security-Policy: {{ $csp }}
   Cross-Origin-Opener-Policy: same-origin
   Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 /
-  Content-Security-Policy: default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src-elem 'self' {{ .ScriptSrcElemHashes }}; style-src-attr 'self' {{ .StyleSrcAttrHashes }}; style-src-elem https://oliverschmid.ca {{ .StyleSrcElemHashes }}; upgrade-insecure-requests; block-all-mixed-content
+  Content-Security-Policy: {{ $csp }}
   Cross-Origin-Opener-Policy: same-origin
   Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
   Referrer-Policy: strict-origin-when-cross-origin
