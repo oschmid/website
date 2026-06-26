@@ -2,8 +2,5 @@
   command = "hugo --minify"
   publish = "public"
 
-# command to update Content-Security-Policy hashes:
-# <build.command>; bin/csp-inline-hashes public layouts/_headers static/_headers
-
 [build.environment]
   HUGO_VERSION = "0.163.0"
