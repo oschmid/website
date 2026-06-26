@@ -1,0 +1,33 @@
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+
+/*.html
+  Content-Security-Policy: default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src-elem 'self' 'sha256-/cFFbEHjTjpj7DLefsC+h1yhrxRRebLCB86XtBuCtvw=' 'sha256-5ilQRTfItUB+Etsk1onTDCqBA1OpUBIKfJhdMlZ61Co=' 'sha256-BpEdBCM/4BJbN8LWEqCQKlp9VGzetdD0UbdMayNyD28=' 'sha256-UBD9lfFHKxagKGHh9S8B2hytN1cmDsFK1Tl1uedsZ0Q=' 'sha256-eyUVosQAviXm2qeOTG819D1n0kSst2gY8VmfgVsZlag='; style-src-attr 'self' ; style-src-elem https://oliverschmid.ca 'sha256-FGec11lwsCO51tU7WzO3jldp5wRvWMBQbCXewZUQH9k=' 'sha256-TzlBu+Yp5QndAbgUwjajid8QyFloMLEZVV3SLr0syao=' 'sha256-XJZa4lRoDzTzi5A0qbbbZC8mbCjQH7MnpWhs7YAUEwU=' 'sha256-pEJHG0KqSJs9W4k8BE0yXOQ9qd1nNK/5SJQyPCX0wbc='; upgrade-insecure-requests; block-all-mixed-content
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+/*/
+  Content-Security-Policy: default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src-elem 'self' 'sha256-/cFFbEHjTjpj7DLefsC+h1yhrxRRebLCB86XtBuCtvw=' 'sha256-5ilQRTfItUB+Etsk1onTDCqBA1OpUBIKfJhdMlZ61Co=' 'sha256-BpEdBCM/4BJbN8LWEqCQKlp9VGzetdD0UbdMayNyD28=' 'sha256-UBD9lfFHKxagKGHh9S8B2hytN1cmDsFK1Tl1uedsZ0Q=' 'sha256-eyUVosQAviXm2qeOTG819D1n0kSst2gY8VmfgVsZlag='; style-src-attr 'self' ; style-src-elem https://oliverschmid.ca 'sha256-FGec11lwsCO51tU7WzO3jldp5wRvWMBQbCXewZUQH9k=' 'sha256-TzlBu+Yp5QndAbgUwjajid8QyFloMLEZVV3SLr0syao=' 'sha256-XJZa4lRoDzTzi5A0qbbbZC8mbCjQH7MnpWhs7YAUEwU=' 'sha256-pEJHG0KqSJs9W4k8BE0yXOQ9qd1nNK/5SJQyPCX0wbc='; upgrade-insecure-requests; block-all-mixed-content
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+/
+  Content-Security-Policy: default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src-elem 'self' 'sha256-/cFFbEHjTjpj7DLefsC+h1yhrxRRebLCB86XtBuCtvw=' 'sha256-5ilQRTfItUB+Etsk1onTDCqBA1OpUBIKfJhdMlZ61Co=' 'sha256-BpEdBCM/4BJbN8LWEqCQKlp9VGzetdD0UbdMayNyD28=' 'sha256-UBD9lfFHKxagKGHh9S8B2hytN1cmDsFK1Tl1uedsZ0Q=' 'sha256-eyUVosQAviXm2qeOTG819D1n0kSst2gY8VmfgVsZlag='; style-src-attr 'self' ; style-src-elem https://oliverschmid.ca 'sha256-FGec11lwsCO51tU7WzO3jldp5wRvWMBQbCXewZUQH9k=' 'sha256-TzlBu+Yp5QndAbgUwjajid8QyFloMLEZVV3SLr0syao=' 'sha256-XJZa4lRoDzTzi5A0qbbbZC8mbCjQH7MnpWhs7YAUEwU=' 'sha256-pEJHG0KqSJs9W4k8BE0yXOQ9qd1nNK/5SJQyPCX0wbc='; upgrade-insecure-requests; block-all-mixed-content
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/contact-success/index.html
+  X-Robots-Tag: noindex
+/contact-success/
+  X-Robots-Tag: noindex
+
+/favicon.ico
+  Content-Type: image/x-icon
