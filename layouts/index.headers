@@ -2,8 +2,8 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
 
-{{ $scriptSrcElem := partial "cspHashes.html" "script-src-elem" -}}
-{{ $styleSrcElem := partial "cspHashes.html" "style-src-elem" -}}
+{{ $scriptSrcElem := partial "scriptHashes.html" -}}
+{{ $styleSrcElem := partial "styleHashes.html" -}}
 {{ $csp := printf "default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src-elem 'self' %s; style-src-attr 'self'; style-src-elem https://oliverschmid.ca %s; upgrade-insecure-requests; block-all-mixed-content" $scriptSrcElem $styleSrcElem -}}
 /*.html
   Content-Security-Policy: {{ $csp }}

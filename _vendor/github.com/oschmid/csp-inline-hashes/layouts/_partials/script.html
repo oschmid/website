@@ -1,8 +1,10 @@
 {{- $file := printf "%s.js" (hash.XxHash .) -}}
 {{- $resource := resources.FromString $file . -}}
-{{- if eq hugo.Environment "production" -}}
+{{- $minify := site.Param "cssInlineHashes.minify" -}}
+{{- if (or (eq $minify "always") (and (ne $minify "never") (eq hugo.Environment "production"))) -}}
     {{- $resource = minify $resource -}}
 {{- end -}}
-{{- $quoted := printf "'%s'" (fingerprint "sha256" $resource).Data.Integrity -}}
-{{- hugo.Store.SetInMap "script-src-elem" $quoted true -}}
+{{- $algo := site.Param "cssInlineHashes.algo" | default "sha256" -}}
+{{- $quoted := printf "'%s'" (fingerprint $algo $resource).Data.Integrity -}}
+{{- hugo.Store.SetInMap "scriptHashes" $quoted true -}}
 <script>{{- $resource.Content | safeJS -}}</script>

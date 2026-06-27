@@ -1,0 +1,5 @@
+{{ $hashes := slice -}}
+{{ range $key, $value := hugo.Store.Get "styleHashes" -}}
+{{ $hashes = $hashes | append $key -}}
+{{ end -}}
+{{ return delimit (sort $hashes) " " -}}
