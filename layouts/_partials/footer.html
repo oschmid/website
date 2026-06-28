@@ -41,8 +41,8 @@
 
 {{- partial "extend_footer.html" . }}
 
-{{- partialCached "script.html"
-    `let menu = document.getElementById('menu');
+{{- with partial "script.html" . }}
+    let menu = document.getElementById('menu');
     if (menu) {
         // Set the scroll position
         const scrollPosition = localStorage.getItem("menu-scroll-position");
@@ -72,11 +72,12 @@
                 history.pushState(null, null, "#" + id);
             }
         });
-    });` "smooth-scroll" -}}
+    });
+    {{ end }}
 
 {{- if (not site.Params.disableScrollToTop) }}
-    {{- partialCached "script.html"
-    `var toplink = document.getElementById("top-link");
+    {{- with partial "script.html" . }}
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
         const scrollThreshold = window.innerHeight;
         if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
@@ -84,12 +85,13 @@
         } else {
             toplink.classList.add("hidden");
         }
-    };` "show-top-link" -}}
+    };
+    {{ end }}
 {{- end }}
 
 {{- if (not site.Params.disableThemeToggle) }}
-{{- partialCached "script.html"
-    `document.getElementById("theme-toggle").addEventListener("click", () => {
+{{- with partial "script.html" . }}
+    document.getElementById("theme-toggle").addEventListener("click", () => {
         const html = document.querySelector("html");
         if (html.dataset.theme === "dark") {
             html.dataset.theme = 'light';
@@ -98,12 +100,13 @@
             html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
-    })` "theme-toggle" -}}
+    })
+    {{ end }}
 {{- end }}
 
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (.Param "ShowCodeCopyButtons")) }}
-    {{- partialCached "script.html"
-    `document.querySelectorAll('pre > code').forEach((codeblock) => {
+    {{- with partial "script.html" . }}
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
         const container = codeblock.parentNode.parentNode;
 
         const copybutton = document.createElement('button');
@@ -147,5 +150,6 @@
             // code blocks not having highlight as parent class
             codeblock.parentNode.appendChild(copybutton);
         }
-    });` "code-copy" -}}
+    });
+    {{ end }}
 {{- end }}

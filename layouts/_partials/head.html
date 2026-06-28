@@ -102,15 +102,16 @@
 {{ end -}}
 
 <noscript>
-    {{- partialCached "style.html"
-        `#theme-toggle,
+    {{- with partial "style.html" . }}
+        #theme-toggle,
         .top-link {
             display: none;
-        }` "theme-toggle" -}}
+        }
+    {{ end }}
 
     {{- if (and (ne site.Params.defaultTheme "light") (ne site.Params.defaultTheme "dark")) }}
-    {{- partialCached "style.html"
-        `@media (prefers-color-scheme: dark) {
+    {{- with partial "style.html" . }}
+        @media (prefers-color-scheme: dark) {
             :root {
                 --theme: rgb(29, 30, 32);
                 --entry: rgb(46, 46, 51);
@@ -131,7 +132,8 @@
             .toc {
                 background: var(--entry);
             }
-        }` "dark-theme" -}}
+        }
+    {{ end }}
     {{- end }}
 </noscript>
 
@@ -139,20 +141,22 @@
 {{- if (not site.Params.disableThemeToggle) }}
 {{- /* theme is light */}}
 {{- if (eq site.Params.defaultTheme "light") }}
-    {{- partialCached "script.html"
-    `if (localStorage.getItem("pref-theme") === "dark") {
+    {{- with partial "script.html" . }}
+    if (localStorage.getItem("pref-theme") === "dark") {
         document.querySelector("html").dataset.theme = 'dark';
-    }` "theme-default-light" -}}
+    }
+    {{ end }}
 {{- /* theme is dark */}}
 {{- else if (eq site.Params.defaultTheme "dark") }}
-    {{- partialCached "script.html"
-    `if (localStorage.getItem("pref-theme") === "light") {
+    {{- with partial "script.html" . }}
+    if (localStorage.getItem("pref-theme") === "light") {
         document.querySelector("html").dataset.theme = 'light';
-    }` "theme-default-dark" -}}
+    }
+    {{ end }}
 {{- else }}
     {{- /* theme is auto */}}
-    {{- partialCached "script.html"
-    `if (localStorage.getItem("pref-theme") === "dark") {
+    {{- with partial "script.html" . }}
+    if (localStorage.getItem("pref-theme") === "dark") {
         document.querySelector("html").dataset.theme = 'dark';
     } else if (localStorage.getItem("pref-theme") === "light") {
        document.querySelector("html").dataset.theme = 'light';
@@ -160,16 +164,18 @@
         document.querySelector("html").dataset.theme = 'dark';
     } else {
         document.querySelector("html").dataset.theme = 'light';
-    }` "theme-default-auto" -}}
+    }
+    {{ end }}
 {{- end }}
 {{- /* theme-toggle is disabled and theme is auto */}}
 {{- else if (and (ne site.Params.defaultTheme "light") (ne site.Params.defaultTheme "dark"))}}
-    {{- partialCached "script.html"
-    `if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    {{- with partial "script.html" . }}
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.querySelector("html").dataset.theme = 'dark';
     } else {
         document.querySelector("html").dataset.theme = 'light';
-    }` "theme-switcher" -}}
+    }
+    {{ end }}
 {{- end }}
 
 {{- partial "extend_head.html" . -}}

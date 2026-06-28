@@ -2,3 +2,7 @@ github.com/oschmid/csp-inline-hashes v0.0.0-20260626153728-76556ebfc23e h1:Wtl9X
 github.com/oschmid/csp-inline-hashes v0.0.0-20260626153728-76556ebfc23e/go.mod h1:QPtuTHR/MMRqZGnKUnaaybre1oWwN8fJ9OGY9NN5bz8=
 github.com/oschmid/csp-inline-hashes v0.0.0-20260627143621-d48cbab1a21a h1:/YZ2ycppQjS7KUauTG7hpeK9AkOQzb4XOcgziN+tCHw=
 github.com/oschmid/csp-inline-hashes v0.0.0-20260627143621-d48cbab1a21a/go.mod h1:QPtuTHR/MMRqZGnKUnaaybre1oWwN8fJ9OGY9NN5bz8=
+github.com/oschmid/csp-inline-hashes v0.0.0-20260627205259-49de7de6c6c0 h1:trYl5Ozvg9Evsb0hxfJHM79M9zgyLrUln5nTXqgC5Ys=
+github.com/oschmid/csp-inline-hashes v0.0.0-20260627205259-49de7de6c6c0/go.mod h1:QPtuTHR/MMRqZGnKUnaaybre1oWwN8fJ9OGY9NN5bz8=
+github.com/oschmid/csp-inline-hashes v0.0.0-20260628192835-2993ab8f1ea1 h1:HAbLcqZCrg+eiHCq9f4l1fxBlBubkiLxOV5ZazaqNkk=
+github.com/oschmid/csp-inline-hashes v0.0.0-20260628192835-2993ab8f1ea1/go.mod h1:QPtuTHR/MMRqZGnKUnaaybre1oWwN8fJ9OGY9NN5bz8=
