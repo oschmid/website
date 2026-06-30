@@ -3,6 +3,10 @@ theme: ["PaperMod"]
 baseURL: https://oliverschmid.ca/
 locale: en-ca
 enableRobotsTXT: true
+menus:
+  main:
+    - name: "Search" # TODO add magnifying glass icon
+      url: "/search/"
 module:
   imports:
     disable: false
@@ -34,8 +38,6 @@ params:
         url: "/recipes/"
       - name: "Contact"
         url: "/contact/"
-      - name: "Search"
-        url: "/search/"
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   socialIcons:
