@@ -113,6 +113,10 @@
   box-shadow: 0 0 0 2px black inset;
 }
 
+:root[data-theme="dark"] .menu a:focus-visible {
+  box-shadow: 0 0 0 2px white inset;
+}
+
 .menu .active {
     font-weight: 500;
     text-decoration: underline;
