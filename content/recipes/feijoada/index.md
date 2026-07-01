@@ -2,6 +2,10 @@
 title: 'Feijoada'
 summary: 'Preparation: 30 mins. Cooking: 4 hours'
 tags: ['beans', 'Brazilian', "Mom's Recipes", 'pork', 'stew']
+cover:
+  image: 'feijoada.jpg'
+  alt: 'Feijoada'
+  relative: true
 ShowReadingTime: false
 ---
 **Ingredients**
