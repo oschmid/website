@@ -40,6 +40,13 @@ switch (today.getMonth()) {
             logo.title = 'Happy Halloween!';
         }
         break;
+    case 10: // November
+        if (today.getDate() === 11) {
+            var logo = document.getElementById('logo');
+            logo.src = '/holidays/poppy.png';
+            logo.title = 'Lest We Forget';
+        }
+        break;
     case 11: // December
         if (today.getDate() === 25) {
             var logo = document.getElementById('logo');
