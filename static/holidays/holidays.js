@@ -1,6 +1,13 @@
 const today = new Date();
 
 switch (today.getMonth()) {
+    case 0: // January
+        if (today.getDate() === 1) {
+            var logo = document.getElementById('logo');
+            logo.src = '/holidays/fireworks.gif';
+            logo.title = 'Happy New Year!';
+        }
+        break;
     case 6: // July
         if (today.getDate() === 1) {
             var logo = document.getElementById('logo');
