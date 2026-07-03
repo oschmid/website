@@ -33,6 +33,13 @@ switch (today.getMonth()) {
             logo.title = 'Selamat Hari Malaysia!';
         }
         break;
+    case 9: // October
+        if (today.getDate() === 31) {
+            var logo = document.getElementById('logo');
+            logo.src = '/holidays/pumpkin.gif';
+            logo.title = 'Happy Halloween!';
+        }
+        break;
     case 11: // December
         if (today.getDate() === 25) {
             var logo = document.getElementById('logo');
