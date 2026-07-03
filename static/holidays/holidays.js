@@ -34,7 +34,13 @@ switch (today.getMonth()) {
         }
         break;
     case 9: // October
-        if (today.getDate() === 31) {
+        var thanksgiving = new Date(today.getFullYear(), 9, 1);
+        thanksgiving.setDate(thanksgiving.getDate() + ((8 - thanksgiving.getDay()) % 7 + 7)); // Calculate 2nd Monday
+        if (today.getDate() === thanksgiving.getDate()) {
+            var logo = document.getElementById('logo');
+            logo.src = '/holidays/thanksgiving.png';
+            logo.title = 'Happy Thanksgiving!';
+        } else if (today.getDate() === 31) {
             var logo = document.getElementById('logo');
             logo.src = '/holidays/pumpkin.gif';
             logo.title = 'Happy Halloween!';
