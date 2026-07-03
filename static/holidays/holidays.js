@@ -31,6 +31,10 @@ switch (today.getMonth()) {
             var logo = document.getElementById('logo');
             logo.src = '/holidays/Animated-Flag-Malaysia.gif';
             logo.title = 'Selamat Hari Malaysia!';
+        } else if (today.getDate() === 30) {
+            var logo = document.getElementById('logo');
+            logo.src = '/holidays/orange-shirt.png';
+            logo.title = 'Truth and Reconciliation';
         }
         break;
     case 9: // October
