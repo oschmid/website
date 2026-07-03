@@ -33,4 +33,11 @@ switch (today.getMonth()) {
             logo.title = 'Selamat Hari Malaysia!';
         }
         break;
+    case 11: // December
+        if (today.getDate() === 25) {
+            var logo = document.getElementById('logo');
+            logo.src = '/holidays/christmas-tree.gif';
+            logo.title = 'Merry Christmas!';
+        }
+        break;
 }
