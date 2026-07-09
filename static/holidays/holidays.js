@@ -3,8 +3,13 @@ function setLogo(src, title) {
     logo.src = src;
     logo.title = title;
 }
+function isChineseNewYear(date) {
+    const newYear = Lunar.fromYmd(date.getFullYear(), 1, 1).getSolar();
+    return (date.getMonth() + 1) == newYear.getMonth() && date.getDate() == newYear.getDay();
+}
 var today = new Date();
 //today = new Date(2026, 0, 1); // New Year's Test
+//today = new Date(2026, 1, 17); // Chinese New Year's Test
 //today = new Date(2026, 6, 1); // Canada Day Test
 //today = new Date(2026, 7, 1); // 1. August Test
 //today = new Date(2026, 7, 31); // Malaysia Independence Test
@@ -18,6 +23,13 @@ switch (today.getMonth()) {
     case 0: // January
         if (today.getDate() === 1) {
             setLogo('/holidays/fireworks.avif', 'Happy New Year!');
+        } else if (isChineseNewYear(today)) {
+            setLogo('/holidays/fireworks.avif', '恭喜發財');
+        }
+        break;
+    case 1: // February
+        if (isChineseNewYear(today)) {
+            setLogo('/holidays/fireworks.avif', '恭喜發財');
         }
         break;
     case 6: // July
