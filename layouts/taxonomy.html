@@ -1,0 +1,43 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+{{- end }}
+
+{{- $type := .Type }}
+{{- $terms := .Data.Terms.Alphabetical }}
+{{- range $section := .Site.Sections }}
+    {{- $sectionHasTerms := false }}
+    {{- range $key, $value := $terms }}
+        {{- range $page := $value.WeightedPages.Pages }}
+            {{- $sectionHasTerms = or $sectionHasTerms (eq $page.Section $section.Section) }}
+        {{- end }}
+    {{- end }}
+    {{- if $sectionHasTerms }}
+        <h2>{{ $section.LinkTitle }}</h2>
+        <ul class="terms-tags">
+            {{- range $key, $value := $terms }}
+                {{- $name := .Name }}
+                {{- $count := .Count }}
+                {{- $hasPageInSection := false }}
+                {{- range $page := $value.WeightedPages.Pages }}
+                    {{- $hasPageInSection = or $hasPageInSection (eq $page.Section $section.Section) }}
+                {{- end }}
+                {{- if $hasPageInSection }}
+                    {{- with site.GetPage (printf "/%s/%s" $type $name) -}}
+                    <li><a href="{{ .Permalink }}">{{ .LinkTitle }} <sup><strong><sup>{{ $count }}</sup></strong></sup></a></li>
+                    {{- end }}
+                {{- end }}
+            {{- end -}}
+        </ul>
+    {{- end }}
+{{- end }}
+
+{{- end }}{{/* end main */ -}}
