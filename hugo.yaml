@@ -32,6 +32,8 @@ params:
     buttons:
       - name: "Apps"
         url: "/apps/"
+      - name: "Art"
+        url: "/art/"
       - name: "Posts"
         url: "/posts/"
       - name: "Recipes"
@@ -45,6 +47,7 @@ params:
       url: "https://github.com/oschmid"
     - name: "LinkedIn"
       url: "https://www.linkedin.com/in/oliver-schmid-62625514/"
+pluralizeListTitles: false
 security:
   allowContent:
     - '.*'
