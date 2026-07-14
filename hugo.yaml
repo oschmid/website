@@ -33,7 +33,7 @@ params:
       - name: "Apps"
         url: "/apps/"
       - name: "Art"
-        url: "/art/"
+        url: "/tags/art/"
       - name: "Posts"
         url: "/posts/"
       - name: "Recipes"
