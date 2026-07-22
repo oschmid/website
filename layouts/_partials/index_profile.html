@@ -1,6 +1,7 @@
 <div class="profile">
     {{- with site.Params.profileMode }}
     <div class="profile_inner h-card">
+        <span class="p-country-name hidden">{{ .country }}</span>
         {{- if .imageUrl -}}
         {{- $img := "" }}
         {{- if not (urls.Parse .imageUrl).IsAbs }}
@@ -33,7 +34,7 @@
         <a class="u-url u-uid" href="{{ site.BaseURL }}">
             <h1 class="p-name">{{ .title | default site.Title | markdownify }}</h1>
         </a>
-        <span>{{ .subtitle | markdownify }}</span>
+        <span class="p-note">{{ .subtitle | markdownify }}</span>
         {{- partial "social_icons.html" -}}
 
         {{- with .buttons }}

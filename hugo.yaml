@@ -25,6 +25,8 @@ params:
     iconWidth: 35
   profileMode:
     enabled: true
+    country: "Canada"
+    subtitle: "Software development, art, cooking, politics, TTRPGs"
     imageTitle: "Owl Predator Flying Free by BarbaraALane"
     imageUrl: "/owl-2223092_1280.png"
     imageHeight: 300
