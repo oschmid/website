@@ -24,7 +24,7 @@ talked through the pros/cons of the standard approach: generating the hashes at 
 and `fingerprint` and storing it in a map for later retrieval when writing headers. I tried it out and found with Hugo's 
 partial decorator syntax it's a pretty nice way of writing inline scripts/styles:
 
-```
+```go-text-template {linenos=table,noClasses=false}
 {{ with partial "script.html" }}
     function printHelloWorld() {
         console.log("hello world");
