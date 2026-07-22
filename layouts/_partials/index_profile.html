@@ -1,7 +1,6 @@
 <div class="profile">
     {{- with site.Params.profileMode }}
     <div class="profile_inner h-card">
-        <span class="p-country-name hidden">{{ .country }}</span>
         {{- if .imageUrl -}}
         {{- $img := "" }}
         {{- if not (urls.Parse .imageUrl).IsAbs }}
@@ -56,6 +55,7 @@
             {{- end }}
         </div>
         {{- end }}
+        <span class="p-country-name display-none">{{ .country }}</span>
     </div>
     {{- end}}
 </div>
