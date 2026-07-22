@@ -15,7 +15,7 @@
             {{- end }}
         </h1>
         {{- if .Description }}
-        <div class="post-description">
+        <div class="post-description p-summary">
             {{ .Description }}
         </div>
         {{- end }}
@@ -48,7 +48,7 @@
         {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
         <ul class="post-tags">
             {{- range ($.GetTerms $tags) }}
-            <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+            <li><a class="p-category" href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
             {{- end }}
         </ul>
         {{- if (.Param "ShowPostNavLinks") }}
