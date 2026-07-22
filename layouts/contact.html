@@ -4,9 +4,6 @@
     .align-right {
       text-align: right;
     }
-    .hidden {
-      display: none;
-    }
     .submit {
       background-color: #360BA2;
       color: #fff;
@@ -36,7 +33,7 @@
     }
 {{ end -}}
 <form name="contact" action="/contact-success/" method="POST" netlify-honeypot="pooh" netlify>
-    <label class="hidden label" for="pooh">
+    <label class="display-none label" for="pooh">
         <span>Don't fill this out if you're human</span>
         <input id="pooh" name="pooh"/>
     </label>
@@ -49,7 +46,7 @@
             <span>Message</span>
             <textarea class="input" id="message" placeholder="Hi..." name="message"></textarea>
         </label>
-        <label class="hidden label" for="referrer">
+        <label class="display-none label" for="referrer">
             <span>Referrer</span>
             <input id="referrer" name="referrer"/>
         </label>
