@@ -56,9 +56,10 @@
     {{- end -}}
 
     {{- /*  Display Caption  */}}
+    {{ $summary := .Params.summary }}
     {{- if $.IsSingle }}
         {{ with .Params.cover.caption -}}
-            <figcaption>{{ . | markdownify }}</figcaption>
+            <figcaption{{ if (eq $summary "") }} class="p-summary"{{ end }}>{{ . | markdownify }}</figcaption>
         {{- end }}
     {{- end }}
 </figure>

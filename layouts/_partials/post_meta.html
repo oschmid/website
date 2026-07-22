@@ -2,6 +2,7 @@
 
 <a class="p-author h-card display-none" href="{{ site.BaseURL }}">{{ site.Title }}</a>
 <a class="u-url display-none" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">{{ .Title }}</a>
+{{ if (ne .Params.summary "") }}<span class="p-summary display-none">{{ .Params.summary }}</span>{{ end }}
 
 {{- if not .Date.IsZero -}}
 {{- $scratch.Add "meta" (slice (printf "<span class='dt-published' title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
