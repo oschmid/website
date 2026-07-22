@@ -26,6 +26,6 @@ ShowReadingTime: false
 
 1. Beat eggs well. Gradually beat in sugar, then oil, then orange extract. Stir in zucchini, orange rind. Mix
 dry ingredients together. Stir into zucchini mixture along with nuts and raisins.
-1. Pour batter into 2 greased 8 x 4 inches loaf pans. Bake in 350 F oven 50-60 minutes. Turn out onto wire
+1. Pour batter into 2 greased 8 x 4 inches loaf pans. Bake in 350°F (175°C) oven 50-60 minutes. Turn out onto wire
 rack. Cool completely.
 

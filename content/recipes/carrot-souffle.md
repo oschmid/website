@@ -22,7 +22,7 @@ ShowReadingTime: false
 
 1. (Optional) Carrots may be cooked and puréed hours ahead of time, add the lemon juice and
 cover tightly until ready to mix.
-1. Preheat oven to 350°F
+1. Preheat oven to 350°F (175°C)
 1. Blend all ingredients together until smooth. Pour into a 2-quart, lightly buttered soufflé
 dish or casserole.
 1. Bake, uncovered, for 45 minutes to 1 hour until center is firm to touch.
