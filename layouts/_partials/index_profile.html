@@ -23,16 +23,18 @@
                     {{- $img = $img.Resize "150x150 webp" }}
                 {{- end }}
             {{- end }}
-            <img class="u-photo" draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+            <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
                  height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" fetchpriority="high"/>
         {{- else }}
-        <img class="u-photo" draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
              height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" fetchpriority="high"/>
         {{- end }}
         {{- end }}
         <a class="u-url u-uid" href="{{ site.BaseURL }}">
             <h1 class="p-name">{{ .title | default site.Title | markdownify }}</h1>
         </a>
+        {{ $profilePic := resources.Get .profilePic }}
+        <img class="u-photo display-none" src="{{ $profilePic.Permalink }}" alt="{{ .profileTitle }}"/>
         <span class="p-note">{{ .subtitle | markdownify }}</span>
         {{- partial "social_icons.html" -}}
 

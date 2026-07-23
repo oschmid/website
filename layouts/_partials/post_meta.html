@@ -1,6 +1,8 @@
 {{- $scratch := newScratch }}
 
 <a class="p-author h-card display-none" href="{{ site.BaseURL }}">{{ site.Title }}</a>
+{{- $profilePic := resources.Get site.Params.profileMode.profilePic }}
+<img class="u-photo display-none" src="{{ $profilePic.Permalink }}" alt="{{ site.Title }}"/>
 <a class="u-url display-none" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">{{ .Title }}</a>
 {{- $url := urls.Parse site.BaseURL }}
 <link rel="webmention" href="https://webmention.io/{{ $url.Host }}/webmention" />

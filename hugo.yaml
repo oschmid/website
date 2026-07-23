@@ -31,6 +31,8 @@ params:
     imageUrl: "/owl-2223092_1280.png"
     imageHeight: 300
     imageWidth: 300
+    profilePic: "/oschmid.png"
+    profileTitle: "Oliver Schmid"
     buttons:
       - name: "Apps"
         url: "/apps/"
