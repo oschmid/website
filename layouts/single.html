@@ -64,4 +64,18 @@
     {{- end }}
 </article>
 
+{{- $webmentionJS := resources.Get "js/webmention.js" }}
+{{- $webmentionCSS := resources.Get "css/webmention.css" }}
+
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $webmentionJS := $webmentionJS | fingerprint }}
+{{- $webmentionCSS := $webmentionCSS | fingerprint }}
+<script src="{{ $webmentionJS.RelPermalink }}" integrity="{{ $webmentionJS.Data.Integrity }}" async></script>
+<link crossorigin="anonymous" href="{{ $webmentionCSS.RelPermalink }}" integrity="{{ $webmentionCSS.Data.Integrity }}" rel="preload stylesheet" as="style">
+{{- else }}
+<script src="{{ $webmentionJS.RelPermalink }}" async></script>
+<link crossorigin="anonymous" href="{{ $webmentionCSS.RelPermalink }}" rel="preload stylesheet" as="style">
+{{- end }}
+<div id="webmentions"></div>
+
 {{- end }}{{/* end main */}}
