@@ -2,6 +2,8 @@
 
 <a class="p-author h-card display-none" href="{{ site.BaseURL }}">{{ site.Title }}</a>
 <a class="u-url display-none" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">{{ .Title }}</a>
+{{- $url := urls.Parse site.BaseURL }}
+<link rel="webmention" href="https://webmention.io/{{ $url.Host }}/webmention" />
 {{ if (ne .Params.summary "") }}<span class="p-summary display-none">{{ .Params.summary }}</span>{{ end }}
 
 {{- if not .Date.IsZero -}}
