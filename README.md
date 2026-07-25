@@ -6,6 +6,8 @@ The source for [oliverschmid.ca](https://oliverschmid.ca)
 
 The theme was originally based on [PaperMod](https://themes.gohugo.io/themes/hugo-papermod/).
 
+Image EXIF data was removed with [exifLooter](https://github.com/aydinnyunus/exifLooter).
+
 ## License
 
 The source code for the site is released under the [MIT License](https://github.com/oschmid/website/blob/LICENSE). All content and images, unless otherwise specified, are copyright with All Rights Reserved.
