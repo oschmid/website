@@ -1,7 +1,7 @@
 ---
 date: '2023-12-18T00:00:00-07:00'
 title: '!Xorto'
-tags: ['art','D&D','mini']
+tags: ['D&D', 'mini']
 cover:
   image: 'xorto-front.webp'
   alt: '!Xorto Tortle Tempest Domain Cleric mini in golden mask, wielding hammer and shield.'
