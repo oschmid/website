@@ -1,7 +1,7 @@
 ---
 title: 'Gremlin at the Movies'
 date: '2023-10-31T00:00:00-07:00'
-tags: ['art', 'pumpkin']
+tags: ['pumpkin']
 cover:
   image: 'gremlin-at-the-movies.jpg'
   alt: 'Stripe the Gremlin Eating Popcorn with Gizmo at the Movies'
