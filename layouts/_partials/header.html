@@ -23,10 +23,10 @@
                             {{- $img = $img.Resize "x30" }}
                         {{- end }}
                     {{- end }}
-                    <img id="logo" src="{{ $img.Permalink }}" alt="" aria-label="logo"
+                    <img id="logo" src="{{ $img.Permalink }}" alt="{{ site.Params.label.alt }}" aria-label="logo"
 			 height="{{- site.Params.label.iconHeight | default "30" -}}" width="{{- site.Params.label.iconWidth | default "30" -}}">
                 {{- else }}
-                <img id="logo" src="{{- site.Params.label.icon | absURL -}}" alt="" {{- if (not .IsHome) -}}aria-label="logo"{{- end -}}
+                <img id="logo" src="{{- site.Params.label.icon | absURL -}}" alt="{{ site.Params.label.alt }}" {{- if (not .IsHome) -}}aria-label="logo"{{- end -}}
 		     height="{{- site.Params.label.iconHeight | default "30" -}}" width="{{- site.Params.label.iconWidth | default "30" -}}">
                 {{- end -}}
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
